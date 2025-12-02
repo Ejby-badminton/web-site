@@ -45,3 +45,20 @@
   padding-top: 100px;
   padding-bottom: 30px;
 }
+
+.intro__container--full {
+  width: 100%;
+  padding-left: clamp(1.5rem, 4vw, 4rem);
+  padding-right: clamp(1.5rem, 4vw, 4rem);
+  margin: 0 auto;
+}
+
+.intro--full {
+  align-items: flex-start;
+
+  h1,
+  h2,
+  p {
+    width: 100%;
+  }
+}

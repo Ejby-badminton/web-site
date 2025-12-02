@@ -2,10 +2,9 @@
 title: Ejby Badminton
 layout: home
 description: Ejby Badminton — Badminton for alle!
-intro_image: /images/illustrations/pointing.svg
-intro_image_hide_on_mobile: true
 show_call_box: false
 show_service_grid: false
+full_width_intro: true
 ---
 
 # Badminton i Ejbyhallen

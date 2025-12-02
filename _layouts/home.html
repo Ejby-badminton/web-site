@@ -3,10 +3,22 @@ layout: default
 bodyClass: "page-home"
 ---
 
-<div class="intro">
+<div class="intro{% if page.full_width_intro %} intro--full{% endif %}">
+  {% if page.full_width_intro %}
+  <div class="intro__container intro__container--full">
+    {{ content }}
+    {% if page.show_call_box %}
+      {% include call.html show_button=true %}
+    {% endif %}
+  </div>
+  {% else %}
+  {% assign intro_content_class = "col-12 col-md-7 col-lg-6 order-2 order-md-1" %}
+  {% unless page.intro_image %}
+    {% assign intro_content_class = "col-12 col-lg-10 col-xl-8" %}
+  {% endunless %}
   <div class="container">
     <div class="row justify-content-start">
-      <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
+      <div class="{{ intro_content_class }}">
         {{ content }}
         {% if page.show_call_box %}
           {% include call.html show_button=true %}
@@ -19,6 +31,7 @@ bodyClass: "page-home"
       {% endif %}
     </div>
   </div>
+  {% endif %}
 </div>
 
 {% if page.show_service_grid != false %}
