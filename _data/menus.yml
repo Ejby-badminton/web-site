@@ -1,21 +1,24 @@
 main:
-  - name: "Services"
+  - name: "Forside"
+    url: "/"
+    weight: 1
+  - name: "Tilbud"
     url: "/services/"
     weight: 2
-  - name: "Team"
+  - name: "Holdet"
     url: "/team/"
     weight: 3
-  - name: "About"
+  - name: "Om klubben"
     url: "/about/"
     weight: 4
-  - name: "Contact"
+  - name: "Kontakt"
     url: "/contact/"
     weight: 5
 
 footer:
-  - name: "Home"
+  - name: "Forside"
     url: "/"
     weight: 1
-  - name: "Contact"
+  - name: "Kontakt"
     url: "/contact/"
     weight: 2
