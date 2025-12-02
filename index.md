@@ -5,6 +5,7 @@ description: Ejby Badminton — Badminton for alle!
 intro_image: /images/illustrations/pointing.svg
 intro_image_hide_on_mobile: true
 show_call_box: false
+show_service_grid: false
 ---
 
 # Badminton i Ejbyhallen
@@ -14,36 +15,54 @@ til sved på panden, fleksible træninger eller faste banetider med din egen
 makker. Vi holder til i Ejbyhallen og tilbyder flere forskellige træningstyper
 i løbet af ugen, så der er plads til både nye og erfarne spillere.
 
-## Det tilbyder vi i sæsonen 2025/2026
+## Vælg dit badminton-tilbud
+
+Her er de mest populære måder at spille badminton hos os lige nu. Vælg det
+tilbud, der passer dig, og brug knapperne under kortene for at læse mere eller
+tage kontakt direkte til holdlederen.
 
 {% assign offers = site.data.offers %}
 {% if offers %}
+<div class="offer-grid">
 {% for offer in offers %}
-### {{ offer.title }}{% if offer.season %} ({{ offer.season }}){% endif %}
-
-{{ offer.blurb }}
-
-{% if offer.times %}
-**Hvornår spiller vi?**
-{% for time in offer.times %}
-- {{ time }}
+	{% assign service = site.services | where: "slug", offer.slug | first %}
+	{% assign primary_contact = offer.contacts | first %}
+	<article class="offer-card">
+		<header class="offer-card__header">
+			{% if offer.season %}
+			<p class="offer-card__season">Sæson {{ offer.season }}</p>
+			{% endif %}
+			<h3 class="offer-card__title">{{ offer.title }}</h3>
+		</header>
+		<p class="offer-card__blurb">{{ offer.blurb }}</p>
+		<ul class="offer-card__meta">
+			{% if offer.times %}
+			<li>
+				<span class="offer-card__label">Spilletid</span>
+				<span class="offer-card__value">{{ offer.times | join: "<br />" }}</span>
+			</li>
+			{% endif %}
+			{% if offer.pricing %}
+			<li>
+				<span class="offer-card__label">Pris</span>
+				<span class="offer-card__value">{{ offer.pricing | join: "<br />" }}</span>
+			</li>
+			{% endif %}
+		</ul>
+		{% if offer.signup %}
+		<p class="offer-card__signup">{{ offer.signup | first }}</p>
+		{% endif %}
+		<div class="offer-card__actions">
+			{% if service %}
+			<a class="button button-primary" href="{{ service.url | relative_url }}">Se detaljer</a>
+			{% endif %}
+			{% if primary_contact and primary_contact.email %}
+			<a class="button button-secondary" href="mailto:{{ primary_contact.email | strip }}?subject={{ offer.title | uri_escape }}">Kontakt {{ primary_contact.name }}</a>
+			{% endif %}
+		</div>
+	</article>
 {% endfor %}
-{% endif %}
-
-{% if offer.pricing %}
-**Prisoversigt**
-{% for price in offer.pricing %}
-- {{ price }}
-{% endfor %}
-{% endif %}
-
-{% assign service = site.services | where: "slug", offer.slug | first %}
-{% if service %}
-[Læs den fulde beskrivelse →]({{ service.url | relative_url }})
-{% endif %}
-
-{% unless forloop.last %}---{% endunless %}
-{% endfor %}
+</div>
 {% endif %}
 
 ## Sådan får du en prøvetime
