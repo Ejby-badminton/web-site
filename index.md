@@ -4,7 +4,6 @@ layout: home
 description: Ejby Badminton — Badminton for alle!
 show_call_box: false
 show_service_grid: false
-full_width_intro: true
 ---
 
 # Badminton i Ejbyhallen
@@ -22,6 +21,7 @@ tage kontakt direkte til holdlederen.
 
 {% assign offers = site.data.offers %}
 {% if offers %}
+<div class="container">
 <div class="offer-grid">
 {% for offer in offers %}
 	{% assign service = site.services | where: "slug", offer.slug | first %}
@@ -61,6 +61,8 @@ tage kontakt direkte til holdlederen.
 		</div>
 	</article>
 {% endfor %}
+</div>
+</div>
 </div>
 {% endif %}
 
