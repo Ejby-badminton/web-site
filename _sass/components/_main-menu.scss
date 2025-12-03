@@ -10,12 +10,18 @@
     > li {
       list-style: none;
       font-size: 1rem;
-      > a {
+      position: relative;
+      > a,
+      > .main-menu__toggle {
         padding: 10px 12px 10px 12px;
         display: inline-block;
         font-weight: normal;
         text-decoration: none;
         color: $primary;
+        background: transparent;
+        border: 0;
+        font-family: $font-family-base;
+        cursor: pointer;
         &:hover {
           text-decoration: underline;
         }
@@ -29,7 +35,65 @@
             transition: all 225ms ease-in 0s;
           }
         }
+        > .main-menu__toggle {
+          font-weight: bold;
+        }
+      }
+      &.has-dropdown {
+        .main-menu__toggle {
+          display: flex;
+          align-items: center;
+          gap: 0.25rem;
+          &:after {
+            content: "▾";
+            font-size: 0.75rem;
+          }
+        }
+        &:hover .main-menu__dropdown,
+        &:focus-within .main-menu__dropdown {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0);
+        }
       }
     }
   }
+}
+
+.main-menu__dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: $white;
+  border: 1px solid rgba($black, 0.08);
+  border-radius: 0.75rem;
+  box-shadow: 0 15px 30px rgba($black, 0.1);
+  padding: 0.5rem 0;
+  min-width: 240px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 5;
+  list-style: none;
+  li {
+    a {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0.5rem 1rem;
+      color: $black;
+      text-decoration: none;
+      font-size: 0.95rem;
+      &:hover {
+        background: rgba($primary, 0.05);
+        color: $primary;
+      }
+    }
+  }
+}
+
+.dropdown-meta {
+  font-size: 0.8rem;
+  color: $steel;
 }

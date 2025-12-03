@@ -61,6 +61,36 @@
           opacity: 0.8;
         }
       }
+      &.has-dropdown {
+        padding-bottom: 0;
+        .main-menu-mobile__label {
+          display: block;
+          color: $white;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          font-size: 0.6em;
+          margin-bottom: 0.5rem;
+          opacity: 0.8;
+        }
+        .main-menu-mobile__dropdown {
+          list-style: none;
+          padding: 0;
+          margin: 0 0 1.5rem 0;
+          li {
+            padding: 0.35rem 0;
+            opacity: 1;
+            a {
+              font-size: 0.7em;
+            }
+          }
+        }
+      }
+      &.active {
+        .main-menu-mobile__label {
+          opacity: 1;
+          font-weight: bold;
+        }
+      }
     }
   }
 }

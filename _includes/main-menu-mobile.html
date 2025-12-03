@@ -2,9 +2,23 @@
   {% assign mainmenu = site.data.menus.main | sort: 'weight'  %}
   <ul>
     {% for item in mainmenu %}
+    {% if item.dropdown == "offers" and site.data.offers %}
+    <li class="has-dropdown {% if page.collection == "services" %}active{% endif %}">
+      <span class="main-menu-mobile__label">{{ item.name }}</span>
+      <ul class="main-menu-mobile__dropdown">
+        {% for offer in site.data.offers %}
+        {% assign service = site.services | where: "slug", offer.slug | first %}
+        {% if service %}
+        <li><a href="{{ service.url | relative_url }}">{{ offer.title }}</a></li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </li>
+    {% else %}
     <li class="{% if item.url == page.url %}active{% endif %}">
       <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
     </li>
+    {% endif %}
     {% endfor %}
   </ul>
 </div>
