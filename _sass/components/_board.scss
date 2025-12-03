@@ -34,24 +34,12 @@
   font-weight: 600;
 }
 
-.board-card__description {
+.board-card__name {
+  font-size: 1.35rem;
   margin: 0;
-  color: $steel;
-  font-size: 0.95rem;
 }
 
-.board-card__people {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.board-person__name {
-  font-size: 1.15rem;
-  margin: 0 0 0.25rem;
-}
-
-.board-person__meta {
+.board-card__meta {
   list-style: none;
   padding: 0;
   margin: 0;
