@@ -1,4 +1,12 @@
 // Card layout for the offer overview on the homepage
+.offer-grid-wrapper {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: clamp(1rem, 3vw, 1.5rem);
+  padding-right: clamp(1rem, 3vw, 1.5rem);
+}
+
 .offer-grid {
   display: grid;
   gap: 1.5rem;
