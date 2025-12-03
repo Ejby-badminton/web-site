@@ -63,7 +63,6 @@ tage kontakt direkte til holdlederen.
 {% endfor %}
 	</div>
 	</div>
-</div>
 {% endif %}
 
 ## Sådan får du en prøvetime
