@@ -15,11 +15,40 @@ layout: page
     line-height: 1;
     letter-spacing: -1px;
   }
+  .shuttle {
+    font-size: 3rem;
+    animation: bounce 1.5s ease-in-out infinite;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0;
+  }
+  li {
+    margin-bottom: 0.5rem;
+  }
+  a {
+    color: #087034;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
 </style>
 
 <div class="container">
-  <h1>404</h1>
+  <div class="shuttle">🏸</div>
+  <h1>Ups, bolden røg ud!</h1>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+  <p><strong>Vi kunne ikke finde den side du sigtede efter.</strong></p>
+  <p>Måske ramte vi nettet, eller også findes siden ikke længere. Prøv i stedet:</p>
+  <ul>
+    <li><a href="/">Tilbage til forsiden</a></li>
+    <li><a href="/bestyrelse/">Se bestyrelsen</a></li>
+    <li><a href="/contact/">Kontakt os – vi hjælper dig videre</a></li>
+  </ul>
 </div>
