@@ -27,8 +27,6 @@ collections:
   tilbud:
     output: true
     sort_by: weight
-  team:
-    output: true
 
 defaults:
   - scope:
@@ -36,11 +34,6 @@ defaults:
       type: "tilbud"
     values:
       layout: "service"
-  - scope:
-      path: ""
-      type: "team"
-    values:
-      layout: "team"
 
 sass:
   style: compressed # possible values: nested expanded compact compressed
