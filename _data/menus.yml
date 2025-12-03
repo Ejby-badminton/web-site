@@ -8,12 +8,15 @@ main:
   - name: "Holdet"
     url: "/team/"
     weight: 3
+  - name: "Bestyrelsen"
+    url: "/bestyrelse/"
+    weight: 4
   - name: "Om klubben"
     url: "/about/"
-    weight: 4
+    weight: 5
   - name: "Kontakt"
     url: "/contact/"
-    weight: 5
+    weight: 6
 
 footer:
   - name: "Forside"
@@ -22,3 +25,6 @@ footer:
   - name: "Kontakt"
     url: "/contact/"
     weight: 2
+  - name: "Bestyrelsen"
+    url: "/bestyrelse/"
+    weight: 3
