@@ -4,34 +4,36 @@ layout: page
 ---
 
 <style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
+  .not-found {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
   }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
+  .not-found__content {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .not-found h1 {
+    font-size: clamp(2.5rem, 4vw, 3.25rem);
+    margin: 1rem 0;
   }
   .shuttle {
     font-size: 3rem;
     animation: bounce 1.5s ease-in-out infinite;
   }
-  ul {
+  .not-found__links {
     list-style: none;
     padding: 0;
-    margin: 1.5rem 0 0;
+    margin: 1.75rem 0 0;
   }
-  li {
+  .not-found__links li {
     margin-bottom: 0.5rem;
   }
-  a {
+  .not-found__links a {
     color: #087034;
     text-decoration: none;
   }
-  a:hover {
+  .not-found__links a:hover {
     text-decoration: underline;
   }
   @keyframes bounce {
@@ -40,15 +42,17 @@ layout: page
   }
 </style>
 
-<div class="container">
-  <div class="shuttle">🏸</div>
-  <h1>Ups, bolden røg ud!</h1>
+<div class="container not-found">
+  <div class="not-found__content col-12 col-lg-10 col-xl-8">
+    <div class="shuttle">🏸</div>
+    <h1>Ups, bolden røg ud!</h1>
 
-  <p><strong>Vi kunne ikke finde den side du sigtede efter.</strong></p>
-  <p>Måske ramte vi nettet, eller også findes siden ikke længere. Prøv i stedet:</p>
-  <ul>
-    <li><a href="/">Tilbage til forsiden</a></li>
-    <li><a href="/bestyrelse/">Se bestyrelsen</a></li>
-    <li><a href="/contact/">Kontakt os – vi hjælper dig videre</a></li>
-  </ul>
+    <p><strong>Vi kunne ikke finde den side du sigtede efter.</strong></p>
+    <p>Måske ramte vi nettet, eller også findes siden ikke længere. Prøv i stedet:</p>
+    <ul class="not-found__links">
+      <li><a href="/">Tilbage til forsiden</a></li>
+      <li><a href="/bestyrelse/">Se bestyrelsen</a></li>
+      <li><a href="/contact/">Kontakt os – vi hjælper dig videre</a></li>
+    </ul>
+  </div>
 </div>
