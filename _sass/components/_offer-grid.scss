@@ -46,17 +46,22 @@
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: $primary;
+  font-weight: 600;
   margin: 0;
 }
 
 .offer-card__title {
   font-family: $font-family-heading;
-  font-size: 1.5rem;
+  font-size: 1.45rem;
+  font-weight: 600;
+  line-height: 1.3;
   margin: 0;
 }
 
 .offer-card__blurb {
   margin-bottom: 0;
+  color: $black;
+  line-height: 1.6;
 }
 
 .offer-card__meta {
@@ -70,15 +75,16 @@
 
 .offer-card__label {
   display: block;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: $steel;
+  font-weight: 600;
 }
 
 .offer-card__value {
   display: block;
-  font-weight: 600;
+  font-weight: 500;
   color: $black;
 
   br {
@@ -91,6 +97,7 @@
 .offer-card__signup {
   font-size: 0.95rem;
   margin-bottom: 0;
+  color: $black;
 }
 
 .offer-card__actions {
