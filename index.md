@@ -24,7 +24,7 @@ tage kontakt direkte til holdlederen.
 <div class="offer-grid-wrapper">
 <div class="offer-grid">
 {% for offer in offers %}
-	{% assign service = site.services | where: "slug", offer.slug | first %}
+	{% assign service = site.tilbud | where: "slug", offer.slug | first %}
 	{% assign primary_contact = offer.contacts | first %}
 	<article class="offer-card">
 		<header class="offer-card__header">

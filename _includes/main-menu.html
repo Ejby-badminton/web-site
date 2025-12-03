@@ -3,11 +3,11 @@
   <ul>
     {% for item in mainmenu %}
     {% if item.dropdown == "offers" and site.data.offers %}
-    <li class="has-dropdown {% if page.collection == "services" %}active{% endif %}">
+    <li class="has-dropdown {% if page.collection == "tilbud" %}active{% endif %}">
       <button class="main-menu__toggle" type="button">{{ item.name }}</button>
       <ul class="main-menu__dropdown">
         {% for offer in site.data.offers %}
-        {% assign service = site.services | where: "slug", offer.slug | first %}
+        {% assign service = site.tilbud | where: "slug", offer.slug | first %}
         {% if service %}
         <li>
           <a href="{{ service.url | relative_url }}">
