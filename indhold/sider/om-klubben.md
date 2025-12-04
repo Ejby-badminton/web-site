@@ -56,7 +56,7 @@ tilmelding. Du finder kontaktoplysninger og betalingsinfo på
 - [Badminton Danmark](https://badminton.dk/)
 - [DGI Badminton](https://www.dgi.dk/badminton)
 - [Skovbohallerne / Ejbyhallen](https://www.skovbohallerne.dk/)
-- [Ejby IF hovedforening](https://www.ejby-if.dk/)
+- [Ejby IF hovedforening](https://www.ejbyif.dk/)
 
 ## Tak til samarbejdspartnere
 
