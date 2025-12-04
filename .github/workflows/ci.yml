@@ -54,4 +54,4 @@ jobs:
           trap 'kill $JEKYLL_PID' EXIT
           echo "Venter på at Jekyll starter..."
           sleep 5
-          npx broken-link-checker http://127.0.0.1:4000 --recursive --filter-level 3
+          npx broken-link-checker http://127.0.0.1:4000 --recursive --filter-level 3 --exclude "https://www.google.com/maps" --exclude "https://maps.google.com"
