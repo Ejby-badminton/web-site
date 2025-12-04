@@ -4,6 +4,7 @@ layout: home
 description: Ejby Badminton — Badminton for alle!
 show_call_box: false
 show_service_grid: false
+permalink: "/"
 ---
 
 # Badminton i Ejbyhallen

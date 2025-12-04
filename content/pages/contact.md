@@ -2,6 +2,7 @@
 title: Kontakt
 layout: contact
 description: Kontakt Ejby IF Badminton
+permalink: "/contact/"
 ---
 
 # Kontakt Ejby IF Badminton

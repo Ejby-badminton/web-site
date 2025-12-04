@@ -3,6 +3,7 @@ title: Om klubben
 layout: page
 description: Om Ejby IF Badminton
 bodyClass: page-about
+permalink: "/about/"
 ---
 
 # Badmintonfællesskabet i Ejby

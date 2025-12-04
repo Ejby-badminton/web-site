@@ -12,6 +12,9 @@ author:
 
 url: 'https://ejbyif-badminton.dk'
 
+collections_dir: content
+data_dir: content/data
+
 logo:
   mobile: "/images/logo/ejby_if_logo.png"
   mobile_height: 100
