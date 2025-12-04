@@ -7,49 +7,38 @@ description: Vedtægter, referater og generalforsamlingsinfo for Ejby IF Badmint
 
 # Vedtægter & generalforsamling
 
-Her finder du samlet adgang til både vedtægter, indkaldelser og referater, så du
-kan dokumentere beslutninger over for medlemmer, kommune og samarbejdspartnere.
-
-## Hurtige genveje
-
-- [Vedtægter for Ejby IF Badminton](/dokumenter/vedtaegter-ejby-if-badminton/)
-- [Referat – generalforsamling 2024](/dokumenter/referat-generalforsamling-2024/)
-- [Indkaldelse – generalforsamling 2025](/dokumenter/generalforsamling-2025/)
-- [Betingelser & privatliv](/betingelser-privatliv/)
+Her finder du gældende vedtægter for Ejby IF og badmintonafdelingen samt de
+seneste referater fra vores generalforsamlinger.
 
 ## Vedtægter
 
-Vedtægterne beskriver afdelingens formål, medlemskriterier, bestyrelsens
-sammensætning og økonomiske regler. Dokumentet blev senest opdateret på den
-ordinære generalforsamling i marts 2024 og ligger nu som fuld tekst i ovenstående
-link.
+- **Ejby IF (hovedforening)** – beskriver den overordnede struktur, kontingenter
+  og bestyrelsens sammensætning.
+- **Ejby IF Badminton** – supplerende vedtægter for badmintonafdelingen med fokus
+  på medlemskab, økonomi og træningsaktiviteter.
 
-Hvis du har brug for hovedforeningens samlede vedtægter eller historiske versioner,
-kan de rekvireres via [badminton@ejbyif.dk](mailto:badminton@ejbyif.dk).
+> PDF-versionerne uploades her efter den næste bestyrelsesgodkendelse. Indtil da
+> kan du få dem tilsendt ved at skrive til
+> [badminton@ejbyif.dk](mailto:badminton@ejbyif.dk).
 
 ## Generalforsamling
 
-- Ordinær generalforsamling afholdes hvert forår i Ejbyhallen.
-- Indkaldelse udsendes senest tre uger før; eventuelle forslag skal være
-  bestyrelsen i hænde otte dage inden mødet.
-- Fysiske kopier af regnskab og budget kan udleveres ved fremmøde.
+- Afholdes hvert forår – typisk i marts/april i Ejbyhallen eller klubbens
+  lokaler.
+- Indkaldelse udsendes senest 3 uger før via mail og opslag i hallen.
+- Forslag til dagsordenen skal være bestyrelsen i hænde 8 dage før mødet.
 
-### Referater
+### Seneste referater
 
-Alle godkendte referater publiceres som selvstændige sider:
+- **2024** – Godkendt regnskab, fokus på nye drop-in tilbud og investering i
+  bolde. (Upload PDF/scan her.)
+- **2023** – Valg af ny kasserer og beslutning om ny hjemmeside. (Upload fil her.)
 
-- [2024 – godkendt 18. marts 2024](/dokumenter/referat-generalforsamling-2024/) med
-  beslutninger om drop-in tilbud og valg til bestyrelsen.
-- 2023 og tidligere år udleveres efter forespørgsel af hensyn til persondata.
+Når referaterne er digitaliseret, placeres de som PDF’er her på siden med direkte
+links.
 
-### Kommende møder
+## Dokumentarkiv
 
-Indkaldelsen til 2025-general forsamlingen ligger som separat dokument med
-dagsorden, tidsfrister og praktiske oplysninger. Dokumentet opdateres, når bilag
-som regnskab og budget frigives.
-
-## Dokumentarkiv og forespørgsler
-
-Har du brug for tidligere budgetter, revisionsprotokoller eller underskrevne
-referater, så skriv til [bestyrelsen](/bestyrelsen/). Vi sender materialet som
-PDF via mail inden for fem hverdage.
+Har du spørgsmål til tidligere materialer, skriv til
+[bestyrelsen](/bestyrelsen/) – vi deler gerne tidligere regnskaber, budgetter
+eller beslutningsreferater via mail.
