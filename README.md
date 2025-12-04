@@ -70,6 +70,7 @@ Til en produktionsbuild (den Netlify bruger) kører du `bundle exec jekyll build
 - **Lokal verifikation:** kør `bundle exec jekyll build` før du pusher, så du ved siden bygger.
 - **Dependabot:** ugentlige PR’er holder Bundler-gems og GitHub Actions opdateret. Gennemgå/merge dem for at være patch’et.
 - **Deploy:** et push til `main` udløser deploy (Netlify eller GitHub Pages). Netlify bruger `bundle exec jekyll build` og uploader `_site/`.
+- **CI:** GitHub Actions-workflowet `.github/workflows/ci.yml` kører både `bundle exec jekyll build` og `npx broken-link-checker` på hver push/PR mod `main`, så du kun skal committe og pushe.
 - **Backups:** Indholdet ligger i Markdown/YAML, så så længe `main` er beskyttet og pushes til GitHub, er du dækket. Tag evt. en kopi af `indhold/data/`, hvis kontaktdata er kritiske.
 
 ## Tips og fejlsøgning
