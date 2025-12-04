@@ -18,6 +18,20 @@
         {% endfor %}
       </ul>
     </li>
+    {% elsif item.children %}
+    {% assign child_active = item.children | where: "url", page.url | first %}
+    <li class="has-dropdown {% if child_active %}active{% endif %}">
+      <button class="main-menu__toggle" type="button">{{ item.name }}</button>
+      <ul class="main-menu__dropdown">
+        {% for child in item.children %}
+        <li>
+          <a href="{{ child.url | relative_url }}">
+            <span class="dropdown-title">{{ child.name }}</span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </li>
     {% else %}
     <li class="{% if item.url == page.url %}active{% endif %}">
       <a href="{{ item.url | relative_url }}">{{ item.name }}</a>

@@ -11,12 +11,19 @@ main:
   - name: "Bestyrelsen"
     url: "/bestyrelsen/"
     weight: 4
+  - name: "Dokumenter"
+    weight: 5
+    children:
+      - name: "Betingelser"
+        url: "/betingelser-privatliv/"
+      - name: "Vedtægter"
+        url: "/vedtaegter-generalforsamling/"
   - name: "Om klubben"
     url: "/om-klubben/"
-    weight: 5
+    weight: 6
   - name: "Kontakt"
     url: "/kontakt/"
-    weight: 6
+    weight: 7
 
 footer:
   - name: "Forside"
