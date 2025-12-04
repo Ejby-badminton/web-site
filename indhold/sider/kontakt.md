@@ -50,14 +50,14 @@ til at kigge forbi hallen i træningstiden.
 ## Kort over Ejbyhallen
 
 <iframe
-	src="https://www.google.com/maps?q=Skovvang+4,+4623+Lille+Skensved&output=embed"
+	src="https://www.google.com/maps?q=Skovvang+4,+4623+Lille+Skensved&t=k&output=embed"
 	width="100%"
 	height="320"
 	style="border:0;"
 	allowfullscreen
 	loading="lazy"
 	referrerpolicy="no-referrer-when-downgrade"></iframe>
-<p><a href="https://www.google.com/maps/place/Skovvang+4,+4623+Lille+Skensved" target="_blank" rel="noopener">Åbn i Google Maps</a></p>
+<p><a href="https://www.google.com/maps/place/Skovvang+4,+4623+Lille+Skensved/@55.49282,12.06448,18z/data=!3m1!1e3" target="_blank" rel="noopener">Åbn i Google Maps (satellit)</a></p>
 
 Fandt du ikke svaret? Send os en mail eller brug siden
 [Bestyrelsen](/bestyrelsen/) for at kontakte det rigtige udvalg.
