@@ -10,16 +10,13 @@ description: Vedtægter, referater og generalforsamlingsinfo for Ejby IF Badmint
 Her finder du gældende vedtægter for Ejby IF og badmintonafdelingen samt de
 seneste referater fra vores generalforsamlinger.
 
-## Vedtægter
+## Vedtægter (PDF)
 
-- **Ejby IF (hovedforening)** – beskriver den overordnede struktur, kontingenter
-  og bestyrelsens sammensætning.
-- **Ejby IF Badminton** – supplerende vedtægter for badmintonafdelingen med fokus
-  på medlemskab, økonomi og træningsaktiviteter.
+- [Ejby IF hovedforening – vedtægter 2016](/assets/docs/Vedtaegter-for-Ejby-IF-2016.pdf)
+- [Ejby IF Badminton – vedtægter 2016](/assets/docs/Vedtaegter-for-Ejby-Badminton-2016.pdf)
 
-> PDF-versionerne uploades her efter den næste bestyrelsesgodkendelse. Indtil da
-> kan du få dem tilsendt ved at skrive til
-> [badminton@ejbyif.dk](mailto:badminton@ejbyif.dk).
+Dokumenterne er identiske med versionerne på det tidligere Klubmodul-site og
+ligger nu permanent her, så du har adgang efter udfasning af det gamle site.
 
 ## Generalforsamling
 
@@ -28,14 +25,15 @@ seneste referater fra vores generalforsamlinger.
 - Indkaldelse udsendes senest 3 uger før via mail og opslag i hallen.
 - Forslag til dagsordenen skal være bestyrelsen i hænde 8 dage før mødet.
 
-### Seneste referater
+### Referater (PDF)
 
-- **2024** – Godkendt regnskab, fokus på nye drop-in tilbud og investering i
-  bolde. (Upload PDF/scan her.)
-- **2023** – Valg af ny kasserer og beslutning om ny hjemmeside. (Upload fil her.)
+- [Generalforsamling 2024 – godkendt referat](/assets/docs/Referat-generalforsamling-2024.pdf)
+- [Generalforsamling 2017 – godkendt referat](/assets/docs/Referat-generalforsamling-2017.pdf)
+- [Generalforsamling 2016 – godkendt referat](/assets/docs/Referat-generalforsamling-2016.pdf)
+- [Generalforsamling 2015 – godkendt referat](/assets/docs/Referat-generalforsamling-2015.pdf)
 
-Når referaterne er digitaliseret, placeres de som PDF’er her på siden med direkte
-links.
+Referater for øvrige år (fx 2018 og 2014) ligger kun fysisk i arkivet. Skriv til
+[bestyrelsen](/bestyrelsen/) hvis du har brug for en kopi.
 
 ## Dokumentarkiv
 
