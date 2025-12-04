@@ -25,6 +25,9 @@ jobs:
           bundler-cache: true
 
       - name: Build site
+        working-directory: ${{ github.workspace }}
+        env:
+          BUNDLE_GEMFILE: ${{ github.workspace }}/Gemfile
         run: bundle exec jekyll build
 
       - name: Setup Node
@@ -33,6 +36,10 @@ jobs:
           node-version: '20'
 
       - name: Run link checker
+        working-directory: ${{ github.workspace }}
+        env:
+          BUNDLE_GEMFILE: ${{ github.workspace }}/Gemfile
+          JEKYLL_ENV: production
         run: |
           bundle exec jekyll serve --host 127.0.0.1 --port 4000 --baseurl '' >/tmp/jekyll.log 2>&1 &
           JEKYLL_PID=$!
@@ -40,5 +47,3 @@ jobs:
           echo "Venter på at Jekyll starter..."
           sleep 5
           npx broken-link-checker http://127.0.0.1:4000 --recursive --filter-level 3
-        env:
-          JEKYLL_ENV: production
