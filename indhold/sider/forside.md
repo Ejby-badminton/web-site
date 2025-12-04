@@ -96,7 +96,7 @@ udmeldelse og kontaktdata.
 - **Telefon til klubben:** [40 38 27 95](tel:+4540382795)
 - **Kontaktpersoner:** Allan – [alyn015@outlook.dk](mailto:alyn015@outlook.dk) ·
 	Georg – [georgmand@hotmail.com](mailto:georgmand@hotmail.com)
-- **Bestyrelse:** [Mød holdet bag klubben](/bestyrelse/)
+- **Bestyrelse:** [Mød holdet bag klubben](/bestyrelsen/)
 - **Dokumenter:** [Vedtægter & generalforsamling](/vedtaegter-generalforsamling/)
 - **Facebook:** [facebook.com/Ejbyif](https://www.facebook.com/Ejbyif)
 

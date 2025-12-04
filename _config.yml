@@ -12,8 +12,8 @@ author:
 
 url: 'https://ejbyif-badminton.dk'
 
-collections_dir: content
-data_dir: content/data
+collections_dir: indhold
+data_dir: indhold/data
 
 logo:
   mobile: "/images/logo/ejby_if_logo.png"

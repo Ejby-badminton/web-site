@@ -1,7 +1,7 @@
 ---
 title: Bestyrelsen
 layout: page
-permalink: "/bestyrelse/"
+permalink: "/bestyrelsen/"
 description: Mød bestyrelsen i Ejby IF Badminton
 full_width: true
 intro_image_hide_on_mobile: true

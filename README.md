@@ -30,9 +30,9 @@ Til en produktionsbuild (den Netlify bruger) kører du `bundle exec jekyll build
 
 | Sti | Formål |
 | ---- | ------ |
-| `content/pages/*.md` | Alle sider som administratoren redigerer. Filnavnet matcher URL’en (fx `contact.md` → `/contact/`). Front matter styrer layout, titel og SEO. |
-| `content/_tilbud/` | Jekyll-kollektion med én Markdown-fil per tilbud. Brug samme `slug` som i `content/data/offers.yml`. |
-| `content/data/` | Struktureret YAML/JSON der driver navigation og dynamiske sektioner.<br>• `offers.yml` styrer rækkefølge og labels på forsiden.<br>• `board.yml` viser bestyrelsen på `bestyrelse.md`.<br>• `menus.yml` definerer navigation og footer.<br>• `contact.yml`, `seo.yml`, `social.json` samler metadata. |
+| `indhold/sider/*.md` | Alle sider som administratoren redigerer. Filnavnet matcher URL’en (fx `kontakt.md` → `/kontakt/`). Front matter styrer layout, titel og SEO. |
+| `indhold/_tilbud/` | Jekyll-kollektion med én Markdown-fil per tilbud. Brug samme `slug` som i `indhold/data/offers.yml`. |
+| `indhold/data/` | Struktureret YAML/JSON der driver navigation og dynamiske sektioner.<br>• `offers.yml` styrer rækkefølge og labels på forsiden.<br>• `board.yml` viser bestyrelsen på `bestyrelsen.md`.<br>• `menus.yml` definerer navigation og footer.<br>• `contact.yml`, `seo.yml`, `social.json` samler metadata. |
 | `_layouts/` | Sidernes skeletter, fx `home.html`, `page.html`, `service.html`. Markdown-filerne peger på dem via front matter. |
 | `_includes/` | Genbrugte snippets (menuer, footer, call-to-action blokke). |
 | `_sass/` + `assets/css` | SCSS-partials der bygger den samlede CSS. Tilpas typografi, farver og helper-klasser her. |
@@ -43,39 +43,39 @@ Til en produktionsbuild (den Netlify bruger) kører du `bundle exec jekyll build
 ## Redigering af indhold
 
 ### Opdater en eksisterende side
-1. Åbn den relevante Markdown-fil under `content/pages/` (fx `content/pages/about.md`).
+1. Åbn den relevante Markdown-fil under `indhold/sider/` (fx `indhold/sider/om-klubben.md`).
 2. Justér front matter (titel, beskrivelse, layout) efter behov.
 3. Redigér selve Markdown-indholdet. Du kan bruge almindelig Markdown samt de Liquid-tags der allerede er i brug.
 4. Kør `bundle exec jekyll serve` lokalt for at tjekke resultatet inden commit.
 
 ### Tilføj eller redigér et tilbud
-1. Opret/redigér filen under `content/_tilbud/`.
+1. Opret/redigér filen under `indhold/_tilbud/`.
 2. Sørg for at front matter indeholder `title`, `slug`, `weight` og andre felter som layoutet forventer.
-3. Opdater `content/data/offers.yml`, så det nye `slug` dukker op i menuen og på forsiden.
+3. Opdater `indhold/data/offers.yml`, så det nye `slug` dukker op i menuen og på forsiden.
 4. Commit Markdown-filen og dataændringen samlet.
 
 ### Opdatér bestyrelsen
-- Redigér `content/data/board.yml` for at ændre navne, roller, telefonnumre eller mails. `bestyrelse.md` viser automatisk data herfra.
+- Redigér `indhold/data/board.yml` for at ændre navne, roller, telefonnumre eller mails. `bestyrelsen.md` viser automatisk data herfra.
 
 ### Navigation
-- Justér `content/data/menus.yml`. Elementer under `main` vises i både desktop- og mobilmenu. Peg enten på en URL (`/about/`) eller brug `dropdown: "offers"` for at vise tilbudslisten.
+- Justér `indhold/data/menus.yml`. Elementer under `main` vises i både desktop- og mobilmenu. Peg enten på en URL (`/om-klubben/`) eller brug `dropdown: "offers"` for at vise tilbudslisten.
 
 ### Kontakt- og SEO-data
-- `content/data/contact.yml` bruges i kontaktsektioner og footer.
-- `content/data/seo.yml` gemmer globale metatags og sociale defaults. Ændr forsigtigt.
+- `indhold/data/contact.yml` bruges i kontaktsektioner og footer.
+- `indhold/data/seo.yml` gemmer globale metatags og sociale defaults. Ændr forsigtigt.
 
 ## Drift og vedligehold
 
 - **Lokal verifikation:** kør `bundle exec jekyll build` før du pusher, så du ved siden bygger.
 - **Dependabot:** ugentlige PR’er holder Bundler-gems og GitHub Actions opdateret. Gennemgå/merge dem for at være patch’et.
 - **Deploy:** et push til `main` udløser deploy (Netlify eller GitHub Pages). Netlify bruger `bundle exec jekyll build` og uploader `_site/`.
-- **Backups:** Indholdet ligger i Markdown/YAML, så så længe `main` er beskyttet og pushes til GitHub, er du dækket. Tag evt. en kopi af `content/data/`, hvis kontaktdata er kritiske.
+- **Backups:** Indholdet ligger i Markdown/YAML, så så længe `main` er beskyttet og pushes til GitHub, er du dækket. Tag evt. en kopi af `indhold/data/`, hvis kontaktdata er kritiske.
 
 ## Tips og fejlsøgning
 
 - Hvis du ser `Could not locate Gemfile or .bundle/ directory`, står du sandsynligvis ikke i repo-roden.
 - Slet `_site/` og kør `bundle exec jekyll build` igen, hvis output virker forældet.
 - Brug `bundle update` med omtanke – lad Dependabot lave PR’s, så ændringerne er overskuelige.
-- Lad filnavne matche permalinks (fx `bestyrelse.md` → `/bestyrelse/`) for at undgå forvirring.
+- Lad filnavne matche permalinks (fx `bestyrelsen.md` → `/bestyrelsen/`) for at undgå forvirring.
 
 Har du idéer eller finder en fejl? Opret et issue eller en pull request, så holder vi klubbens website skarpt og opdateret.

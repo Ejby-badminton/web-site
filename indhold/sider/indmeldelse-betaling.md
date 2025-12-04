@@ -52,4 +52,4 @@ oplyses igen, når du kontakter os.
 ## Spørgsmål?
 
 Skriv til [badminton@ejbyif.dk](mailto:badminton@ejbyif.dk) eller brug formularen
-på [Kontakt-siden](/contact/) – så hjælper vi dig videre.
+på [Kontakt-siden](/kontakt/) – så hjælper vi dig videre.

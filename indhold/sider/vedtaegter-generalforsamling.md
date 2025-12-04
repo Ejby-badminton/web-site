@@ -40,5 +40,5 @@ links.
 ## Dokumentarkiv
 
 Har du spørgsmål til tidligere materialer, skriv til
-[bestyrelsen](/bestyrelse/) – vi deler gerne tidligere regnskaber, budgetter
+[bestyrelsen](/bestyrelsen/) – vi deler gerne tidligere regnskaber, budgetter
 eller beslutningsreferater via mail.

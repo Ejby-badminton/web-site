@@ -2,7 +2,7 @@
 title: Kontakt
 layout: contact
 description: Kontakt Ejby IF Badminton
-permalink: "/contact/"
+permalink: "/kontakt/"
 ---
 
 # Kontakt Ejby IF Badminton
@@ -59,4 +59,4 @@ til at kigge forbi hallen i træningstiden.
 	referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 Fandt du ikke svaret? Send os en mail eller brug siden
-[Bestyrelsen](/bestyrelse/) for at kontakte det rigtige udvalg.
+[Bestyrelsen](/bestyrelsen/) for at kontakte det rigtige udvalg.

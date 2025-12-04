@@ -9,13 +9,13 @@ main:
     url: "/indmeldelse-betaling/"
     weight: 3
   - name: "Bestyrelsen"
-    url: "/bestyrelse/"
+    url: "/bestyrelsen/"
     weight: 4
   - name: "Om klubben"
-    url: "/about/"
+    url: "/om-klubben/"
     weight: 5
   - name: "Kontakt"
-    url: "/contact/"
+    url: "/kontakt/"
     weight: 6
 
 footer:
@@ -23,10 +23,10 @@ footer:
     url: "/"
     weight: 1
   - name: "Kontakt"
-    url: "/contact/"
+    url: "/kontakt/"
     weight: 2
   - name: "Bestyrelsen"
-    url: "/bestyrelse/"
+    url: "/bestyrelsen/"
     weight: 3
   - name: "Indmeldelse"
     url: "/indmeldelse-betaling/"
