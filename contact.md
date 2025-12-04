@@ -49,11 +49,11 @@ til at kigge forbi hallen i træningstiden.
 ## Kort over Ejbyhallen
 
 <iframe
-	src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2257.808024181157!2d12.035886277169328!3d55.51340347306368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46526342c5c456b9%3A0xe7f2d9c3b8397f52!2sEjbyhallen!5e0!3m2!1sda!2sdk!4v1733250000"
+	src="https://www.google.com/maps?q=Skovvang+44,+4623+Lille+Skensved&output=embed"
 	width="100%"
 	height="320"
 	style="border:0;"
-	allowfullscreen=""
+	allowfullscreen
 	loading="lazy"
 	referrerpolicy="no-referrer-when-downgrade"></iframe>
 
