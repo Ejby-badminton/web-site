@@ -23,7 +23,7 @@ tage kontakt direkte til holdlederen.
 > **Nyt:** Vi er flyttet alt indholdet væk fra Klubmodul. Alle informationer,
 > tilmeldinger og dokumenter finder du nu her på ejbyif-badminton.dk.
 
-{% assign offers = site.data.offers %}
+{% assign offers = site.data.tilbud %}
 {% if offers %}
 <div class="offer-grid-wrapper">
 <div class="offer-grid">

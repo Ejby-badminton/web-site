@@ -3,7 +3,7 @@ main:
     url: "/"
     weight: 1
   - name: "Tilbud"
-    dropdown: "offers"
+    dropdown: "tilbud"
     weight: 2
   - name: "Indmeldelse"
     url: "/indmeldelse-betaling/"

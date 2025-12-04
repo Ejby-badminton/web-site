@@ -1,12 +1,12 @@
 <div id="main-menu" class="main-menu">
-  {% assign mainmenu = site.data.menus.main | sort: 'weight'  %}
+  {% assign mainmenu = site.data.menuer.main | sort: 'weight'  %}
   <ul>
     {% for item in mainmenu %}
-    {% if item.dropdown == "offers" and site.data.offers %}
+    {% if item.dropdown == "tilbud" and site.data.tilbud %}
     <li class="has-dropdown {% if page.collection == "tilbud" %}active{% endif %}">
       <button class="main-menu__toggle" type="button">{{ item.name }}</button>
       <ul class="main-menu__dropdown">
-        {% for offer in site.data.offers %}
+        {% for offer in site.data.tilbud %}
         {% assign service = site.tilbud | where: "slug", offer.slug | first %}
         {% if service %}
         <li>

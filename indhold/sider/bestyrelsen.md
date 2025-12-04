@@ -13,7 +13,7 @@ Vi bygger klubben på frivilligt engagement. Her finder du det nuværende hold i
 bestyrelsen, så du hurtigt kan kontakte den rette person om økonomi,
 træningstilbud eller nye idéer.
 
-{% assign board = site.data.board %}
+{% assign board = site.data.bestyrelse %}
 {% if board %}
 <div class="board-grid">
   {% for person in board %}
