@@ -23,7 +23,7 @@ til at kigge forbi hallen i træningstiden.
 
 ## Find os i Ejbyhallen
 
-- **Adresse:** Skovvang 44, 4623 Lille Skensved
+- **Adresse:** Skovvang 4, 4623 Lille Skensved
 - **Træningstider:**
 	- Mandag 18.00-21.00 (baneudlejning + Senior Motion)
 	- Onsdag 18.00-21.00 (Flex-hygge + Senior Motion)
@@ -49,7 +49,7 @@ til at kigge forbi hallen i træningstiden.
 ## Kort over Ejbyhallen
 
 <iframe
-	src="https://www.google.com/maps?q=Skovvang+44,+4623+Lille+Skensved&output=embed"
+	src="https://www.google.com/maps?q=Skovvang+4,+4623+Lille+Skensved&output=embed"
 	width="100%"
 	height="320"
 	style="border:0;"

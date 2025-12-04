@@ -91,7 +91,7 @@ udmeldelse og kontaktdata.
 
 ## Praktisk info og kontakt
 
-- **Adresse:** Skovvang 44, 4623 Lille Skensved (Ejbyhallen)
+- **Adresse:** Skovvang 4, 4623 Lille Skensved (Ejbyhallen)
 - **Telefon til klubben:** [40 38 27 95](tel:+4540382795)
 - **Kontaktpersoner:** Allan – [alyn015@outlook.dk](mailto:alyn015@outlook.dk) ·
 	Georg – [georgmand@hotmail.com](mailto:georgmand@hotmail.com)
