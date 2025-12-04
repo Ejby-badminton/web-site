@@ -6,9 +6,16 @@ on:
   pull_request:
     branches: ["main"]
 
+defaults:
+  run:
+    shell: bash
+    working-directory: "."
+
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      BUNDLE_GEMFILE: ${{ github.workspace }}/Gemfile
 
     steps:
       - name: Checkout
