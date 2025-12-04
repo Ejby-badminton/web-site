@@ -5,8 +5,6 @@ description: Sådan bliver du medlem af Ejby IF Badminton
 permalink: "/indmeldelse-betaling/"
 ---
 
-# Indmeldelse & betaling
-
 Her finder du hele processen for at blive medlem, betale kontingent og melde dig
 ud igen. Alt foregår nu direkte hos Ejby IF Badminton – ingen eksterne systemer.
 

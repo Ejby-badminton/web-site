@@ -5,8 +5,6 @@ permalink: "/betingelser-privatliv/"
 description: Forretningsbetingelser, persondata og cookies for Ejby IF Badminton
 ---
 
-# Betingelser & privatliv
-
 Denne side samler vores vigtigste forretningsbetingelser, information om
 persondata og hvordan vi håndterer cookies og nyhedsbreve.
 

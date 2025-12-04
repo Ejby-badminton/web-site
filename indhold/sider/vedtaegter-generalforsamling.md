@@ -5,8 +5,6 @@ permalink: "/vedtaegter-generalforsamling/"
 description: Vedtægter, referater og generalforsamlingsinfo for Ejby IF Badminton
 ---
 
-# Vedtægter & generalforsamling
-
 Her finder du gældende vedtægter for Ejby IF og badmintonafdelingen samt de
 seneste referater fra vores generalforsamlinger.
 

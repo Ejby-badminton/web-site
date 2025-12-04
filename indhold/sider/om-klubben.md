@@ -6,8 +6,6 @@ bodyClass: page-about
 permalink: "/om-klubben/"
 ---
 
-# Badmintonfællesskabet i Ejby
-
 Ejby IF Badminton har i årtier været samlingspunkt for lokale spillere i alle
 aldre. Vi holder til i Ejbyhallen på Skovvang 4 i Lille Skensved, hvor frivillige
 krafter sikrer, at hallen summer af liv flere aftener om ugen. Klubben hører under

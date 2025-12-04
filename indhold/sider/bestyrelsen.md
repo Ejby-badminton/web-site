@@ -7,8 +7,6 @@ full_width: true
 intro_image_hide_on_mobile: true
 ---
 
-# Bestyrelsen i Ejby IF Badminton
-
 Vi bygger klubben på frivilligt engagement. Her finder du det nuværende hold i
 bestyrelsen, så du hurtigt kan kontakte den rette person om økonomi,
 træningstilbud eller nye idéer.
