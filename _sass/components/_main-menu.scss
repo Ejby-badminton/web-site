@@ -45,7 +45,7 @@
           align-items: center;
           gap: 0.25rem;
           &:after {
-            content: "▾";
+            content: "\25BE";
             font-size: 0.75rem;
           }
         }
