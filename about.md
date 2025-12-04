@@ -39,6 +39,26 @@ trænere og sociale udvalg.
 
 Det er nemt at starte. Kig forbi en træningsaften til en gratis prøvetime eller
 tag fat i Allan eller Georg, som hjælper med alt fra niveauafklaring til praktisk
-tilmelding i Klubmodul. Du finder kontaktoplysninger på
-[Kontakt-siden](/contact/), og du kan altid følge med i nyheder via
-Ejby IF på Facebook.
+tilmelding. Du finder kontaktoplysninger og betalingsinfo på
+[Indmeldelse & betaling](/indmeldelse-betaling/) samt på
+[Kontakt-siden](/contact/). Følg også med via Ejby IF på Facebook.
+
+## Trænere og holdledere
+
+- **Allan** – ansvarlig for Senior Motion samt baneudlejning. Kontakt ham om
+  indmeldelser, kontingent og ledige baner.
+- **Georg** – ansvarlig for Flex-hygge og drop-in tilbud. Kontakt ham om
+  niveau, træning og fleksible forløb.
+
+## Nyttige links
+
+- [Badminton Danmark](https://badminton.dk/)
+- [DGI Badminton](https://www.dgi.dk/badminton)
+- [Skovbohallerne / Ejbyhallen](https://www.skovbohallerne.dk/)
+- [Ejby IF hovedforening](https://www.ejby-if.dk/)
+
+## Tak til samarbejdspartnere
+
+Ejby IF Badminton drives af frivillige kræfter og støttes af Ejby IF,
+Skovbohallerne og alle medlemmer, der giver en hånd med til træning, stævner og
+arrangementer. Tak for hjælpen – uden jer var der ingen badminton i Ejby.

@@ -28,3 +28,9 @@ baner mellem de fremmødte, så alle får spilletid og en hyggelig snak på side
 
 - Georg — telefon [40 73 60 87](tel:+4540736087) / mail
   [georgmand@hotmail.com](mailto:georgmand@hotmail.com)
+
+## Indmeldelse & betaling
+
+Vil du med på holdet? Læs mere på
+[Indmeldelse & betaling](/indmeldelse-betaling/) eller kontakt Georg, så hjælper
+han dig i gang.

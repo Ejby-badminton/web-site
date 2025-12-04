@@ -19,6 +19,9 @@ Her er de mest populære måder at spille badminton hos os lige nu. Vælg det
 tilbud, der passer dig, og brug knapperne under kortene for at læse mere eller
 tage kontakt direkte til holdlederen.
 
+> **Nyt:** Vi er flyttet alt indholdet væk fra Klubmodul. Alle informationer,
+> tilmeldinger og dokumenter finder du nu her på ejbyif-badminton.dk.
+
 {% assign offers = site.data.offers %}
 {% if offers %}
 <div class="offer-grid-wrapper">
@@ -70,8 +73,14 @@ tage kontakt direkte til holdlederen.
 1. Kig forbi Ejbyhallen en mandag eller onsdag i tidsrummet 18.00-21.00.
 2. Spørg efter Allan (Senior Motion / baneudlejning) eller Georg (Flex-hygge),
 	 så finder de et niveau, der passer dig.
-3. Når du er klar til at melde dig ind, hjælper vi med oprettelsen i Klubmodul
-	 og svarer på spørgsmål om betaling, udstyr og kontingent.
+3. Når du er klar til at melde dig ind, tager du kontakt til Allan eller
+	Georg – eller følger guiden på siden
+	[Indmeldelse & betaling](/indmeldelse-betaling/). Vi sørger for alt det
+	praktiske omkring kontingent, udstyr og bekræftelse.
+
+Har du brug for mere info? Hop direkte til
+[Indmeldelse & betaling](/indmeldelse-betaling/) og få svar på betaling,
+udmeldelse og kontaktdata.
 
 ## Hvorfor vælge Ejby IF Badminton?
 
@@ -86,8 +95,8 @@ tage kontakt direkte til holdlederen.
 - **Telefon til klubben:** [40 38 27 95](tel:+4540382795)
 - **Kontaktpersoner:** Allan – [alyn015@outlook.dk](mailto:alyn015@outlook.dk) ·
 	Georg – [georgmand@hotmail.com](mailto:georgmand@hotmail.com)
-- **Bestyrelse & dokumenter:**
-	[Se mere i Klubmodul](https://ejbyifbadminton.klub-modul.dk/bestyrelse)
+- **Bestyrelse:** [Mød holdet bag klubben](/bestyrelse/)
+- **Dokumenter:** [Vedtægter & generalforsamling](/vedtaegter-generalforsamling/)
 - **Facebook:** [facebook.com/Ejbyif](https://www.facebook.com/Ejbyif)
 
 Har du specifikke ønsker til hold eller tidsrum, så skriv eller ring – vi finder

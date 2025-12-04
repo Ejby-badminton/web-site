@@ -32,3 +32,9 @@ makkere.
 
 - Allan — telefon [61 55 73 61](tel:+4561557361) / mail
   [alyn015@outlook.dk](mailto:alyn015@outlook.dk)
+
+## Indmeldelse & betaling
+
+Har du lyst til at være med? Følg guiden på
+[Indmeldelse & betaling](/indmeldelse-betaling/) eller tag fat i Allan i hallen,
+så sørger vi for resten.

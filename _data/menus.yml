@@ -5,15 +5,18 @@ main:
   - name: "Tilbud"
     dropdown: "offers"
     weight: 2
+  - name: "Indmeldelse"
+    url: "/indmeldelse-betaling/"
+    weight: 3
   - name: "Bestyrelsen"
     url: "/bestyrelse/"
-    weight: 3
+    weight: 4
   - name: "Om klubben"
     url: "/about/"
-    weight: 4
+    weight: 5
   - name: "Kontakt"
     url: "/contact/"
-    weight: 5
+    weight: 6
 
 footer:
   - name: "Forside"
@@ -25,3 +28,12 @@ footer:
   - name: "Bestyrelsen"
     url: "/bestyrelse/"
     weight: 3
+  - name: "Indmeldelse"
+    url: "/indmeldelse-betaling/"
+    weight: 4
+  - name: "Betingelser"
+    url: "/betingelser-privatliv/"
+    weight: 5
+  - name: "Vedtægter"
+    url: "/vedtaegter-generalforsamling/"
+    weight: 6

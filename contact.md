@@ -35,10 +35,27 @@ til at kigge forbi hallen i træningstiden.
 | Spørgsmål                    | Svar |
 | ---------------------------- | ---- |
 | Kan jeg få en prøvetime?     | Ja, mød op mandag eller onsdag og spørg efter Allan eller Georg. |
-| Hvordan melder jeg mig ind?  | Efter prøvetimen hjælper vi dig med Klubmodul-tilmelding. |
+| Hvordan melder jeg mig ind?  | Følg guiden på [Indmeldelse & betaling](/indmeldelse-betaling/) eller kontakt Allan/Georg direkte. |
 | Lejer I baner ud?            | Ja, se priser på vores tilbudsside og kontakt Allan/Georg for booking. |
 | Mangler jeg eget udstyr?     | Du må gerne låne ketsjer de første gange; indendørssko er påkrævet. |
 
-Fandt du ikke svaret? Send os en mail, eller brug
-[bestyrelsesoversigten i Klubmodul](https://ejbyifbadminton.klub-modul.dk/bestyrelse)
-for at kontakte et bestemt udvalg.
+## Trænere & holdledere
+
+- **Allan** – Senior Motion og baneudlejning. Spørgsmål om indmeldelse,
+	kontingent og faste baner.
+- **Georg** – Flex-hygge badminton og drop-in. Spørgsmål om niveau,
+	tilmelding og program.
+
+## Kort over Ejbyhallen
+
+<iframe
+	src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2257.808024181157!2d12.035886277169328!3d55.51340347306368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46526342c5c456b9%3A0xe7f2d9c3b8397f52!2sEjbyhallen!5e0!3m2!1sda!2sdk!4v1733250000"
+	width="100%"
+	height="320"
+	style="border:0;"
+	allowfullscreen=""
+	loading="lazy"
+	referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+Fandt du ikke svaret? Send os en mail eller brug siden
+[Bestyrelsen](/bestyrelse/) for at kontakte det rigtige udvalg.

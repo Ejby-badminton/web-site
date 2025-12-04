@@ -31,3 +31,9 @@ passer dig.
   [alyn015@outlook.dk](mailto:alyn015@outlook.dk)
 - Georg — telefon [40 73 60 87](tel:+4540736087) / mail
   [georgmand@hotmail.com](mailto:georgmand@hotmail.com)
+
+## Indmeldelse & betaling
+
+Book din tid ved at skrive til Allan eller Georg og følg informationen på
+[Indmeldelse & betaling](/indmeldelse-betaling/). Når aftalen er på plads,
+modtager du en betalingsanmodning og bekræftelse på din faste banetid.
