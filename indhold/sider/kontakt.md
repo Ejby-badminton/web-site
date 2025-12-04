@@ -17,8 +17,6 @@ til at kigge forbi hallen i træningstiden.
 - **Georg** – Flex-hygge badminton & baneudlejning  
 	Telefon: [40 73 60 87](tel:+4540736087) · Mail:
 	[georgmand@hotmail.com](mailto:georgmand@hotmail.com)
-- **Ejby Badminton** (generel henvendelse)
-	Telefon: [40 38 27 95](tel:+4540382795)
 
 ## Find os i Ejbyhallen
 
@@ -56,6 +54,3 @@ til at kigge forbi hallen i træningstiden.
 	loading="lazy"
 	referrerpolicy="no-referrer-when-downgrade"></iframe>
 <p><a href="https://www.google.com/maps/place/Skovvang+4,+4623+Lille+Skensved/@55.49282,12.06448,18z/data=!3m1!1e3" target="_blank" rel="noopener">Åbn i Google Maps (satellit)</a></p>
-
-Fandt du ikke svaret? Send os en mail eller brug siden
-[Bestyrelsen](/bestyrelsen/) for at kontakte det rigtige udvalg.
