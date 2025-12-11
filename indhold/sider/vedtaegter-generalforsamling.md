@@ -1,3 +1,4 @@
+---
 title: Vedtægter
 layout: page
 permalink: "/vedtaegter-generalforsamling/"
