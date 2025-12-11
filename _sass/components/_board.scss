@@ -47,21 +47,19 @@
   line-height: 1.5;
 
   li {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.25rem;
+    display: block;
   }
 
   span {
     font-weight: 600;
     color: $black;
-    flex-shrink: 0;
   }
 
   a {
     color: $primary;
     text-decoration: none;
-    word-break: break-all;
+    word-break: break-word;
+    overflow-wrap: break-word;
 
     &:hover,
     &:focus {
