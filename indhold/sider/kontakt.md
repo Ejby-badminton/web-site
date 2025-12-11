@@ -4,7 +4,6 @@ layout: contact
 description: Kontakt Ejby IF Badminton
 permalink: "/kontakt/"
 ---
-
 Har du spørgsmål til medlemskab, prøvetimer eller baneudlejning, så ræk endelig
 ud. Vi bestræber os på at svare inden for 1-2 hverdage, og du er altid velkommen
 til at kigge forbi hallen i træningstiden.

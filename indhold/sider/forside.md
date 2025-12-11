@@ -74,8 +74,7 @@ tage kontakt direkte til holdlederen.
 1. Kig forbi Ejbyhallen en mandag eller onsdag i tidsrummet 18.00-21.00.
 2. Spørg efter Allan (Senior Motion / baneudlejning) eller Georg (Flex-hygge),
 	 så finder de et niveau, der passer dig.
-3. Når du er klar til at melde dig ind, tager du kontakt til Allan eller
-	Georg – vælg dit tilbud ovenfor og følg indmeldelsesguiden på siden.
+3. Når du er klar til at melde dig ind, tager du kontakt til formanden – vælg dit tilbud ovenfor og følg indmeldelsesguiden på siden.
 
 Har du brug for mere info? Brug [Kontakt-siden](/kontakt/) eller ring direkte.
 

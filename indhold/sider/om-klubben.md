@@ -23,34 +23,28 @@ trænere og sociale udvalg.
 
 ## Faciliteter i Ejbyhallen
 
-- 6 badmintonbaner med mulighed for både single, double og træningsforløb
-- Omklædningsrum med plads til hele holdet
-- Opholdsrum hvor forældre og spillere kan følge med fra sidelinjen
+- 9 badmintonbaner med mulighed for både single, double.
+- Omklædningsrum.
+- Tilskuer rækker til de intresserede.
 
 ## Aktiviteter gennem sæsonen
 
-- Senior Motion mandag og onsdag aften
-- Flex-hygge badminton onsdag før aftensmaden
-- Baneudlejning til dig, der vil have faste tider med venner eller familie
-- Sociale arrangementer, klubmesterskaber og fælles arbejdsdage i hallen
+- Sommerfest
+- Skovbo mesterskaberne
+- Klubmesterskaber
+- Julefrokost
 
 ## Vil du være med?
 
 Det er nemt at starte. Kig forbi en træningsaften til en gratis prøvetime eller
-tag fat i Allan eller Georg, som hjælper med alt fra niveauafklaring til praktisk
+tag fat i formanden, som hjælper med alt fra niveauafklaring til praktisk
 tilmelding. Du finder kontaktoplysninger på
-[Kontakt-siden](/kontakt/). Følg også med via Ejby IF på Facebook.
-
-## Trænere og holdledere
-
-- **Allan** – ansvarlig for Senior Motion samt baneudlejning. Kontakt ham om
-  indmeldelser, kontingent og ledige baner.
-- **Georg** – ansvarlig for Flex-hygge og drop-in tilbud. Kontakt ham om
-  niveau, træning og fleksible forløb.
+[bestyrelsen siden](/bestyrelsen/). Følg også med via Ejby IF Badminton på Facebook.
 
 ## Nyttige links
 
 - [Badminton Danmark](https://badminton.dk/)
+- [Badminton player](https://badmintonplayer.dk/)
 - [DGI Badminton](https://www.dgi.dk/badminton)
 - [Skovbohallerne / Ejbyhallen](https://www.skovbohallerne.dk/)
 - [Ejby IF hovedforening](https://www.ejbyif.dk/)

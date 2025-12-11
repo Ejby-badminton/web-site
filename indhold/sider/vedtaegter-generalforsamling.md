@@ -4,7 +4,6 @@ layout: page
 permalink: "/vedtaegter/"
 description: Vedtægter, generalforsamling og betingelser for Ejby IF Badminton
 ---
-
 Her finder du både gældende vedtægter, generalforsamlingsreferater og klubbens
 forretningsbetingelser samlet ét sted.
 
