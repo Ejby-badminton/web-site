@@ -24,11 +24,6 @@ til at kigge forbi hallen i træningstiden.
 | Lejer I baner ud?            | Ja, se priser på vores tilbudsside og kontakt formanden for booking. |
 | Mangler jeg eget udstyr?     | Du må gerne låne ketsjer de første gange; indendørssko er påkrævet. |
 
-## Trænere & holdledere
-
-- **William** – Senior Motion.
-- **Georg** – Flex-hygge badminton og Baneleje.
-
 ## Kort over Ejbyhallen
 
 <iframe
