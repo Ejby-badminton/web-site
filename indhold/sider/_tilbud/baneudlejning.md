@@ -5,8 +5,8 @@ weight: 3
 season: "2025/2026"
 ---
 
-Vil du hellere spille med din faste makker eller familie? Med baneudlejning får
-du din egen faste tid i Ejbyhallen, så du kan planlægge træningen præcis som det
+Vil du hellere spille med din faste makker eller familie?
+Med baneudlejning får du din egen faste tid i Ejbyhallen, så du kan planlægge træningen præcis som det
 passer dig.
 
 ## Tider
