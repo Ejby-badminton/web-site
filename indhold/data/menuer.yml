@@ -14,11 +14,9 @@ main:
   - name: "Kontakt"
     url: "/kontakt/"
     weight: 6
-  - name: "Dokumenter"
+  - name: "Vedtægter"
+    url: "/vedtaegter/"
     weight: 8
-    children:
-      - name: "Vedtægter"
-        url: "/vedtaegter/"
 
 footer:
   - name: "Forside"

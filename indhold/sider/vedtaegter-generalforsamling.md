@@ -26,9 +26,6 @@ forretningsbetingelser samlet ét sted.
 - [Generalforsamling 2016 – godkendt referat](/assets/docs/Referat-generalforsamling-2016.pdf)
 - [Generalforsamling 2015 – godkendt referat](/assets/docs/Referat-generalforsamling-2015.pdf)
 
-Referater for øvrige år (fx 2018 og 2014) ligger kun fysisk i arkivet. Skriv
-til [bestyrelsen](/bestyrelsen/) hvis du har brug for en kopi.
-
 ## Betingelser og privatliv
 
 Denne sektion samler de praktiske betingelser for medlemskab, betaling og brugen
@@ -81,9 +78,3 @@ løsning hurtigst muligt.
 
 Der er ingen fortrydelsesret på kontingent og der refunderes ikke penge efter
 tilmelding.
-
-## Dokumentarkiv
-
-Har du spørgsmål til tidligere materialer, skriv til
-[bestyrelsen](/bestyrelsen/) – vi deler gerne tidligere regnskaber, budgetter
-eller beslutningsreferater via mail.
