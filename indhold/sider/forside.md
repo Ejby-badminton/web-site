@@ -75,13 +75,9 @@ tage kontakt direkte til holdlederen.
 2. Spørg efter Allan (Senior Motion / baneudlejning) eller Georg (Flex-hygge),
 	 så finder de et niveau, der passer dig.
 3. Når du er klar til at melde dig ind, tager du kontakt til Allan eller
-	Georg – eller følger guiden på siden
-	[Indmeldelse & betaling](/indmeldelse-betaling/). Vi sørger for alt det
-	praktiske omkring kontingent, udstyr og bekræftelse.
+	Georg – vælg dit tilbud ovenfor og følg indmeldelsesguiden på siden.
 
-Har du brug for mere info? Hop direkte til
-[Indmeldelse & betaling](/indmeldelse-betaling/) og få svar på betaling,
-udmeldelse og kontaktdata.
+Har du brug for mere info? Brug [Kontakt-siden](/kontakt/) eller ring direkte.
 
 ## Hvorfor vælge Ejby IF Badminton?
 

@@ -35,6 +35,31 @@ makkere.
 
 ## Indmeldelse & betaling
 
-Har du lyst til at være med? Følg guiden på
-[Indmeldelse & betaling](/indmeldelse-betaling/) eller tag fat i Allan i hallen,
-så sørger vi for resten.
+Har du lyst til at være med? Sådan gør du:
+
+1. **Kontakt Allan** – mød op i hallen eller skriv til
+   [alyn015@outlook.dk](mailto:alyn015@outlook.dk).
+2. **Oplys kontaktdata** – navn, telefon, fødselsdato og eventuel faktura-mail.
+3. **Bekræft betaling** – vi sender en MobilePay-anmodning eller bankoplysninger,
+   og du modtager kvittering når betalingen er registreret.
+
+> Vi vender tilbage inden for to hverdage. Ring gerne på 61 55 73 61 hvis det
+> haster.
+
+### Betalingsmuligheder
+
+- **MobilePay** – vi sender en anmodning, så du kan godkende direkte i appen.
+- **Bankoverførsel** – efter aftale sender vi kontonummer og reference.
+- **Kontant i hallen** – kun efter aftale med Allan.
+
+Betaling sker forud for sæsonen.
+
+### Udmeldelse eller pause
+
+- Giv besked til Allan senest én måned før du stopper.
+- Har du forudbetalt, finder vi en fair løsning afhængigt af hvor langt sæsonen
+  er nået.
+- Husk at returnere evt. nøglekort eller lånt udstyr.
+
+Har du spørgsmål? Skriv til [badminton@ejbyif.dk](mailto:badminton@ejbyif.dk)
+eller brug [Kontakt-siden](/kontakt/).

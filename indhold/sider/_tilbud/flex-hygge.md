@@ -31,6 +31,28 @@ baner mellem de fremmødte, så alle får spilletid og en hyggelig snak på side
 
 ## Indmeldelse & betaling
 
-Vil du med på holdet? Læs mere på
-[Indmeldelse & betaling](/indmeldelse-betaling/) eller kontakt Georg, så hjælper
-han dig i gang.
+Vil du med på holdet? Sådan gør du:
+
+1. **Kontakt Georg** – mød op i hallen onsdag kl. 18 eller skriv til
+   [georgmand@hotmail.com](mailto:georgmand@hotmail.com).
+2. **Oplys kontaktdata** – navn, telefon og fødselsdato.
+3. **Bekræft betaling** – vi sender en MobilePay-anmodning eller bankoplysninger.
+
+> Vi vender tilbage inden for to hverdage. Ring gerne på 40 73 60 87 hvis det
+> haster.
+
+### Betalingsmuligheder
+
+- **MobilePay** – vi sender en anmodning, så du kan godkende direkte i appen.
+- **Bankoverførsel** – efter aftale sender vi kontonummer og reference.
+
+Årskontingent (450 kr.) betales ved tilmelding; mødegebyr (25 kr.) afregnes
+løbende via MobilePay.
+
+### Udmeldelse eller pause
+
+- Giv besked til Georg senest én måned før du stopper.
+- Har du forudbetalt, finder vi en fair løsning.
+
+Har du spørgsmål? Skriv til [badminton@ejbyif.dk](mailto:badminton@ejbyif.dk)
+eller brug [Kontakt-siden](/kontakt/).

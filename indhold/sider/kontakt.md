@@ -32,7 +32,7 @@ til at kigge forbi hallen i træningstiden.
 | Spørgsmål                    | Svar |
 | ---------------------------- | ---- |
 | Kan jeg få en prøvetime?     | Ja, mød op mandag eller onsdag og spørg efter Allan eller Georg. |
-| Hvordan melder jeg mig ind?  | Følg guiden på [Indmeldelse & betaling](/indmeldelse-betaling/) eller kontakt Allan/Georg direkte. |
+| Hvordan melder jeg mig ind?  | Vælg dit [tilbud](/tilbud/senior-motion/) og følg vejledningen dér, eller kontakt Allan/Georg direkte. |
 | Lejer I baner ud?            | Ja, se priser på vores tilbudsside og kontakt Allan/Georg for booking. |
 | Mangler jeg eget udstyr?     | Du må gerne låne ketsjer de første gange; indendørssko er påkrævet. |
 

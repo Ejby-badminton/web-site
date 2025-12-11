@@ -54,9 +54,21 @@ jobs:
           cd "$GITHUB_WORKSPACE"
           bundle exec jekyll serve --host 127.0.0.1 --port 4000 --baseurl '' >/tmp/jekyll.log 2>&1 &
           JEKYLL_PID=$!
-          trap 'kill $JEKYLL_PID' EXIT
+          trap 'kill $JEKYLL_PID 2>/dev/null || true' EXIT
           echo "Venter på at Jekyll starter..."
-          sleep 5
+          # Wait for Jekyll to be ready (max 60 seconds)
+          for i in {1..60}; do
+            if curl -s -o /dev/null -w "%{http_code}" http://127.0.0.1:4000 | grep -q "200"; then
+              echo "Jekyll er klar efter $i sekunder"
+              break
+            fi
+            if [ $i -eq 60 ]; then
+              echo "Jekyll startede ikke i tide. Log:"
+              cat /tmp/jekyll.log
+              exit 1
+            fi
+            sleep 1
+          done
           npx broken-link-checker http://127.0.0.1:4000 --recursive --filter-level 3 \
             --exclude "https://www.google.com/maps" \
             --exclude "https://maps.google.com" \

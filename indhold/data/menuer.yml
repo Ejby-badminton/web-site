@@ -5,9 +5,6 @@ main:
   - name: "Tilbud"
     dropdown: "tilbud"
     weight: 2
-  - name: "Indmeldelse og betaling"
-    url: "/indmeldelse-betaling/"
-    weight: 3
   - name: "Bestyrelsen"
     url: "/bestyrelsen/"
     weight: 4
@@ -33,9 +30,6 @@ footer:
   - name: "Bestyrelsen"
     url: "/bestyrelsen/"
     weight: 3
-  - name: "Indmeldelse & betaling"
-    url: "/indmeldelse-betaling/"
-    weight: 4
   - name: "Vedtægter"
     url: "/vedtaegter/"
     weight: 5

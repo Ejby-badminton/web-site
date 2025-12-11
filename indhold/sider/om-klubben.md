@@ -38,8 +38,7 @@ trænere og sociale udvalg.
 
 Det er nemt at starte. Kig forbi en træningsaften til en gratis prøvetime eller
 tag fat i Allan eller Georg, som hjælper med alt fra niveauafklaring til praktisk
-tilmelding. Du finder kontaktoplysninger og betalingsinfo på
-[Indmeldelse & betaling](/indmeldelse-betaling/) samt på
+tilmelding. Du finder kontaktoplysninger på
 [Kontakt-siden](/kontakt/). Følg også med via Ejby IF på Facebook.
 
 ## Trænere og holdledere
