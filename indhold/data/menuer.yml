@@ -20,9 +20,7 @@ main:
   - name: "Dokumenter"
     weight: 8
     children:
-      - name: "Betingelser og privatliv"
-        url: "/betingelser-privatliv/"
-      - name: "Vedtægter og generalforsamling"
+      - name: "Vedtægter"
         url: "/vedtaegter-generalforsamling/"
 
 footer:
@@ -38,9 +36,6 @@ footer:
   - name: "Indmeldelse & betaling"
     url: "/indmeldelse-betaling/"
     weight: 4
-  - name: "Betingelser & privatliv"
-    url: "/betingelser-privatliv/"
-    weight: 5
-  - name: "Vedtægter & generalforsamling"
+  - name: "Vedtægter"
     url: "/vedtaegter-generalforsamling/"
-    weight: 6
+    weight: 5
