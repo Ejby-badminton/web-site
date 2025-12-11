@@ -97,7 +97,7 @@ udmeldelse og kontaktdata.
 - **Kontaktpersoner:** Allan – [alyn015@outlook.dk](mailto:alyn015@outlook.dk) ·
 	Georg – [georgmand@hotmail.com](mailto:georgmand@hotmail.com)
 - **Bestyrelse:** [Mød holdet bag klubben](/bestyrelsen/)
-- **Dokumenter:** [Vedtægter & generalforsamling](/vedtaegter-generalforsamling/)
+- **Dokumenter:** [Vedtægter](/vedtaegter/)
 - **Facebook:** [facebook.com/Ejbyif](https://www.facebook.com/Ejbyif)
 
 Har du specifikke ønsker til hold eller tidsrum, så skriv eller ring – vi finder

@@ -21,7 +21,7 @@ main:
     weight: 8
     children:
       - name: "Vedtægter"
-        url: "/vedtaegter-generalforsamling/"
+        url: "/vedtaegter/"
 
 footer:
   - name: "Forside"
@@ -37,5 +37,5 @@ footer:
     url: "/indmeldelse-betaling/"
     weight: 4
   - name: "Vedtægter"
-    url: "/vedtaegter-generalforsamling/"
+    url: "/vedtaegter/"
     weight: 5

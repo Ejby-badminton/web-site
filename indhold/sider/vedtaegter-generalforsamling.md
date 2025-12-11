@@ -1,7 +1,7 @@
 ---
 title: Vedtægter
 layout: page
-permalink: "/vedtaegter-generalforsamling/"
+permalink: "/vedtaegter/"
 description: Vedtægter, generalforsamling og betingelser for Ejby IF Badminton
 ---
 
