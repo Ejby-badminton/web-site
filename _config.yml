@@ -12,7 +12,7 @@ author:
 
 url: 'https://ejbyif-badminton.dk'
 
-collections_dir: indhold
+collections_dir: indhold/sider
 data_dir: indhold/data
 
 logo:

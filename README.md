@@ -31,7 +31,7 @@ Til en produktionsbuild (den Netlify bruger) kører du `bundle exec jekyll build
 | Sti | Formål |
 | ---- | ------ |
 | `indhold/sider/*.md` | Alle sider som administratoren redigerer. Filnavnet matcher URL’en (fx `kontakt.md` → `/kontakt/`). Front matter styrer layout, titel og SEO. |
-| `indhold/_tilbud/` | Jekyll-kollektion med én Markdown-fil per tilbud. Brug samme `slug` som i `indhold/data/tilbud.yml`. |
+| `indhold/sider/_tilbud/` | Jekyll-kollektion med én Markdown-fil per tilbud. Brug samme `slug` som i `indhold/data/tilbud.yml`. |
 | `indhold/data/` | Struktureret YAML/JSON der driver navigation og dynamiske sektioner.<br>• `tilbud.yml` styrer rækkefølge og labels på forsiden.<br>• `bestyrelse.yml` viser bestyrelsen på `bestyrelsen.md`.<br>• `menuer.yml` definerer navigation og footer.<br>• `kontakt.yml`, `seo.yml`, `sociale_medier.json` samler metadata. |
 | `_layouts/` | Sidernes skeletter, fx `home.html`, `page.html`, `service.html`. Markdown-filerne peger på dem via front matter. |
 | `_includes/` | Genbrugte snippets (menuer, footer, call-to-action blokke). |
@@ -49,7 +49,7 @@ Til en produktionsbuild (den Netlify bruger) kører du `bundle exec jekyll build
 4. Kør `bundle exec jekyll serve` lokalt for at tjekke resultatet inden commit.
 
 ### Tilføj eller redigér et tilbud
-1. Opret/redigér filen under `indhold/_tilbud/`.
+1. Opret/redigér filen under `indhold/sider/_tilbud/`.
 2. Sørg for at front matter indeholder `title`, `slug`, `weight` og andre felter som layoutet forventer.
 3. Opdater `indhold/data/tilbud.yml`, så det nye `slug` dukker op i menuen og på forsiden.
 4. Commit Markdown-filen og dataændringen samlet.

@@ -5,7 +5,7 @@ main:
   - name: "Tilbud"
     dropdown: "tilbud"
     weight: 2
-  - name: "Indmeldelse & betaling"
+  - name: "Indmeldelse og betaling"
     url: "/indmeldelse-betaling/"
     weight: 3
   - name: "Bestyrelsen"
@@ -20,9 +20,9 @@ main:
   - name: "Dokumenter"
     weight: 8
     children:
-      - name: "Betingelser & privatliv"
+      - name: "Betingelser og privatliv"
         url: "/betingelser-privatliv/"
-      - name: "Vedtægter & generalforsamling"
+      - name: "Vedtægter og generalforsamling"
         url: "/vedtaegter-generalforsamling/"
 
 footer:
