@@ -6,22 +6,37 @@
   <title>{% if page.title %}{{page.title}}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" type="image/png" href="{{ '/images/favicon-32x32.png' | relative_url }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}" />
   <!-- Google Fonts CDN -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <!-- Self host font -->
   <!-- <link rel="preload" href="{{ '/assets/fonts/playfair-display.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin> -->
   <link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet">
   
-  {% if page.description %}<meta name="description" content="{{ page.description }}" />{% endif %}
-  {% if page.meta_title %}<meta property="og:title" content="{{ page.meta_title }}"/>{% else %}<meta property="og:title" content="{{ page.title }}"/>{% endif %}
+  {% assign meta_description = page.description | default: site.description %}
+  {% assign meta_title = page.meta_title | default: page.title | default: site.title %}
+  {% assign meta_image = page.image | default: site.logo.desktop %}
+  
+  <meta name="description" content="{{ meta_description }}" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ meta_title }}"/>
   <meta property="og:type" content="website"/>
-  <meta property="og:url" content="{{ url }}"/>
-  {% if page.image %}<meta property="og:image" content="{{ page.image | absolute_url }}"/>{% endif %}
-  {% if page.description %}<meta property="og:description" content="{{ page.description }}"/>{% endif %}
+  <meta property="og:url" content="{{ page.url | absolute_url }}"/>
+  <meta property="og:image" content="{{ meta_image | absolute_url }}"/>
+  <meta property="og:description" content="{{ meta_description }}"/>
+  <meta property="og:site_name" content="{{ site.title }}"/>
+  <meta property="og:locale" content="da_DK"/>
+  
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary"/>
-  {% if site.data.seo.meta_twitter_site %}<meta name="twitter:site" content="{{ site.seo.meta_twitter_site }}"/>{% endif %}
-  {% if site.data.seo.meta_twitter_creator %}<meta name="twitter:creator" content="{{ site.seo.meta_twitter_creator }}"/>{% endif %}
+  <meta name="twitter:title" content="{{ meta_title }}"/>
+  <meta name="twitter:description" content="{{ meta_description }}"/>
+  <meta name="twitter:image" content="{{ meta_image | absolute_url }}"/>
+  {% if site.data.seo.meta_twitter_site %}<meta name="twitter:site" content="{{ site.data.seo.meta_twitter_site }}"/>{% endif %}
+  {% if site.data.seo.meta_twitter_creator %}<meta name="twitter:creator" content="{{ site.data.seo.meta_twitter_creator }}"/>{% endif %}
 
+  {% include structured-data.html %}
 </head>
 
 <body class='page {{layout.bodyClass}}'>

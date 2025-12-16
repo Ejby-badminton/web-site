@@ -37,9 +37,16 @@ defaults:
       type: "tilbud"
     values:
       layout: "service"
+  - scope:
+      path: ""
+    values:
+      image: "/images/logo/ejby_if_logo.png"
 
 sass:
   style: compressed # possible values: nested expanded compact compressed
+
+plugins:
+  - jekyll-sitemap
 
 exclude:
   - Gemfile

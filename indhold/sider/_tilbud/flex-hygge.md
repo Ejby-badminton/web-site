@@ -1,5 +1,5 @@
 ---
-title: "Flex-hygge Badminton"
+title: "Flex-hygge"
 slug: flex-hygge
 weight: 2
 season: "2025/2026"

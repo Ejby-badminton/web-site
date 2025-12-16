@@ -1,0 +1,5 @@
+# Ejby IF Badminton - robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://ejbyif-badminton.dk/sitemap.xml
