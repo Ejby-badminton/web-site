@@ -17,8 +17,7 @@ i løbet af ugen, så der er plads til både nye og erfarne spillere.
 ## Vælg dit badminton-tilbud
 
 Her er de mest populære måder at spille badminton hos os lige nu. Vælg det
-tilbud, der passer dig, og brug knapperne under kortene for at læse mere eller
-tage kontakt direkte til holdlederen.
+tilbud, der passer dig, og brug knapperne under kortene for at læse mere.
 
 {% assign offers = site.data.tilbud %}
 {% if offers %}
@@ -69,17 +68,13 @@ tage kontakt direkte til holdlederen.
 ## Sådan får du en prøvetime
 
 1. Kig forbi Ejbyhallen en mandag eller onsdag i tidsrummet 18.00-21.00.
-2. Spørg efter William så finder de et niveau, der passer dig.
-3. Når du er klar til at melde dig ind, tager du kontakt til formanden – vælg dit tilbud ovenfor og følg indmeldelsesguiden på siden.
+2. Spørg efter William så finder han et niveau, der passer dig.
 
-Har du brug for mere info? Brug [Kontakt-siden](/kontakt/) eller ring direkte.
+Har du brug for mere info? Brug [Kontakt-siden](/kontakt/).
 
 ## Hvorfor vælge Ejby IF Badminton?
 
 - Trygt og socialt miljø med plads til både nybegyndere og rutinerede spillere
 - Fleksible tilbud – drop-in hyggebadminton, motionisttræning eller faste baner
-- Frivilligt drevet klub, hvor kontingentet går direkte til at holde hallen og
+- Frivilligt drevet klub, hvor kontingentet går direkte til at holde klubben og
 	fællesskabet i gang
-
-Har du specifikke ønsker til hold eller tidsrum, så skriv eller ring – vi finder
-en løsning, der passer dig.
