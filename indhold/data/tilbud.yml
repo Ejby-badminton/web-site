@@ -3,20 +3,18 @@
   season: "2025/2026"
   blurb: >-
     Motionistafdelingen samler godt 30 badmintonentusiaster på tværs af niveauer.
-    Vi spiller på to banetider hver uge, hvor tempoet er hyggeligt men engageret,
-    og nye spillere får en gratis prøvetime, så de kan mærke stemningen.
+    Vi spiller på to gange om ugen, hvor tempoet er hyggeligt men engageret,
+    og nye spillere får op til 3 gratis prøvetimer, så de kan mærke stemningen.
   times:
     - "Mandag og onsdag kl. 19.00-21.00 i Ejbyhallen (18. august 2025 – 29. april 2026)."
   signup:
-    - "Mød op i Ejbyhallen en mandag eller onsdag kl. 19-21 og spørg efter Allan for en prøvetime."
-    - "Kontakt Allan for spørgsmål eller tilmelding, hvis du ikke kan komme forbi i træningstiden."
+    - "Mød op i Ejbyhallen en mandag eller onsdag kl. 19-21 og spørg efter William for en prøvetime."
   pricing:
     - "1 dag pr. uge: 1.100 kr. for hele sæsonen inkl. bolde."
     - "Begge dage pr. uge: 1.700 kr. for hele sæsonen inkl. bolde."
   contacts:
-    - name: "Allan"
-      phone: "+45 61 55 73 61"
-      email: "alyn015@outlook.dk"
+    - name: "William"
+      phone: "+45 60 71 40 19"
 
 - slug: flex-hygge
   title: "Flex-hygge Badminton"
@@ -35,7 +33,6 @@
   contacts:
     - name: "Georg"
       phone: "+45 40 73 60 87"
-      email: "georgmand@hotmail.com"
 
 - slug: baneudlejning
   title: "Baneudlejning"
@@ -52,9 +49,5 @@
     - "Singlebane: 800 kr. for sæsonen."
     - "Doublebane: 1.600 kr. for sæsonen."
   contacts:
-    - name: "Allan"
-      phone: "+45 61 55 73 61"
-      email: "alyn015@outlook.dk"
     - name: "Georg"
       phone: "+45 40 73 60 87"
-      email: "georgmand@hotmail.com"
