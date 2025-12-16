@@ -70,7 +70,7 @@ tilbud, der passer dig, og brug knapperne under kortene for at læse mere.
 1. Kig forbi Ejbyhallen en mandag eller onsdag i tidsrummet 18.00-21.00.
 2. Spørg efter William så finder han et niveau, der passer dig.
 
-Har du brug for mere info? Brug [Kontakt-siden](/kontakt/).
+Har du brug for mere info brug [Kontakt-siden](/kontakt/).
 
 ## Hvorfor vælge Ejby IF Badminton?
 
