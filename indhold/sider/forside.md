@@ -65,6 +65,8 @@ tilbud, der passer dig, og brug knapperne under kortene for at læse mere.
 	</div>
 {% endif %}
 
+
+
 ## Sådan får du en prøvetime
 
 1. Kig forbi Ejbyhallen en mandag eller onsdag i tidsrummet 18.00-21.00.
