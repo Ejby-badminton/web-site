@@ -13,6 +13,7 @@ til at kigge forbi hallen i træningstiden.
 - **Adresse:** Skovvang 4, 4623 Lille Skensved
 - **Parkering:** Gratis parkering foran hallen
 - **Offentlig transport:** Kort gåtur fra Ejby Station
+- **Personlig kontakt:** [kontakt bestyrelsen](/bestyrelsen/)
 
 ## Hurtige svar
 
