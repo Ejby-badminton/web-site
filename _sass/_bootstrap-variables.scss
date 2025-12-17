@@ -5,14 +5,14 @@ $grid-breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1300px,
+  xl: 1300px
 );
 
 $container-max-widths: (
   sm: 566px,
   md: 740px,
   lg: 960px,
-  xl: 1140px,
+  xl: 1140px
 );
 
 $grid-gutter-width: 30px;
@@ -31,7 +31,7 @@ $spacers: map-merge(
     7: 70px,
     8: 80px,
     9: 90px,
-    10: 100px,
+    10: 100px
   ),
   $spacers
 );
