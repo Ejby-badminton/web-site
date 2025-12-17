@@ -32,5 +32,5 @@ Sådan booker du en fast bane:
 
 1. **Kontakt formanden** – skriv til formanden.
 2. **Aftal tid og varighed** – vi finder en ledig plads i skemaet.
-3. **Betaling** – du betaler men MobilPay eller bankoverførsel.
+3. **Betaling** – du betaler med MobilPay eller bankoverførsel.
 4. **Spil Badminton**
