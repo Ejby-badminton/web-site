@@ -24,7 +24,7 @@ passer dig.
 ## Sådan reserverer du
 
 - Kontakt formanden for at høre om ledige tider og booke banen.
-- Reservationen gælder for samme tid hver uge, og inkludere ikke nye bolde.
+- Reservationen gælder for samme tid hver uge, og inkluderer ikke nye bolde.
 
 ## Indmeldelse & betaling
 
