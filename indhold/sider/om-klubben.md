@@ -17,7 +17,7 @@ trænere og sociale udvalg.
 - **Plads til alle** – uanset om du er helt ny, tidligere turneringsspiller eller
   mest kommer for hyggens skyld, finder vi en bane og et niveau til dig.
 - **Frivilligt engagement** – klubben bæres af engagerede medlemmer, der hjælper
-  med alt fra kagebagning til stævner og bemanding af hallen.
+  med alt fra kagebagning til stævner og andre aktiviteter.
 - **Lokalt sammenhold** – vi prioriterer sociale aktiviteter, fælles spisning og
   støtte til resten af Ejby IF’s aktiviteter, så byen står stærkere sammen.
 
@@ -25,7 +25,7 @@ trænere og sociale udvalg.
 
 - 9 badmintonbaner med mulighed for både single, double.
 - Omklædningsrum.
-- Tilskuer rækker til de intresserede.
+- Tilskuerrækker til de interesserede.
 
 ## Aktiviteter gennem sæsonen
 
