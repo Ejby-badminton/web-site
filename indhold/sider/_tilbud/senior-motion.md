@@ -20,7 +20,7 @@ makkere.
 ## Tilmelding og prøvetime
 
 1. Mød op i Ejbyhallen på en mandag eller onsdag mellem kl. 19 og 21.
-2. Spørg efter William, så får du en gratis prøvetime og kan mærke stemningen.
+2. Spørg efter William, så får du op til 3 gratis prøvetimer og kan mærke stemningen.
 3. Hvis du ikke kan komme forbi i tidsrummet, er du velkommen til at ringe eller
    skrive for at aftale nærmere.
 

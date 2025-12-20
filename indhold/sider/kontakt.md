@@ -19,7 +19,7 @@ til at kigge forbi hallen i træningstiden.
 
 | Spørgsmål                    | Svar |
 | ---------------------------- | ---- |
-| Kan jeg få en prøvetime?     | Ja, mød op mandag eller onsdag og spørg efter Allan eller William. |
+| Kan jeg få en prøvetime?     | Ja, mød op mandag eller onsdag og spørg efter William. |
 | Hvordan melder jeg mig ind?  | Vælg dit [tilbud](/tilbud/senior-motion/) og følg vejledningen dér, eller kontakt formanden direkte. |
 | Lejer I baner ud?            | Ja, se priser på vores [tilbud](/tilbud/baneudlejning/) eller kontakt formanden for booking. |
 | Mangler jeg eget udstyr?     | Du må gerne låne ketsjer de første gange; indendørssko er påkrævet. |

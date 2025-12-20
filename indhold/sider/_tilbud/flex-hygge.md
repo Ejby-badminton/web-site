@@ -33,5 +33,5 @@ baner mellem de fremmødte, så alle får spilletid og en hyggelig snak på side
 Sådan tilmelder du dig:
 
 1. **Kontakt formanden** – skriv til formanden.
-2. **Betaling** – du betaler med MobilPay eller bankoverførsel.
+2. **Betaling** – du betaler med MobilePay eller bankoverførsel.
 3. **Spil Badminton**

@@ -23,7 +23,7 @@ trænere og sociale udvalg.
 
 ## Faciliteter i Ejbyhallen
 
-- 9 badmintonbaner med mulighed for både single, double.
+- 9 badmintonbaner med mulighed for både single og double.
 - Omklædningsrum.
 - Tilskuerrækker til de interesserede.
 

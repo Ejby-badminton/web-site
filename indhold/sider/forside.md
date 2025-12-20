@@ -70,7 +70,7 @@ tilbud, der passer dig, og brug knapperne under kortene for at læse mere.
 ## Sådan får du en prøvetime
 
 1. Kig forbi Ejbyhallen en mandag eller onsdag i tidsrummet 18.00-21.00.
-2. Spørg efter William så finder han et niveau, der passer dig.
+2. Spørg efter William så finder vi et niveau, der passer dig.
 
 Har du brug for mere info, brug [kontakt-siden](/kontakt/).
 
