@@ -1,1 +1,12 @@
 contact_button_link: '/kontakt/'
+
+# CVR number (Danish business registration number). Leave empty if not applicable.
+cvr: "29 95 04 82"
+
+# P-number (production unit). Leave empty if not applicable.
+pnr: "10 21 22 22 55"
+
+# Legal info (used on the contact page and/or footer)
+juridisk_navn: "Ejby IF"
+afdelingsnavn: "Ejby Badminton"
+selskabsform: "Forening"

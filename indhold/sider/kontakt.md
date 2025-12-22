@@ -35,3 +35,15 @@ til at kigge forbi hallen i træningstiden.
 	loading="lazy"
 	referrerpolicy="no-referrer-when-downgrade"></iframe>
 <p><a href="https://www.google.com/maps/place/Skovvang+4,+4623+Lille+Skensved/@55.49282,12.06448,18z/data=!3m1!1e3" target="_blank" rel="noopener">Åbn i Google Maps (satellit)</a></p>
+
+## Generelle oplysninger
+
+{% assign k = site.data.kontakt %}
+
+| Felt | Værdi |
+| ---- | ----- |
+| Klubbens juridiske navn | {{ k.juridisk_navn }} |
+| Afdelingens navn | {{ k.afdelingsnavn }} |
+| Selskabsform | {{ k.selskabsform }} |
+| CVR-nummer | {{ k.cvr }} |
+| P-nr. | {{ k.pnr }} |

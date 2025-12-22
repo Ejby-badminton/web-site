@@ -6,8 +6,15 @@
           {% if site.data.sociale_medier %}
             {% include social.html %}
           {% endif %}
-          {% if site.data.seo.copyright_text %}
-          <div class="copyright">{{ site.data.seo.copyright_text }}</div>
+          {% assign copyright_text = site.data.seo.copyright_text %}
+          {% assign cvr = site.data.kontakt.cvr %}
+          {% assign pnr = site.data.kontakt.pnr %}
+          {% if copyright_text != blank or cvr != blank or pnr != blank %}
+          <div class="copyright">
+            {% if copyright_text != blank %}{{ copyright_text }}{% endif %}
+            {% if cvr != blank %}{% if copyright_text != blank %} · {% endif %}CVR: {{ cvr }}{% endif %}
+            {% if pnr != blank %}{% if copyright_text != blank or cvr != blank %} · {% endif %}P-nr.: {{ pnr }}{% endif %}
+          </div>
           {% endif %}
         </div>
       </div>

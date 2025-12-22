@@ -22,6 +22,16 @@
   },
   "telephone": "+4540382795",
   "email": "badminton@ejbyif.dk",
+  {% if site.data.kontakt.cvr != blank %}
+  "taxID": "{{ site.data.kontakt.cvr }}",
+  {% endif %}
+  {% if site.data.kontakt.pnr != blank %}
+  "identifier": {
+    "@type": "PropertyValue",
+    "name": "P-nr.",
+    "value": "{{ site.data.kontakt.pnr }}"
+  },
+  {% endif %}
   "sameAs": [
     "https://www.facebook.com/Ejbyif"
   ],
