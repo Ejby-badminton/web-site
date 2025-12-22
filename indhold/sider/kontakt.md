@@ -40,10 +40,8 @@ til at kigge forbi hallen i træningstiden.
 
 {% assign k = site.data.kontakt %}
 
-| Felt | Værdi |
-| ---- | ----- |
-| Klubbens juridiske navn | {{ k.juridisk_navn }} |
-| Afdelingens navn | {{ k.afdelingsnavn }} |
-| Selskabsform | {{ k.selskabsform }} |
-| CVR-nummer | {{ k.cvr }} |
-| P-nr. | {{ k.pnr }} |
+- **Klubbens juridiske navn:** {{ k.juridisk_navn }}
+- **Afdelingens navn:** {{ k.afdelingsnavn }}
+- **Selskabsform:** {{ k.selskabsform }}
+- **CVR-nummer (Ejby Idrætsforening):** {{ k.cvr }}
+- **P-nr.:** {{ k.pnr }}
