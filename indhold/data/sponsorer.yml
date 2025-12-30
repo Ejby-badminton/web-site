@@ -5,6 +5,6 @@
 # - logo: path to an image under /images/...
 #
 - name: "RSL"
-  url: ""
+  url: "rsl.dk"
   logo: "/images/sponsorer/rsl.png"
   logo_alt: "RSL"
