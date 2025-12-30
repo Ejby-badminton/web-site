@@ -1,0 +1,20 @@
+{% if site.data.sponsorer and site.data.sponsorer.size > 0 %}
+<ul>
+  {% for sponsor in site.data.sponsorer %}
+  {% assign sponsor_name = sponsor.name | default: "" %}
+  {% if sponsor_name != blank %}
+  <li>
+    {% if sponsor.logo != blank %}
+      <img src="{{ sponsor.logo | relative_url }}" alt="{{ sponsor.logo_alt | default: sponsor_name }}" loading="lazy" />
+    {% endif %}
+
+    {% if sponsor.url != blank %}
+      <a href="{{ sponsor.url }}" target="_blank" rel="noopener">{{ sponsor_name }}</a>
+    {% else %}
+      {{ sponsor_name }}
+    {% endif %}
+  </li>
+  {% endif %}
+  {% endfor %}
+</ul>
+{% endif %}

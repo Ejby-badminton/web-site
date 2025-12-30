@@ -1,0 +1,10 @@
+# Sponsorer
+#
+# Add one item per sponsor. Optional fields:
+# - url: link to sponsor site
+# - logo: path to an image under /images/...
+#
+- name: "RSL"
+  url: ""
+  logo: ""
+  logo_alt: "RSL"

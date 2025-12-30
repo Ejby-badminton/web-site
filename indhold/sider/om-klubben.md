@@ -54,3 +54,7 @@ tilmelding. Du finder kontaktoplysninger på
 Ejby IF Badminton drives af frivillige kræfter og støttes af Ejby IF,
 Skovbohallerne og alle medlemmer, der giver en hånd med til træning, stævner og
 arrangementer. Tak for hjælpen – uden jer var der ingen badminton i Ejby.
+
+### Sponsorer
+
+{% include sponsors.html %}
