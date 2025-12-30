@@ -57,4 +57,6 @@ arrangementer. Tak for hjælpen – uden jer var der ingen badminton i Ejby.
 
 ### Sponsorer
 
-{% include sponsors.html %}
+<div class="container">
+  {% include sponsors.html %}
+</div>
