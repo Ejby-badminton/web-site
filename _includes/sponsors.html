@@ -1,12 +1,13 @@
 {% if site.data.sponsorer and site.data.sponsorer.size > 0 %}
-<ul>
+<ul class="sponsors-list">
   {% for sponsor in site.data.sponsorer %}
   {% assign sponsor_name = sponsor.name | default: "" %}
   {% if sponsor_name != blank %}
   <li>
+    {% assign is_external = sponsor.url contains '://' %}
     {% if sponsor.logo != blank %}
       {% if sponsor.url != blank %}
-        <a href="{{ sponsor.url }}" target="_blank" rel="noopener">
+        <a href="{% if is_external %}{{ sponsor.url }}{% else %}{{ sponsor.url | relative_url }}{% endif %}" target="_blank" rel="noopener">
           <img src="{{ sponsor.logo | relative_url }}" alt="{{ sponsor.logo_alt | default: sponsor_name }}" loading="lazy" />
           <span class="visually-hidden">{{ sponsor_name }}</span>
         </a>
@@ -15,7 +16,7 @@
       {% endif %}
     {% else %}
       {% if sponsor.url != blank %}
-        <a href="{{ sponsor.url }}" target="_blank" rel="noopener">{{ sponsor_name }}</a>
+        <a href="{% if is_external %}{{ sponsor.url }}{% else %}{{ sponsor.url | relative_url }}{% endif %}" target="_blank" rel="noopener">{{ sponsor_name }}</a>
       {% else %}
         {{ sponsor_name }}
       {% endif %}
