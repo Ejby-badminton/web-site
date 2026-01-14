@@ -12,6 +12,7 @@ author:
   email: 'wbb@ejbyif-badminton.dk'
 
 url: 'https://ejbyif-badminton.dk'
+enforce_ssl: ejbyif-badminton.dk
 
 collections_dir: indhold/sider
 data_dir: indhold/data
