@@ -265,6 +265,8 @@ GEM
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
+    sassc (2.4.0)
+      ffi (~> 1.9)
     sawyer (0.9.3)
       addressable (>= 2.3.5)
       faraday (>= 0.17.3, < 3)
@@ -288,6 +290,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages (~> 232)
+  sassc (~> 2.4)
 
 BUNDLED WITH
    2.4.22
