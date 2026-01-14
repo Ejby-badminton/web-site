@@ -2,4 +2,7 @@
 User-agent: *
 Allow: /
 
+# PDF documents (referater/vedtægter) should not be indexed
+Disallow: /assets/docs/
+
 Sitemap: https://ejbyif-badminton.dk/sitemap.xml
