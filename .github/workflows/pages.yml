@@ -28,6 +28,11 @@ jobs:
           ruby-version: '3.1'
           bundler-cache: true
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
@@ -37,6 +42,16 @@ jobs:
         run: |
           cd "$GITHUB_WORKSPACE"
           bundle exec jekyll build --destination _site
+
+      - name: Purge unused CSS (production)
+        run: |
+          cd "$GITHUB_WORKSPACE"
+          npx -y purgecss@6 --config purgecss.config.cjs
+
+      - name: Minify CSS (production)
+        run: |
+          cd "$GITHUB_WORKSPACE"
+          npx -y clean-css-cli@5 -o _site/assets/css/style.css _site/assets/css/style.css
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
