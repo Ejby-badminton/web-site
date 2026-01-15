@@ -7,10 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" type="image/png" href="{{ '/images/favicon-32x32.png' | relative_url }}">
   <link rel="canonical" href="{{ page.url | absolute_url }}" />
-  <!-- Google Fonts CDN -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <!-- Self host font -->
-  <!-- <link rel="preload" href="{{ '/assets/fonts/playfair-display.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin> -->
+  <link rel="preload" href="{{ '/assets/fonts/playfair-display.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="{{ '/assets/css/style.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}"></noscript>
   
@@ -51,7 +49,7 @@
   </div>
   {% include footer.html %}
   {% include sub-footer.html %}
-  <script type="text/javascript" src="{{ '/assets/js/scripts.js' | relative_url }}"></script>
+  <script type="text/javascript" src="{{ '/assets/js/scripts.js' | relative_url }}" defer></script>
   {% include google-analytics.html %}
 </body>
 </html>
