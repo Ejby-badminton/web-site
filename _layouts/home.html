@@ -6,7 +6,9 @@ bodyClass: "page-home"
 <div class="intro{% if page.full_width_intro %} intro--full{% endif %}">
   {% if page.full_width_intro %}
   <div class="intro__container intro__container--full">
-    {{ content }}
+    <div class="content">
+      {{ content }}
+    </div>
     {% if page.show_call_box %}
       {% include call.html show_button=true %}
     {% endif %}
@@ -21,7 +23,9 @@ bodyClass: "page-home"
   <div class="container">
     <div class="{{ intro_row_class }}">
       <div class="{{ intro_content_class }}">
-        {{ content }}
+        <div class="content">
+          {{ content }}
+        </div>
         {% if page.show_call_box %}
           {% include call.html show_button=true %}
         {% endif %}
