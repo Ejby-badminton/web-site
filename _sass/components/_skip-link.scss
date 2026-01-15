@@ -1,0 +1,19 @@
+.skip-link {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 10px 14px;
+  background: $white;
+  color: $primary;
+  border: 2px solid $primary;
+  border-radius: 4px;
+  z-index: 9999;
+  text-decoration: none;
+  transform: translateY(-200%);
+  transition: transform 0.15s ease-in-out;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
