@@ -1,6 +1,6 @@
 # Ejby IF Badminton Website
 
-Statisk præsentationsside for Ejby IF Badminton bygget med [Jekyll](https://jekyllrb.com/) og hostet via Netlify/GitHub Pages. Repositoriet indeholder alt indhold, data, layouts og styling, så du kan køre siden lokalt og holde den opdateret i produktion.
+Statisk præsentationsside for Ejby IF Badminton bygget med [Jekyll](https://jekyllrb.com/) og hostet via GitHub Pages. Repositoriet indeholder alt indhold, data, layouts og styling, så du kan køre siden lokalt og holde den opdateret i produktion.
 
 ## Forudsætninger
 

@@ -18,12 +18,12 @@ collections_dir: indhold/sider
 data_dir: indhold/data
 
 logo:
-  mobile: "/images/logo/ejby_if_logo.png"
-  mobile_height: 100
-  mobile_width: 100
-  desktop: "/images/logo/ejby_if_logo.png"
-  desktop_height: 100
-  desktop_width: 100
+  mobile: "/images/logo/ejby_if_logo-40.png"
+  mobile_height: 40
+  mobile_width: 40
+  desktop: "/images/logo/ejby_if_logo-70.png"
+  desktop_height: 70
+  desktop_width: 70
 
 home: 
   limit_services: 6

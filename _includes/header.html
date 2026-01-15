@@ -1,10 +1,35 @@
 <div class='header'>
   <div class="container">
     <div class="logo">
-      <a href="{{ '/' | relative_url }}"><img width="{{ site.logo.desktop_width }}" height="{{ site.logo.desktop_height }}" alt="{{ site.title }}" src="{{ site.logo.desktop | relative_url }}" /></a>
+      <a href="{{ '/' | relative_url }}">
+        <picture>
+          <source type="image/webp" srcset="{{ '/images/logo/ejby_if_logo-70.webp' | relative_url }} 1x, {{ '/images/logo/ejby_if_logo-140.webp' | relative_url }} 2x">
+          <img
+            width="{{ site.logo.desktop_width }}"
+            height="{{ site.logo.desktop_height }}"
+            alt="{{ site.title }}"
+            src="{{ site.logo.desktop | relative_url }}"
+            srcset="{{ site.logo.desktop | relative_url }} 1x, {{ '/images/logo/ejby_if_logo-140.png' | relative_url }} 2x"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high" />
+        </picture>
+      </a>
     </div>
     <div class="logo-mobile">
-      <a href="{{ '/' | relative_url }}"><img width="{{ site.logo.mobile_width }}" height="{{ site.logo.mobile_height }}" alt="{{ site.title }}" src="{{ site.logo.mobile | relative_url }}" /></a>
+      <a href="{{ '/' | relative_url }}">
+        <picture>
+          <source type="image/webp" srcset="{{ '/images/logo/ejby_if_logo-40.webp' | relative_url }} 1x, {{ '/images/logo/ejby_if_logo-80.webp' | relative_url }} 2x">
+          <img
+            width="{{ site.logo.mobile_width }}"
+            height="{{ site.logo.mobile_height }}"
+            alt="{{ site.title }}"
+            src="{{ site.logo.mobile | relative_url }}"
+            srcset="{{ site.logo.mobile | relative_url }} 1x, {{ '/images/logo/ejby_if_logo-80.png' | relative_url }} 2x"
+            loading="eager"
+            decoding="async" />
+        </picture>
+      </a>
     </div>
     {% include main-menu.html %}
     {% include hamburger.html %}

@@ -3,6 +3,7 @@
 ## Project overview
 - This repo is a Jekyll static site (Ruby/Bundler) with source content under [indhold/](../indhold/) and generated output under [_site/](../_site/). Do not edit generated files in `_site/`.
 - Content language is Danish (`lang: da`). Prefer Danish copy in pages and UI text.
+- Hosting is GitHub Pages. Response headers (e.g. `Cache-Control` TTL) are controlled by GitHub Pages and cannot be changed from this repo; performance work should focus on reducing bytes and using versioned assets (or use an external CDN like Cloudflare if long-lived caching is required).
 
 ## Key structure (source of truth)
 - Pages: [indhold/sider/](../indhold/sider/) (Markdown with front matter). URLs are usually pinned via `permalink` (see [indhold/sider/om-klubben.md](../indhold/sider/om-klubben.md)).
