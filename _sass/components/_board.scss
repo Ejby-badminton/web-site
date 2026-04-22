@@ -50,12 +50,10 @@
     display: flex;
     align-items: baseline;
     gap: 0.25em;
-    white-space: nowrap;
-    overflow: hidden;
+    flex-wrap: wrap;
 
     a {
-      overflow: hidden;
-      text-overflow: ellipsis;
+      word-break: break-all;
     }
   }
 
