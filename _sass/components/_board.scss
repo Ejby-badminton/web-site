@@ -42,7 +42,7 @@
 .board-card__meta {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 -1.5rem -1.5rem;
   font-size: 0.95rem;
   line-height: 1.5;
 
@@ -51,6 +51,8 @@
     align-items: baseline;
     gap: 0.25em;
     flex-wrap: wrap;
+    padding: 0.45rem 1.5rem;
+    border-top: 1px solid rgba($black, 0.06);
 
     a {
       word-break: break-all;
