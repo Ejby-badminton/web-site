@@ -47,7 +47,16 @@
   line-height: 1.5;
 
   li {
-    display: block;
+    display: flex;
+    align-items: baseline;
+    gap: 0.25em;
+    white-space: nowrap;
+    overflow: hidden;
+
+    a {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 
   span {
