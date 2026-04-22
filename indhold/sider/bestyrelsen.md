@@ -21,7 +21,7 @@ Vi bygger klubben på frivilligt engagement. Her finder du bestyrelsen, så du h
       <li><span>Telefon:</span> <a href="tel:{{ person.phone | replace: ' ', '' }}">{{ person.phone }}</a></li>
       {% endif %}
       {% if person.email %}
-      <li><span>Email:</span> <a href="mailto:{{ person.email }}">{{ person.email }}</a></li>
+      <li><span>Email:</span> <a href="mailto:{{ person.email }}">Send e-mail</a></li>
       {% endif %}
     </ul>
   </article>
