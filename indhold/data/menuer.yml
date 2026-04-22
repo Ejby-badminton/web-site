@@ -5,6 +5,9 @@ main:
   - name: "Tilbud"
     dropdown: "tilbud"
     weight: 2
+  - name: "Turneringer"
+    url: "/turneringer/"
+    weight: 3
   - name: "Bestyrelsen"
     url: "/bestyrelsen/"
     weight: 4
@@ -25,6 +28,9 @@ footer:
   - name: "Kontakt"
     url: "/kontakt/"
     weight: 2
+  - name: "Turneringer"
+    url: "/turneringer/"
+    weight: 3
   - name: "Bestyrelsen"
     url: "/bestyrelsen/"
     weight: 3
