@@ -16,16 +16,16 @@
         column-span: all;
       }
 
-      h2,
-      h3,
       ul,
       ol,
       p {
         break-inside: avoid;
       }
 
-      h2 {
-        break-before: auto;
+      h2,
+      h3 {
+        break-inside: avoid;
+        break-after: avoid;
       }
     }
   }

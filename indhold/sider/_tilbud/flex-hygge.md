@@ -18,6 +18,7 @@ baner mellem de fremmødte, så alle får spilletid og en hyggelig snak på side
 ## Sådan deltager du
 
 - Mød op i hallen kl. 18.00, så organiserer vi kampene på stedet.
+
 ## Økonomi
 
 - Årligt kontingent: **450 kr.**
