@@ -20,6 +20,7 @@ forretningsbetingelser samlet ét sted.
 
 ### Referater (PDF)
 
+- [Generalforsamling 2026 – godkendt referat](/assets/docs/Referat-generalforsamling-2026.pdf)
 - [Generalforsamling 2024 – godkendt referat](/assets/docs/Referat-generalforsamling-2024.pdf)
 - [Generalforsamling 2017 – godkendt referat](/assets/docs/Referat-generalforsamling-2017.pdf)
 - [Generalforsamling 2016 – godkendt referat](/assets/docs/Referat-generalforsamling-2016.pdf)
