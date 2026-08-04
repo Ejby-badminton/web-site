@@ -2,7 +2,7 @@
 title: "Senior Motion"
 slug: senior-motion
 weight: 1
-season: "2025/2026"
+season: "2026/2027"
 ---
 
 Senior Motion er for dig, der gerne vil have sved på panden i et afslappet og
@@ -15,7 +15,7 @@ makkere.
 
 - Mandag kl. 19.00-21.00 i Ejbyhallen
 - Onsdag kl. 19.00-21.00 i Ejbyhallen
-- Sæson: 18. august 2025 til 29. april 2026
+- Sæson: 17. august 2026 til 28. april 2027
 
 ## Tilmelding og prøvetime
 
