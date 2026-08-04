@@ -14,7 +14,7 @@ passer dig.
 - Mandag kl. 18.00-19.00
 - Onsdag kl. 18.00-19.00
 - Opstart: Mandag 17. august 2026
-- Slut: Onsdag 18. august 2027
+- Slut: Onsdag 28. april 2027
 
 ## Priser
 

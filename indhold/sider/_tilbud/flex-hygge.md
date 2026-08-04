@@ -13,7 +13,7 @@ baner mellem de fremmødte, så alle får spilletid og en hyggelig snak på side
 
 - Onsdag kl. 18.00-19.00 i Ejbyhallen
 - Opstart: 19. august 2026
-- Slut: 18. august 2027
+- Slut: Onsdag 28. april 2027
 
 ## Sådan deltager du
 
