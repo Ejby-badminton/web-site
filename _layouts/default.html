@@ -8,15 +8,14 @@
   {%- comment -%}
     Titel: søgemaskiner og AI-assistenter bruger <title> som den primære
     overskrift. Sidens navn alene ("Kontakt") siger intet om hvilken klub det
-    handler om, så klubnavnet hænges altid på. Forsiden bruger sin egen
-    fulde titel i stedet for at gentage navnet to gange.
+    handler om, så klubnavnet hænges altid på. Sæt meta_title i front matter
+    for at skrive hele titlen selv — fx på forsiden, hvor "Ejby Badminton"
+    ellers ville stå to gange.
   {%- endcomment -%}
   {%- assign meta_description = page.description | default: site.description -%}
   {%- assign meta_title = page.meta_title | default: page.title | default: site.title -%}
   {%- assign meta_image = page.image | default: site.logo.desktop -%}
-  {%- if page.url == "/" -%}
-    {%- assign full_title = site.title | append: " – Badminton i Ejbyhallen, Lille Skensved" -%}
-  {%- elsif page.meta_title -%}
+  {%- if page.meta_title -%}
     {%- assign full_title = page.meta_title -%}
   {%- else -%}
     {%- assign full_title = meta_title | append: " | " | append: site.title -%}

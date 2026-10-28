@@ -18,7 +18,14 @@
   margin-top: 2rem;
   grid-template-columns: 1fr;
 
+  // To kolonner på tablet og tre fra lg. Kortene står i samme smalle
+  // tekstkolonne som resten af siderne, og tre kort ved md ville give
+  // omkring 180px pr. kort.
   @include media-breakpoint-up(md) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include media-breakpoint-up(lg) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
