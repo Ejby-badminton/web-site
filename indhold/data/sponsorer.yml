@@ -4,15 +4,37 @@
 # - url:         link til sponsorens hjemmeside (åbnes i nyt faneblad)
 # - logo:        sti til et billede under /images/sponsorer/
 # - logo_alt:    alt-tekst til logoet (falder tilbage til name)
-# - beskrivelse: kort linje under navnet, fx hvilke mærker sponsoren dækker
+# - logo_width / logo_height: visningsstørrelsen i pixels. Angiv dem, så
+#                browseren kan reservere pladsen og siden ikke hopper,
+#                mens logoerne hentes.
+# - beskrivelse: kort linje under navnet. Vises KUN når sponsoren ikke har
+#                et logo, så en ny sponsor kan tilføjes med det samme og få
+#                sit logo på bagefter.
 #
-# Uden logo vises sponsorens navn som tekst, så en sponsor kan tilføjes med
-# det samme og få sit logo på bagefter.
+# Logofiler: gem dem i images/sponsorer/ som webp. De vises med max 60px
+# højde og 320px bredde (se _sass/components/_sponsors.scss), og filerne
+# gemmes i dobbelt opløsning til skærme med høj pixeltæthed — altså max
+# 120px høj og 640px bred. Sæt logo_width/logo_height til den halve,
+# viste størrelse. Afsnittet "Sponsorlogoer" i CLAUDE.md viser kommandoen.
 
 - name: "Sports Group Denmark"
+  url: "https://sports-group-sgd.com/"
+  logo: "/images/sponsorer/sports-group-denmark.webp"
+  logo_width: 320
+  logo_height: 21
+  logo_alt: "Sports Group Denmark"
   beskrivelse: "Står bag badmintonmærkerne Victor og FZ Forza"
-  # MANGLER: url og logo.
-  # Hjemmesiden er ikke udfyldt, fordi den ikke kunne bekræftes — et gæt ville
-  # både give et dødt link på siden og få link-tjekket i CI til at fejle.
-  # Indsæt den officielle adresse her, og læg logoet i
-  # images/sponsorer/ (fx sports-group-denmark.png) og peg på det med logo:.
+
+- name: "Victor"
+  url: "https://www.victor-europe.com/"
+  logo: "/images/sponsorer/victor.webp"
+  logo_width: 212
+  logo_height: 60
+  logo_alt: "Victor"
+
+- name: "FZ Forza"
+  url: "https://fz-forza.com/"
+  logo: "/images/sponsorer/fz-forza.webp"
+  logo_width: 218
+  logo_height: 60
+  logo_alt: "FZ Forza"

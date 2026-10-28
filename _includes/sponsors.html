@@ -15,16 +15,17 @@
   {% assign sponsor_logo = sponsor.logo | default: "" %}
   {% assign sponsor_url = sponsor.url | default: "" %}
   {% assign sponsor_description = sponsor.beskrivelse | default: "" %}
+  {% capture logo_size %}{% if sponsor.logo_width %} width="{{ sponsor.logo_width }}"{% endif %}{% if sponsor.logo_height %} height="{{ sponsor.logo_height }}"{% endif %}{% endcapture %}
   {% assign is_external = sponsor_url contains '://' %}
   <li>
     {% if sponsor_logo != "" %}
       {% if sponsor_url != "" %}
         <a href="{% if is_external %}{{ sponsor_url }}{% else %}{{ sponsor_url | relative_url }}{% endif %}" target="_blank" rel="noopener">
-          <img src="{{ sponsor_logo | relative_url }}" alt="{{ sponsor.logo_alt | default: sponsor_name }}" loading="lazy" />
+          <img src="{{ sponsor_logo | relative_url }}" alt="{{ sponsor.logo_alt | default: sponsor_name }}"{{ logo_size }} loading="lazy" decoding="async" />
           <span class="visually-hidden">{{ sponsor_name }}</span>
         </a>
       {% else %}
-        <img src="{{ sponsor_logo | relative_url }}" alt="{{ sponsor.logo_alt | default: sponsor_name }}" loading="lazy" />
+        <img src="{{ sponsor_logo | relative_url }}" alt="{{ sponsor.logo_alt | default: sponsor_name }}"{{ logo_size }} loading="lazy" decoding="async" />
       {% endif %}
     {% else %}
       {%- comment -%} Uden logo vises navnet som tekst. {%- endcomment -%}

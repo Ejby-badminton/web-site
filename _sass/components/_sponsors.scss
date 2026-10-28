@@ -15,10 +15,20 @@
   justify-content: center;
   margin: 0;
   padding: 0;
+  min-width: 0;
 }
 .sponsors-list img {
-  max-height: 240px;
+  // Sponsorlogoer har meget forskellige billedformater — et bredt wordmark
+  // kan være 15:1, mens et mærkelogo er 3,5:1. Begrænses kun højden, bliver
+  // wordmarket flere tusinde pixels bredt. Begge grænser holder dem i
+  // nogenlunde samme visuelle vægt, uanset hvilket logo der tilføjes.
+  max-height: 60px;
+  // min() frem for en fast bredde: 320px er bredere end indholdet på en smal
+  // telefon, og logoet ville derfor give vandret scroll på hele siden.
+  max-width: min(320px, 100%);
   width: auto;
+  height: auto;
+  object-fit: contain;
   display: block;
   margin: 0 auto;
 }

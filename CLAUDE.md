@@ -109,6 +109,23 @@ permalink: "/my-page/"
 - `_includes/structured-data.html` → one JSON-LD `@graph` per page with `SportsClub`, `Place`/`SportsActivityLocation`, `WebSite`, `WebPage` and `BreadcrumbList`, plus `FAQPage` and `Service` where relevant. Nodes are linked by `@id`; if you add a node, make sure every `@id` reference resolves to a node in the same graph or Google ignores it.
 - Excluded paths must stay in sync in three places: `robots.txt` (`disallow`), `_config.yml` (`sitemap: false` for `assets/docs`) and `check-seo.mjs`. The general-assembly PDFs are excluded because they contain members' names.
 
+## Sponsor logos
+
+Logos live in `images/sponsorer/` as webp and are declared in `indhold/data/sponsorer.yml`. A sponsor without a `logo` renders as styled text instead, so one can be added immediately and get its logo later.
+
+Sponsor logos arrive in wildly different aspect ratios — a wordmark can be 15:1 while a brand mark is 3.5:1 — so they are normalised rather than used as-is. They display at max 60×320 px and are stored at 2x for high-density screens:
+
+```python
+from PIL import Image
+im = Image.open(src).convert('RGBA')
+w, h = im.size
+ratio = min(60 / h, 320 / w)          # same clamp the CSS applies
+im.resize((round(w*ratio*2), round(h*ratio*2)), Image.LANCZOS) \
+  .save('images/sponsorer/<name>.webp', format='WEBP', quality=90, method=6)
+```
+
+Set `logo_width` / `logo_height` to the **displayed** size (half the file's pixels) so the browser reserves the space and the page does not jump while loading.
+
 ## Analytics — how the club sees its traffic
 
 Both tools are free and stay **off** until the IDs are filled into `indhold/data/seo.yml`, which contains step-by-step instructions:
