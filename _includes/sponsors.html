@@ -1,25 +1,43 @@
+{%- comment -%}
+  Sponsorliste. Data kommer fra indhold/data/sponsorer.yml.
+
+  Bemærk testene nedenfor: "sponsor.logo != blank" virker IKKE, når nøglen
+  mangler helt i YAML'en — den er da nil, og udtrykket blev sandt, så siden
+  fik <img src=""> og href="". Fejlen var latent, så længe alle sponsorer
+  havde både logo og url. Derfor normaliseres værdierne med default: ""
+  først, og der sammenlignes med en tom streng.
+{%- endcomment -%}
 {% if site.data.sponsorer and site.data.sponsorer.size > 0 %}
 <ul class="sponsors-list">
   {% for sponsor in site.data.sponsorer %}
   {% assign sponsor_name = sponsor.name | default: "" %}
-  {% if sponsor_name != blank %}
+  {% if sponsor_name != "" %}
+  {% assign sponsor_logo = sponsor.logo | default: "" %}
+  {% assign sponsor_url = sponsor.url | default: "" %}
+  {% assign sponsor_description = sponsor.beskrivelse | default: "" %}
+  {% assign is_external = sponsor_url contains '://' %}
   <li>
-    {% assign is_external = sponsor.url contains '://' %}
-    {% if sponsor.logo != blank %}
-      {% if sponsor.url != blank %}
-        <a href="{% if is_external %}{{ sponsor.url }}{% else %}{{ sponsor.url | relative_url }}{% endif %}" target="_blank" rel="noopener">
-          <img src="{{ sponsor.logo | relative_url }}" alt="{{ sponsor.logo_alt | default: sponsor_name }}" loading="lazy" />
+    {% if sponsor_logo != "" %}
+      {% if sponsor_url != "" %}
+        <a href="{% if is_external %}{{ sponsor_url }}{% else %}{{ sponsor_url | relative_url }}{% endif %}" target="_blank" rel="noopener">
+          <img src="{{ sponsor_logo | relative_url }}" alt="{{ sponsor.logo_alt | default: sponsor_name }}" loading="lazy" />
           <span class="visually-hidden">{{ sponsor_name }}</span>
         </a>
       {% else %}
-        <img src="{{ sponsor.logo | relative_url }}" alt="{{ sponsor.logo_alt | default: sponsor_name }}" loading="lazy" />
+        <img src="{{ sponsor_logo | relative_url }}" alt="{{ sponsor.logo_alt | default: sponsor_name }}" loading="lazy" />
       {% endif %}
     {% else %}
-      {% if sponsor.url != blank %}
-        <a href="{% if is_external %}{{ sponsor.url }}{% else %}{{ sponsor.url | relative_url }}{% endif %}" target="_blank" rel="noopener">{{ sponsor_name }}</a>
-      {% else %}
-        {{ sponsor_name }}
-      {% endif %}
+      {%- comment -%} Uden logo vises navnet som tekst. {%- endcomment -%}
+      <span class="sponsors-text">
+        {% if sponsor_url != "" %}
+          <a href="{% if is_external %}{{ sponsor_url }}{% else %}{{ sponsor_url | relative_url }}{% endif %}" target="_blank" rel="noopener">{{ sponsor_name }}</a>
+        {% else %}
+          <span class="sponsors-name">{{ sponsor_name }}</span>
+        {% endif %}
+        {% if sponsor_description != "" %}
+        <span class="sponsors-description">{{ sponsor_description }}</span>
+        {% endif %}
+      </span>
     {% endif %}
   </li>
   {% endif %}

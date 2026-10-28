@@ -1,10 +1,18 @@
 # Sponsorer
 #
-# Add one item per sponsor. Optional fields:
-# - url: link to sponsor site
-# - logo: path to an image under /images/...
+# Ét punkt pr. sponsor. Påkrævet: name. Valgfrit:
+# - url:         link til sponsorens hjemmeside (åbnes i nyt faneblad)
+# - logo:        sti til et billede under /images/sponsorer/
+# - logo_alt:    alt-tekst til logoet (falder tilbage til name)
+# - beskrivelse: kort linje under navnet, fx hvilke mærker sponsoren dækker
 #
-- name: "RSL"
-  url: "https://rsl.dk"
-  logo: "/images/sponsorer/rsl.png"
-  logo_alt: "RSL"
+# Uden logo vises sponsorens navn som tekst, så en sponsor kan tilføjes med
+# det samme og få sit logo på bagefter.
+
+- name: "Sports Group Denmark"
+  beskrivelse: "Står bag badmintonmærkerne Victor og FZ Forza"
+  # MANGLER: url og logo.
+  # Hjemmesiden er ikke udfyldt, fordi den ikke kunne bekræftes — et gæt ville
+  # både give et dødt link på siden og få link-tjekket i CI til at fejle.
+  # Indsæt den officielle adresse her, og læg logoet i
+  # images/sponsorer/ (fx sports-group-denmark.png) og peg på det med logo:.

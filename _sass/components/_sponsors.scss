@@ -22,3 +22,29 @@
   display: block;
   margin: 0 auto;
 }
+
+// Vises når en sponsor endnu ikke har et logo. Navnet sættes i samme
+// overskriftsskrift som resten af sitet, så tekst-sponsorer ikke ser ud
+// som en fejl ved siden af dem der har logo.
+.sponsors-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  text-align: center;
+}
+
+.sponsors-name,
+.sponsors-text a {
+  font-family: $font-family-heading;
+  font-size: 1.45rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: $black;
+}
+
+.sponsors-description {
+  font-size: 0.95rem;
+  color: $steel;
+  line-height: 1.5;
+}
