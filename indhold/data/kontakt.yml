@@ -10,9 +10,10 @@ contact_button_link: '/kontakt/'
 # bruger sammenfaldet til at bekræfte, at der er tale om samme klub.
 # ---------------------------------------------------------------------------
 
-# Offentligt telefonnummer og mail (formanden / klubbens fællesmail)
-phone: "+45 40 73 60 87"
-phone_display: "40 73 60 87"
+# Offentligt telefonnummer og mail. Telefonen er formandens nummer — ret den
+# her, hvis formandsposten skifter (se indhold/data/bestyrelse.yml).
+phone: "+45 25 31 83 36"
+phone_display: "25 31 83 36"
 email: "info@ejbyif-badminton.dk"
 
 # Adresse på spillestedet

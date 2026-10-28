@@ -1,10 +1,10 @@
 ---
 title: Tilbud
 layout: page
-meta_title: "Badminton i Ejby – hold, spilletider og priser 2025/2026"
+meta_title: "Badminton i Ejby – hold, spilletider og priser 2026/2027"
 description: >-
   Alle badmintontilbud i Ejbyhallen: Senior Motion, Flex-hygge og
-  baneudlejning. Se spilletider og priser for sæsonen 2025/2026.
+  baneudlejning. Se spilletider og priser for sæsonen 2026/2027.
 permalink: "/tilbud/"
 full_width: true
 ---

@@ -8,6 +8,9 @@ main:
     # for brødkrummer og llms.txt.
     url: "/tilbud/"
     weight: 2
+  - name: "Turneringer"
+    url: "/turneringer/"
+    weight: 3
   - name: "Bestyrelsen"
     url: "/bestyrelsen/"
     weight: 4
@@ -31,9 +34,12 @@ footer:
   - name: "Kontakt"
     url: "/kontakt/"
     weight: 3
+  - name: "Turneringer"
+    url: "/turneringer/"
+    weight: 4
   - name: "Bestyrelsen"
     url: "/bestyrelsen/"
-    weight: 4
+    weight: 5
   - name: "Vedtægter"
     url: "/vedtaegter/"
-    weight: 5
+    weight: 6

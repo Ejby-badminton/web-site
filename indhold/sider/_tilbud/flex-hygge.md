@@ -2,7 +2,7 @@
 title: "Flex-hygge"
 slug: flex-hygge
 weight: 2
-season: "2025/2026"
+season: "2026/2027"
 meta_title: "Flex-hygge – drop-in badminton i Ejbyhallen | Ejby Badminton"
 description: >-
   Drop-in badminton for voksne i Ejbyhallen onsdag kl. 18-19. Mød op når det
@@ -16,12 +16,13 @@ baner mellem de fremmødte, så alle får spilletid og en hyggelig snak på side
 ## Spilletid
 
 - Onsdag kl. 18.00-19.00 i Ejbyhallen
-- Opstart: 20. august 2025
-- Slut: 19. august 2026
+- Opstart: 19. august 2026
+- Slut: Onsdag 28. april 2027
 
 ## Sådan deltager du
 
 - Mød op i hallen kl. 18.00, så organiserer vi kampene på stedet.
+
 ## Økonomi
 
 - Årligt kontingent: **450 kr.**
@@ -29,8 +30,8 @@ baner mellem de fremmødte, så alle får spilletid og en hyggelig snak på side
 
 ## Kontakt
 
-- Georg — telefon [40 73 60 87](tel:+4540736087) / mail
-  [georgmand@hotmail.com](mailto:georgmand@hotmail.com)
+- Kamilla — telefon [25 31 83 36](tel:+4525318336) / mail
+  [kpedersen1210@gmail.com](mailto:kpedersen1210@gmail.com)
 
 ## Indmeldelse & betaling
 

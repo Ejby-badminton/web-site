@@ -39,4 +39,5 @@ npx --yes broken-link-checker "http://127.0.0.1:${PORT}" --recursive --filter-le
   --exclude "https://www.google.com/maps" \
   --exclude "https://maps.google.com" \
   --exclude "https://www.dgi.dk/badminton" \
-  --exclude "https://www.dgi.dk/idr%C3%A6t/badminton"
+  --exclude "https://www.dgi.dk/idr%C3%A6t/badminton" \
+  --exclude "https://badmintondenmark.tournamentsoftware.com"

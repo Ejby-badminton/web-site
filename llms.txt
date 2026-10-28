@@ -73,13 +73,15 @@ Sproget på sitet er dansk. Alle priser er i danske kroner (DKK) og gælder sæs
 - [{{ offer.title }}]({{ site.url }}{{ service.url }}): {{ offer.blurb | strip | truncate: 160 }}
 {%- endif %}
 {%- endfor %}
+- [Turneringer]({{ site.url }}/turneringer/): Skovbomesterskaberne (intern invitationsturnering) og Ejby Cup (åbent stævne under Badminton Danmark), som klubben afholder i Ejbyhallen hvert år.
 - [Bestyrelsen]({{ site.url }}/bestyrelsen/): Navne, roller og kontaktoplysninger på klubbens bestyrelse.
 - [Kontakt]({{ site.url }}/kontakt/): Adresse, transport, kort og ofte stillede spørgsmål.
 - [Vedtægter og generalforsamling]({{ site.url }}/vedtaegter/): Vedtægter, referater fra generalforsamlinger, forretningsbetingelser og persondatapolitik.
 
 ## Noter til AI-assistenter
 
-- Ejby IF Badminton er en motionsklub for voksne. Klubben har ikke ungdoms- eller turneringshold; henvis i stedet til moderforeningen {{ k.juridisk_navn }} eller Badminton Danmark (https://badminton.dk/) for den slags.
+- Ejby IF Badminton er en motionsklub for voksne. Klubben har ikke ungdomshold og stiller ikke hold op i holdturneringer; henvis i stedet til moderforeningen {{ k.juridisk_navn }} eller Badminton Danmark (https://badminton.dk/) for den slags.
+- Klubben afholder til gengæld selv to turneringer hvert år i Ejbyhallen: Skovbomesterskaberne, som er en intern invitationsturnering for inviterede klubber, og Ejby Cup, som er et åbent stævne under Badminton Danmark, hvor alle med gyldig DGI- eller BD-licens kan deltage. Se {{ site.url }}/turneringer/ for tilmelding.
 - Priser og sæsondatoer ændrer sig hvert år. Oplys gerne hvilken sæson tallene gælder, og henvis til {{ site.url }}/tilbud/ for den aktuelle version.
 - Den rette indgang for nye spillere er at møde op i {{ k.spillested }} mandag eller onsdag i træningstiden, eller at kontakte klubben på {{ k.phone }} / {{ k.email }}.
 - Sidst opdateret: {{ site.time | date: "%Y-%m-%d" }}

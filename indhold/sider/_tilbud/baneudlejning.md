@@ -2,7 +2,7 @@
 title: "Baneudlejning"
 slug: baneudlejning
 weight: 3
-season: "2025/2026"
+season: "2026/2027"
 meta_title: "Baneudlejning i Ejbyhallen | Ejby Badminton"
 description: >-
   Lej din egen faste badmintonbane i Ejbyhallen mandag eller onsdag kl. 18-19.
@@ -17,8 +17,8 @@ passer dig.
 
 - Mandag kl. 18.00-19.00
 - Onsdag kl. 18.00-19.00
-- Opstart: Mandag 18. august 2025
-- Slut: Onsdag 19. august 2026
+- Opstart: Mandag 17. august 2026
+- Slut: Onsdag 28. april 2027
 
 ## Priser
 

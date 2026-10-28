@@ -1,167 +1,148 @@
-# Arbejdsgang for Ejby IF Badminton (web-site)
+# CLAUDE.md — Ejby IF Badminton Website
 
-Statisk Jekyll-site for en frivilligt drevet badmintonklub. Hostet på **GitHub
-Pages**. Alt indhold er på **dansk** (`lang: da`) — skriv dansk i sider, UI-tekst
-og datafiler. Kodekommentarer er også dansk i dette repo.
+Static presentation site for Ejby IF Badminton built with Jekyll and hosted on GitHub Pages. All source content lives in this repo; `_site/` is generated output — never edit it directly.
 
-> Denne fil er den primære kilde for agenter. `.github/copilot-instructions.md`
-> peger herpå. Opdatér begge, hvis arbejdsgangen ændrer sig.
+## Project overview
 
-## 1. Test lokalt før du pusher
+- **Stack:** Jekyll (via `github-pages` gem), Bootstrap 5.3, SCSS, vanilla JS
+- **Language:** Danish (`lang: da`). All page copy and UI text should be in Danish. Comments in content and data files are Danish too; this file and the scripts are English.
+- **Hosting:** GitHub Pages (CNAME: `ejbyif-badminton.dk`). Cache-Control headers are managed by GitHub Pages and cannot be changed from this repo — performance work should focus on reducing bytes and using versioned assets.
+- **Plugin constraint:** Only gems bundled with `github-pages` are available. Do not add arbitrary Jekyll plugins. `jekyll-sitemap` is the only one enabled.
 
-Der skal **ikke** installeres Ruby. Alt kører i Docker via scripts i `scripts/`.
+## Key structure
+
+| Path | Purpose |
+|---|---|
+| `indhold/sider/*.md` | Pages (Markdown + front matter). Filename → URL unless `permalink` overrides. |
+| `indhold/sider/_tilbud/` | Jekyll collection — one Markdown file per offer (`slug` in front matter must match `tilbud.yml`). |
+| `indhold/data/` | YAML/JSON driving navigation and dynamic sections (see wiring below). |
+| `_layouts/` | Liquid page templates (`default`, `home`, `page`, `service`, `contact`, `services`). |
+| `_includes/` | Reusable snippets (header, footer, menus, CTA, structured data). |
+| `_sass/` | SCSS partials. Bootstrap 5 is imported selectively and customized via `_sass/_bootstrap-variables.scss`. |
+| `assets/css/style.scss` | Primary SCSS entrypoint (Jekyll front matter triggers compilation). |
+| `assets/js/scripts.js` | Minimal vanilla JS (hamburger toggle, etc.). |
+| `images/` | Logos, favicons, sponsor images. |
+| `scripts/` | Local build, serve, SEO check and link check. See **Local development**. |
+| `llms.txt`, `robots.txt` | Generated from `indhold/data/` — see **SEO and AI discoverability**. |
+
+## Content/data wiring
+
+**Data files are the source of truth. Never hardcode club facts in a page or template.** Address, phone, email, opening hours and prices live in `indhold/data/` and are read from there by the page HTML, the JSON-LD structured data *and* `llms.txt`. Writing a phone number or price directly into a page means HTML and markup eventually disagree, and contradictory club details hurt ranking in both Google and AI answers.
+
+| File | Holds | Read by |
+|---|---|---|
+| `kontakt.yml` | Name, address, phone, email, coordinates, opening hours, areas served, CVR | `call.html`, `structured-data.html`, `llms.txt`, `kontakt.md`, `tilbud.md` |
+| `tilbud.yml` | Offers: title, season, times, pricing, contacts | Home page, menus, `tilbud.md`, JSON-LD, `llms.txt` |
+| `faq.yml` | Questions and answers | `/kontakt/` **and** `FAQPage` markup |
+| `bestyrelse.yml` | Board members | `/bestyrelsen/`, `llms.txt` |
+| `menuer.yml` | Navigation and footer | Both menu includes, footer |
+| `seo.yml` | Analytics and verification IDs | `google-analytics.html`, `<head>` |
+| `sociale_medier.json` | Footer social icons | `social.html` |
+
+Two couplings must not break:
+
+- **Tilbud (offers) are dual-sourced.** Every `slug` in `tilbud.yml` must match the `slug` in a file under `indhold/sider/_tilbud/`. Templates look it up with `site.tilbud | where: "slug", offer.slug | first`. Without a match the offer disappears silently from the menu and home page.
+- **`price_min` / `price_max`** in `tilbud.yml` are machine-readable DKK prices used only for JSON-LD `Offer`. They must agree with the human-readable `pricing` text.
+- **Home page** uses the `tilbud` collection directly (`_layouts/home.html`); `_config.yml` sets `home.limit_services`.
+- **Board** — `bestyrelse.yml` auto-renders into `indhold/sider/bestyrelsen.md`.
+
+## Local development
+
+No Ruby install needed — the scripts run Jekyll in Docker on the same Ruby version as CI:
 
 ```bash
-./scripts/test.sh            # byg + SEO-tjek. Kør ALTID denne før commit.
-./scripts/test.sh --links    # samme, plus link-tjek (kræver netværk)
-./scripts/serve.sh           # live på http://127.0.0.1:4000
-./scripts/build.sh           # kun build → _site/
-./scripts/check-seo.mjs      # kun SEO-tjek (kræver et build først)
-./scripts/check-links.sh     # kun link-tjek (kræver et build først)
+./scripts/test.sh            # build + SEO check. ALWAYS run before committing.
+./scripts/test.sh --links    # same, plus link check (needs network)
+./scripts/serve.sh           # live reload on http://127.0.0.1:4000
+./scripts/build.sh           # build only → _site/
+node scripts/check-seo.mjs   # SEO check only (needs an existing build)
+./scripts/check-links.sh     # link check only (needs an existing build)
 ```
 
-Første kørsel henter `ruby:3.2` og installerer gems i en Docker-volume
-(`ejby-badminton-gems`); derefter tager et build ca. 8 sekunder.
+The first run pulls `ruby:3.2` and caches gems in a Docker volume (`ejby-badminton-gems`); after that a build takes about 8 seconds.
 
-`scripts/check-seo.mjs` er et regressionsnet mod de fejl, man **ikke** kan se i
-en browser: manglende eller duplikerede `<title>`, manglende meta description,
-ugyldig JSON-LD, `@id`-referencer der ikke kan opløses, urenderet Liquid i
-output, billeder uden `alt`, huller i brødkrummer, samt fejl i `robots.txt`,
-`llms.txt` og `sitemap.xml`. Den kører også i CI. **Fejl skal rettes — ikke
-undertrykkes.** Advarsler er vejledende.
+`scripts/check-seo.mjs` is a regression net for the failures you **cannot** see in a browser: missing or duplicate `<title>`, missing or duplicate meta descriptions, invalid JSON-LD, unresolvable `@id` references, unrendered Liquid in the output, images without `alt`, gaps in breadcrumb positions, and errors in `robots.txt`, `llms.txt` and `sitemap.xml`. It also runs in CI. **Fix the errors — do not suppress them.** Warnings are advisory.
 
-Ruby-versionen er pinnet til **3.2** i `ci.yml`, `pages.yml` og
-`scripts/_docker.sh` (nokogiri kræver det). Ændres én, skal alle fire ændres.
+Ruby is pinned to **3.2** in `ci.yml`, `pages.yml` and `scripts/_docker.sh` (nokogiri requires it). Change one, change all three.
 
-## 2. Hvor indholdet bor
+Without Docker you can still use `bundle install` and `bundle exec jekyll serve --livereload`. Production build:
 
-| Sti | Formål |
-| --- | --- |
-| `indhold/sider/*.md` | Sider. URL styres af `permalink`. |
-| `indhold/sider/_tilbud/` | Kollektion: én fil per tilbud. |
-| `indhold/data/` | YAML/JSON der driver menuer og dynamiske sektioner. |
-| `_layouts/`, `_includes/` | Liquid-skabeloner. |
-| `_sass/`, `assets/css/style.scss` | SCSS. Bootstrap 5.3.2 importeres selektivt. |
-| `_site/` | **Genereret. Redigér aldrig. Commit aldrig.** |
+```bash
+JEKYLL_ENV=production bundle exec jekyll build
+npx purgecss --config purgecss.config.cjs
+npx clean-css-cli -o _site/assets/css/style.css _site/assets/css/style.css
+```
 
-## 3. Data er source of truth — hardkod ikke fakta
+## SEO and AI discoverability
 
-Dette er den vigtigste regel i repoet. Klubbens fakta står **ét** sted og læses
-derfra af sider, strukturerede data og `llms.txt`. Skriver du en adresse, et
-telefonnummer eller en pris direkte i en side eller skabelon, opstår der før
-eller siden uenighed mellem HTML og JSON-LD — og modstridende oplysninger
-skader placeringen i både Google og AI-svar.
+The goal is that the club gets found — both in Google and when someone asks an AI assistant "where can I play badminton near Køge?".
 
-| Fil | Indeholder | Læses af |
-| --- | --- | --- |
-| `kontakt.yml` | Navn, adresse, telefon, mail, koordinater, åbningstider, områder, CVR | `call.html`, `structured-data.html`, `llms.txt`, `kontakt.md`, `tilbud.md` |
-| `tilbud.yml` | Tilbud: titel, priser, tider, kontaktpersoner | Forside, menuer, `tilbud.md`, JSON-LD, `llms.txt` |
-| `faq.yml` | Spørgsmål og svar | `/kontakt/` **og** `FAQPage`-markup |
-| `bestyrelse.yml` | Bestyrelsen | `/bestyrelsen/`, `llms.txt` |
-| `menuer.yml` | Navigation og footer | Begge menu-includes, footer |
-| `seo.yml` | Analytics- og verifikations-ID'er | `google-analytics.html`, `<head>` |
-
-To koblinger må ikke brydes:
-
-- Hvert `slug` i `tilbud.yml` **skal** matche `slug` i en fil under
-  `indhold/sider/_tilbud/`. Skabelonerne slår op med
-  `site.tilbud | where: "slug", offer.slug | first`. Uden match forsvinder
-  tilbuddet lydløst fra menu og forside.
-- `price_min` / `price_max` i `tilbud.yml` er maskinlæsbare priser i DKK til
-  JSON-LD. De skal stemme med den menneskelige tekst i `pricing`.
-
-## 4. Regler for søgemaskiner og AI-assistenter
-
-Formålet er, at klubben bliver fundet — både i Google og når en AI-assistent
-bliver spurgt "hvor kan man spille badminton i Køge?".
-
-**Hver ny side skal have** i front matter:
+**Every new page needs** in its front matter:
 
 ```yaml
-title: Kort sidenavn            # bliver <h1>
-meta_title: "..."               # valgfri; fuld <title>, ellers "title | Ejby Badminton"
-description: >-                 # 120-155 tegn, nævn sted og konkrete fakta
+title: Short page name          # becomes the <h1>
+meta_title: "..."               # optional; full <title>, else "title | Ejby Badminton"
+description: >-                 # unique, 120-155 chars, name the place and concrete facts
   ...
-permalink: "/min-side/"
+permalink: "/my-page/"
 ```
 
-- **Én `<h1>` per side.** Layoutet `page.html` udskriver selv `page.title` som
-  `<h1>` — start derfor *ikke* indholdet med `#` i de layouts.
-- **`description` skal være unik** og 120-155 tegn. Tjekket fanger duplikater.
-- Skriv **selvbærende** svar og afsnit. AI-assistenter citerer et afsnit uden
-  den omkringstående tekst, så skriv "i Ejbyhallen" fremfor "hos os".
-- Nævn konkrete tal, dage, priser og stednavne (Lille Skensved, Køge, Ejby).
-  Vage formuleringer som "kontakt os for pris" kan ikke citeres.
-- Sæt `noindex: true` + `sitemap: false` på sider der ikke skal i søgeresultater.
-- Sæt `show_faq: true` for at vise FAQ fra `faq.yml` **og** udsende
-  `FAQPage`-markup. Synlig tekst og markup skal altid være identisk — Google
-  straffer markup, der beskriver indhold brugeren ikke kan se.
+- **One `<h1>` per page.** The `page.html` and `service.html` layouts already output `page.title` as the `<h1>`, so do **not** start the content with `#` in those layouts.
+- **`description` must be unique** and 120-155 characters. The check catches duplicates and lengths.
+- Write **self-contained** paragraphs and answers. An AI assistant quotes a paragraph without its surrounding text, so write "i Ejbyhallen" rather than "hos os".
+- Name concrete numbers, days, prices and places (Lille Skensved, Køge, Ejby). Vague copy like "contact us for prices" cannot be quoted.
+- Set `noindex: true` and `sitemap: false` on pages that should stay out of search results.
+- Set `show_faq: true` to render the FAQ from `faq.yml` **and** emit `FAQPage` markup. Visible text and markup must stay identical — Google penalises markup describing content the user cannot see.
 
-**Genererede filer** (redigér aldrig output — ret i datafilerne):
+**Generated output — edit the data, never the output:**
 
-- `llms.txt` → `/llms.txt`. Maskinlæsbart resumé for AI-assistenter efter
-  konventionen på llmstxt.org. Bygges helt fra `indhold/data/`.
-- `robots.txt` → genereres med en Liquid-løkke. **Vigtigt:** en navngiven
-  crawler arver ikke regler fra `User-agent: *`, så hver gruppe skal selv
-  gentage sine `Disallow`-linjer. Løkken sikrer det; tilføj nye crawlere i
-  listen `agent_list`, ikke som en løs blok.
-- `_includes/structured-data.html` → ét JSON-LD `@graph` per side med noderne
-  `SportsClub`, `Place`/`SportsActivityLocation`, `WebSite`, `WebPage`,
-  `BreadcrumbList` og — hvor relevant — `FAQPage` og `Service`. Noderne kobles
-  med `@id`. Tilføjer du en node, så kontrollér at hver `@id`-reference peger på
-  en node i samme graf; ellers ignorerer Google den.
-- Udelukkede stier skal holdes i sync tre steder: `robots.txt` (`disallow`),
-  `_config.yml` (`sitemap: false` for `assets/docs`) og `check-seo.mjs`.
-  PDF-referater holdes ude, fordi de indeholder medlemsnavne.
+- `llms.txt` → `/llms.txt`. Machine-readable summary for AI assistants following the llmstxt.org convention. Built entirely from `indhold/data/`.
+- `robots.txt` → generated with a Liquid loop. **A named crawler does not inherit rules from `User-agent: *`**, so every group must repeat its own `Disallow` lines. The loop guarantees that; add new crawlers to the `agent_list` capture, not as a loose block.
+- `_includes/structured-data.html` → one JSON-LD `@graph` per page with `SportsClub`, `Place`/`SportsActivityLocation`, `WebSite`, `WebPage` and `BreadcrumbList`, plus `FAQPage` and `Service` where relevant. Nodes are linked by `@id`; if you add a node, make sure every `@id` reference resolves to a node in the same graph or Google ignores it.
+- Excluded paths must stay in sync in three places: `robots.txt` (`disallow`), `_config.yml` (`sitemap: false` for `assets/docs`) and `check-seo.mjs`. The general-assembly PDFs are excluded because they contain members' names.
 
-## 5. Statistik: hvor mange besøg får sitet?
+## Analytics — how the club sees its traffic
 
-Begge værktøjer er gratis og slået **fra** indtil ID'erne er udfyldt i
-`indhold/data/seo.yml` (filen indeholder trin-for-trin vejledning):
+Both tools are free and stay **off** until the IDs are filled into `indhold/data/seo.yml`, which contains step-by-step instructions:
 
-- `google_analytics_id` (`G-XXXXXXXXXX`) → Google Analytics 4: antal besøg og
-  hvilke sider der læses. Indlæses kun ved `JEKYLL_ENV=production`, så lokal
-  udvikling ikke forurener statistikken.
-- `google_site_verification` → Google Search Console: hvad folk **søgte på**,
-  før de fandt sitet, plus visninger og klik. Det vigtigste værktøj til at
-  vurdere, om SEO-arbejdet virker. Husk at indsende `/sitemap.xml` der.
-- `bing_site_verification` → Bing Webmaster Tools. Bing leverer også data til
-  ChatGPT-søgning.
+- `google_analytics_id` (`G-XXXXXXXXXX`) → Google Analytics 4: how many visits and which pages get read. Only loaded when `JEKYLL_ENV=production`, so local development does not pollute the statistics.
+- `google_site_verification` → Google Search Console: what people **searched for** before finding the site, plus impressions and clicks. The most useful tool for judging whether SEO work pays off. Submit `/sitemap.xml` there.
+- `bing_site_verification` → Bing Webmaster Tools. Bing also feeds ChatGPT search.
 
-## 6. Commit og deploy
+## Yearly: new season
 
-- PROD er det eneste miljø. **Commit og push** til `main` udløser deploy, med
-  mindre brugeren siger andet.
-- Kør `./scripts/test.sh` først. Små, fokuserede commits.
-- `ci.yml`: build → `check-seo.mjs` → link-tjek. `pages.yml`: build → purgecss →
-  minify → deploy.
-- Link-tjekket udelader `https://ejbyif-badminton.dk`, fordi hver sides
-  canonical peger på produktion. Uden den undtagelse ville **enhver ny side**
-  fejle i CI, indtil den var deployet.
-- Tilføjer du en ny CSS-klasse i et layout eller en include, så kontrollér
-  `purgecss.config.cjs`: klasser der kun optræder i JavaScript, kan blive
-  fjernet i produktionsbuildet.
+1. Update `season`, `times`, `pricing`, `price_min`, `price_max`, `signup` and `contacts` in `indhold/data/tilbud.yml`.
+2. Update the same figures in the body copy under `indhold/sider/_tilbud/`.
+3. Update prices and dates in the answers in `indhold/data/faq.yml`.
+4. Update season figures in `description` / `meta_title` on the affected pages.
+5. Run `./scripts/test.sh`. `llms.txt`, the JSON-LD and `/tilbud/` update themselves.
 
-## 7. Årligt: ny sæson
+Wrong prices are worse than no prices: AI assistants quote them as fact long after they change.
 
-1. Ret `season`, `times`, `pricing`, `price_min`, `price_max` og `signup` i
-   `indhold/data/tilbud.yml`.
-2. Ret de samme tal i brødteksten under `indhold/sider/_tilbud/`.
-3. Ret priser og datoer i svarene i `indhold/data/faq.yml`.
-4. Ret sæsontal i `description`/`meta_title` på de berørte sider.
-5. Kør `./scripts/test.sh`. `llms.txt`, JSON-LD og `/tilbud/` opdaterer sig selv.
+## CI/CD
 
-Forkerte priser er værre end ingen priser: de bliver citeret som fakta af
-AI-assistenter længe efter, de er ændret.
+- **CI** (`.github/workflows/ci.yml`) — on every push/PR to `main`: build, then `node scripts/check-seo.mjs`, then `npx broken-link-checker` recursively. When changing URLs or permalinks, update all links accordingly.
+- The link checker excludes `https://ejbyif-badminton.dk`, because every page's canonical points at production. Without that exclusion **any new page** fails CI until it is deployed.
+- **Deploy** (`.github/workflows/pages.yml`) — on push to `main`: builds, purges CSS, minifies, deploys to GitHub Pages.
+- **Dependabot** — opens weekly PRs for Bundler gems and GitHub Actions. Review and merge to stay patched.
 
-## 8. Lad være med
+## Commit and deploy conventions
 
-- Redigér eller commit `_site/`.
-- Tilføj Jekyll-plugins. Repoet bruger `github-pages`-gemmet, som kun tillader
-  en fast liste. `jekyll-sitemap` er den eneste aktive.
-- Hardkod adresse, telefon, mail eller priser i sider eller skabeloner.
-- Skriv i `llms.txt` eller `robots.txt` som om de var statiske filer.
-- Introducér nye design-primitiver. Brug de eksisterende tokens i
-  `_sass/_bootstrap-variables.scss`.
-- Ændr `Cache-Control` o.l. — GitHub Pages styrer response headers.
-  Performance-arbejde skal reducere bytes.
+- Changes pushed to `main` automatically trigger CI and deploy to production.
+- Prefer small, focused commits.
+- Always run `./scripts/test.sh` before pushing.
+- Never commit anything under `_site/` or generated artifacts.
+
+## Styling conventions
+
+- Keep changes within existing SCSS tokens/variables (`_sass/_bootstrap-variables.scss`).
+- Avoid introducing new design primitives unless there is already a pattern in the repo for it.
+- PurgeCSS safelist is in `purgecss.config.cjs` — add dynamic/JS-toggled class patterns there if needed, or they get stripped from the production build.
+
+## Don'ts
+
+- Don't edit `_site/` or commit generated artifacts.
+- Don't add Jekyll plugins not included in the `github-pages` gem bundle.
+- Don't hardcode address, phone, email or prices in pages or templates — use `indhold/data/`.
+- Don't hand-edit `llms.txt` or `robots.txt` as if they were static files; they are Liquid templates.
+- Don't touch `_config.yml` `sass.style` — it is set to `compressed` for production.
