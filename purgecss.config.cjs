@@ -17,6 +17,12 @@ module.exports = {
       "open",
       "has-dropdown",
       "visually-hidden",
+      // Tilføjes KUN af assets/js/scripts.js, så PurgeCSS kan ikke se dem i
+      // HTML'en. Uden disse forsvinder scroll-låsen bag mobilmenuen og
+      // hamburger-animationen, når menuen åbnes.
+      "is-active",
+      "lock-scroll",
+      "is-closed",
     ],
     greedy: [
       /^page-/, 

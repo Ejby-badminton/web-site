@@ -4,8 +4,12 @@
     {% for item in mainmenu %}
     {% if item.dropdown == "tilbud" and site.data.tilbud %}
     <li class="has-dropdown {% if page.collection == "tilbud" %}active{% endif %}">
-      <button class="main-menu__toggle" type="button">{{ item.name }}</button>
-      <ul class="main-menu__dropdown">
+      <button
+        class="main-menu__toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="main-menu-dropdown-{{ forloop.index }}">{{ item.name }}</button>
+      <ul class="main-menu__dropdown" id="main-menu-dropdown-{{ forloop.index }}">
         {% if item.url %}
         <li class="{% if item.url == page.url %}active{% endif %}">
           <a href="{{ item.url | relative_url }}">
@@ -28,8 +32,12 @@
     {% elsif item.children %}
     {% assign child_active = item.children | where: "url", page.url | first %}
     <li class="has-dropdown {% if child_active %}active{% endif %}">
-      <button class="main-menu__toggle" type="button">{{ item.name }}</button>
-      <ul class="main-menu__dropdown">
+      <button
+        class="main-menu__toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="main-menu-dropdown-{{ forloop.index }}">{{ item.name }}</button>
+      <ul class="main-menu__dropdown" id="main-menu-dropdown-{{ forloop.index }}">
         {% for child in item.children %}
         <li>
           <a href="{{ child.url | relative_url }}">

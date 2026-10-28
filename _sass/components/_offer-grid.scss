@@ -78,6 +78,14 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+
+  // Kortene ligger inde i .content, hvor "ul { list-style: disc }" ellers
+  // vinder på specificitet og giver punkttegn og indrykning. Værdien sættes
+  // derfor på li'en, som arver fra ul'en — samme greb som i _board.scss.
+  li {
+    list-style: none;
+    margin-left: 0;
+  }
 }
 
 .offer-card__label {

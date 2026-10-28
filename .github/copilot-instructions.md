@@ -48,6 +48,13 @@ Front matter skal have `title`, en **unik** `description` på 120-155 tegn og
 `permalink`. Én `<h1>` per side. Skriv selvbærende afsnit med konkrete tal og
 stednavne — AI-assistenter citerer et afsnit uden den omkringstående tekst.
 
+## CSS purging
+
+Production builds run `scripts/optimize-css.sh` (PurgeCSS + clean-css), locally and in
+the deploy. If you add a class that **only JavaScript applies**, add it to
+`safelist.standard` in `purgecss.config.cjs` — PurgeCSS scans rendered HTML and cannot
+see it, so the rule gets stripped and the behaviour breaks only in production.
+
 ## Deploy
 
 PROD er det eneste miljø. Push til `main` deployer. Commit og push, med mindre

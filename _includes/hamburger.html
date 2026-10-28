@@ -1,4 +1,15 @@
-<button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button" aria-label="Mobile Menu">
+{%- comment -%}
+  aria-expanded holdes opdateret af assets/js/scripts.js, så skærmlæsere kan
+  høre om menuen er åben. aria-label er på dansk, fordi sitet er lang="da" —
+  en engelsk label bliver læst op med dansk udtale.
+{%- endcomment -%}
+<button
+  id="toggle-main-menu-mobile"
+  class="hamburger hamburger--slider"
+  type="button"
+  aria-label="Menu"
+  aria-expanded="false"
+  aria-controls="main-menu-mobile">
   <span class="hamburger-box">
     <span class="hamburger-inner"></span>
   </span>

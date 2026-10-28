@@ -49,11 +49,25 @@
             font-size: 0.75rem;
           }
         }
+        // .open sættes af assets/js/scripts.js, så dropdownen også kan
+        // åbnes med klik og berøring. :hover og :focus-within dækker fortsat
+        // mus og tastatur uden JavaScript.
         &:hover .main-menu__dropdown,
-        &:focus-within .main-menu__dropdown {
+        &:focus-within .main-menu__dropdown,
+        &.open .main-menu__dropdown {
           opacity: 1;
           visibility: visible;
           transform: translateY(0);
+        }
+
+        // Escape lukker dropdownen. Fokus sendes tilbage til knappen, som
+        // ligger inde i .has-dropdown og derfor ville holde :focus-within
+        // aktiv — .is-closed vinder på specificitet og lukker alligevel.
+        // Fjernes igen af scripts.js, når musen eller fokus forlader menuen.
+        &.is-closed .main-menu__dropdown {
+          opacity: 0;
+          visibility: hidden;
+          transform: translateY(10px);
         }
       }
     }

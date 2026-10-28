@@ -11,7 +11,9 @@ if [ ! -d _site ]; then
   exit 1
 fi
 
-npx --yes http-server _site -p "$PORT" -s >/tmp/ejby-http-server.log 2>&1 &
+# -c-1 slår cache fra: ellers kan tjekket køre mod gammel CSS/JS fra en
+# tidligere kørsel og give et misvisende resultat.
+npx --yes http-server _site -p "$PORT" -s -c-1 >/tmp/ejby-http-server.log 2>&1 &
 SERVER_PID=$!
 trap 'kill $SERVER_PID 2>/dev/null || true' EXIT
 

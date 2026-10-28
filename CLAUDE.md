@@ -65,6 +65,14 @@ The first run pulls `ruby:3.2` and caches gems in a Docker volume (`ejby-badmint
 
 Ruby is pinned to **3.2** in `ci.yml`, `pages.yml` and `scripts/_docker.sh` (nokogiri requires it). Change one, change all three.
 
+### CSS is purged on production builds
+
+`scripts/optimize-css.sh` runs PurgeCSS and clean-css, and is called both by `scripts/build.sh` (only when `JEKYLL_ENV=production`, which `scripts/test.sh` sets) and by the deploy workflow — so what you test locally is what ships. It takes the stylesheet from ~156 KB to ~53 KB.
+
+**If you add a class that only JavaScript applies, add it to `safelist.standard` in `purgecss.config.cjs`** — PurgeCSS scans the rendered HTML and cannot see it. `lock-scroll`, `is-active` and `is-closed` are there for this reason; `lock-scroll` was missing and would have silently broken the mobile menu's scroll lock the moment purging started working.
+
+The script fails the build if the CSS did not shrink (the purge step silently did nothing for months before October 2026) or if a known-needed selector disappeared. Extend `REQUIRED_SELECTORS` when you add a component that depends on a JS-applied class.
+
 Without Docker you can still use `bundle install` and `bundle exec jekyll serve --livereload`. Production build:
 
 ```bash
@@ -145,4 +153,5 @@ Wrong prices are worse than no prices: AI assistants quote them as fact long aft
 - Don't add Jekyll plugins not included in the `github-pages` gem bundle.
 - Don't hardcode address, phone, email or prices in pages or templates — use `indhold/data/`.
 - Don't hand-edit `llms.txt` or `robots.txt` as if they were static files; they are Liquid templates.
+- Don't add a JS-toggled class without safelisting it in `purgecss.config.cjs`.
 - Don't touch `_config.yml` `sass.style` — it is set to `compressed` for production.
