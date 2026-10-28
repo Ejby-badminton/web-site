@@ -3,6 +3,10 @@ title: "Flex-hygge"
 slug: flex-hygge
 weight: 2
 season: "2025/2026"
+meta_title: "Flex-hygge – drop-in badminton i Ejbyhallen | Ejby Badminton"
+description: >-
+  Drop-in badminton for voksne i Ejbyhallen onsdag kl. 18-19. Mød op når det
+  passer dig. 450 kr. årligt plus 25 kr. pr. gang inkl. bolde.
 ---
 
 Flex-hygge er et uformelt fællesskab for voksne, der vil have badminton på egne præmisser.

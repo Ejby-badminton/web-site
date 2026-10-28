@@ -4,6 +4,9 @@ main:
     weight: 1
   - name: "Tilbud"
     dropdown: "tilbud"
+    # url giver dropdownen en forside ("Alle tilbud"), som også er målet
+    # for brødkrummer og llms.txt.
+    url: "/tilbud/"
     weight: 2
   - name: "Bestyrelsen"
     url: "/bestyrelsen/"
@@ -22,12 +25,15 @@ footer:
   - name: "Forside"
     url: "/"
     weight: 1
+  - name: "Tilbud"
+    url: "/tilbud/"
+    weight: 2
   - name: "Kontakt"
     url: "/kontakt/"
-    weight: 2
+    weight: 3
   - name: "Bestyrelsen"
     url: "/bestyrelsen/"
-    weight: 3
+    weight: 4
   - name: "Vedtægter"
     url: "/vedtaegter/"
     weight: 5

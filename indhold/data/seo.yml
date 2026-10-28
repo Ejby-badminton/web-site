@@ -1,3 +1,43 @@
+# ---------------------------------------------------------------------------
+# SEO, statistik og verifikation
+#
+# SÅDAN SER KLUBBEN HVOR MANGE BESØG SITET FÅR
+#
+# Der er to forskellige værktøjer, og klubben bør have begge — de svarer på
+# hver sit spørgsmål. Begge er gratis.
+#
+# 1) Google Analytics 4  →  "hvor mange besøgte sitet, og hvad læste de?"
+#    - Opret en gratis konto på https://analytics.google.com
+#    - Opret en "Property" for ejbyif-badminton.dk, vælg en "Web" data stream
+#    - Kopiér måle-ID'et (det ser ud som G-XXXXXXXXXX) ind i
+#      google_analytics_id nedenfor, commit og push.
+#    - Statistik vises KUN når sitet er bygget med JEKYLL_ENV=production
+#      (altså det rigtige site, ikke når man kører lokalt).
+#
+# 2) Google Search Console  →  "hvad søgte folk på, før de fandt os?"
+#    Dette er det vigtigste værktøj for at forstå, om vi bliver fundet.
+#    Det viser visninger, klik og den præcise søgetekst folk brugte.
+#    - Gå til https://search.google.com/search-console
+#    - Tilføj ejbyif-badminton.dk, vælg verifikation via "HTML tag"
+#    - Kopiér KUN indholdet af content="..." ind i
+#      google_site_verification nedenfor, commit og push, og tryk Verify.
+#    - Indsend derefter sitemappet: https://ejbyif-badminton.dk/sitemap.xml
+#
+# Begge felter må gerne stå tomme — så udelades koden helt fra sitet.
+# ---------------------------------------------------------------------------
+
+# Google Analytics 4 måle-ID, format "G-XXXXXXXXXX". Tom = ingen statistik.
 google_analytics_id: ""
+
+# Google Search Console verifikation (kun selve koden, ikke hele HTML-tagget).
+google_site_verification: ""
+
+# Bing Webmaster Tools verifikation. Bing leverer også data til ChatGPT-søgning,
+# så det er værd at tilmelde: https://www.bing.com/webmasters
+bing_site_verification: ""
+
+# Vises i sidefoden sammen med CVR/P-nr.
+copyright_text: "© Ejby IF Badminton"
+
 meta_twitter_site: ""
 meta_twitter_creator: ""

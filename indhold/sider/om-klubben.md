@@ -1,7 +1,9 @@
 ---
 title: Om klubben
 layout: page
-description: Om Ejby IF Badminton
+description: >-
+  Frivilligt drevet badmintonklub i Ejbyhallen, Skovvang 4, Lille Skensved.
+  Læs om klubbens værdier, de 9 baner og aktiviteterne gennem sæsonen.
 bodyClass: page-about
 permalink: "/om-klubben/"
 ---

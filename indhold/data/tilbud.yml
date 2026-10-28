@@ -1,6 +1,14 @@
+# Tilbud (offers)
+#
+# price_min / price_max er maskinlæsbare priser i DKK. De bruges KUN til
+# JSON-LD (schema.org Offer), så Google og AI-assistenter kan vise pris
+# direkte i svar. Teksten i "pricing" er det brugeren ser — hold de to i sync.
+
 - slug: senior-motion
   title: "Senior Motion"
   season: "2025/2026"
+  price_min: 1100
+  price_max: 1700
   blurb: >-
     Motionistafdelingen samler godt 30 badmintonentusiaster på tværs af niveauer.
     Vi spiller to gange om ugen, hvor tempoet er hyggeligt men engageret,
@@ -19,6 +27,8 @@
 - slug: flex-hygge
   title: "Flex-hygge Badminton"
   season: "2025/2026"
+  price_min: 450
+  price_max: 450
   blurb: >-
     Et fleksibelt voksenhold hvor du blot møder op, når det passer dig. Vi
     fordeler baner blandt de fremmødte, så alle får spilletid og et socialt
@@ -37,6 +47,8 @@
 - slug: baneudlejning
   title: "Baneudlejning"
   season: "2025/2026"
+  price_min: 800
+  price_max: 1600
   blurb: >-
     Lej din egen bane, hvis du vil spille med din faste makker eller familie. Vi
     tilbyder faste tidspunkter i hallen med opstart samme uge som resten af

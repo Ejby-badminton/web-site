@@ -3,6 +3,10 @@ title: "Senior Motion"
 slug: senior-motion
 weight: 1
 season: "2025/2026"
+meta_title: "Senior Motion – motionsbadminton i Ejbyhallen | Ejby Badminton"
+description: >-
+  Motionsbadminton for voksne i Ejbyhallen mandag og onsdag kl. 19-21. Op til
+  3 gratis prøvetimer, og 1.100-1.700 kr. for sæsonen inkl. bolde.
 ---
 
 Senior Motion er for dig, der gerne vil have sved på panden i et afslappet og

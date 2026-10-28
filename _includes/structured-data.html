@@ -1,58 +1,290 @@
+{%- comment -%}
+  JSON-LD structured data (schema.org) som ét @graph.
+
+  Hvorfor et @graph: Google og AI-assistenter (ChatGPT, Claude, Perplexity,
+  Gemini) kobler noder sammen via @id. Når tilbud, FAQ og spillested peger på
+  samme klub-node, forstår de at det ER samme klub — i stedet for løsrevne
+  fragmenter. Alle fakta kommer fra indhold/data/, så der kun er ét sted at
+  rette dem.
+
+  Noder: klubben, Ejbyhallen (spillested), websitet, den aktuelle side,
+  brødkrummer, samt FAQ / tilbud hvor det er relevant.
+{%- endcomment -%}
+{%- assign k = site.data.kontakt -%}
+{%- assign klub_navn = "Ejby IF Badminton" -%}
+{%- assign modified = page.updated | default: site.time -%}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SportsClub",
-  "name": "Ejby IF Badminton",
-  "alternateName": "Ejby Badminton",
-  "url": "{{ site.url }}",
-  "logo": "{{ site.url }}{{ site.logo.desktop }}",
-  "image": "{{ site.url }}{{ site.logo.desktop }}",
-  "description": "{{ site.description }}",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Skovvang 4",
-    "addressLocality": "Lille Skensved",
-    "postalCode": "4623",
-    "addressCountry": "DK"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 55.49282,
-    "longitude": 12.06448
-  },
-  "telephone": "+4540382795",
-  "email": "badminton@ejbyif.dk",
-  {% if site.data.kontakt.cvr != blank %}
-  "taxID": "{{ site.data.kontakt.cvr }}",
-  {% endif %}
-  {% if site.data.kontakt.pnr != blank %}
-  "identifier": {
-    "@type": "PropertyValue",
-    "name": "P-nr.",
-    "value": "{{ site.data.kontakt.pnr }}"
-  },
-  {% endif %}
-  "sameAs": [
-    "https://www.facebook.com/Ejbyif"
-  ],
-  "sport": "Badminton",
-  "memberOf": {
-    "@type": "SportsOrganization",
-    "name": "Ejby IF"
-  },
-  "openingHoursSpecification": [
+  "@graph": [
     {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": "Monday",
-      "opens": "18:00",
-      "closes": "21:00"
+      "@type": "SportsClub",
+      "@id": "{{ site.url }}/#klub",
+      "name": {{ klub_navn | jsonify }},
+      "alternateName": ["Ejby Badminton", "Ejby Badmintonklub", "Badminton i Ejby"],
+      "url": "{{ site.url }}/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ site.url }}{{ site.logo.desktop }}",
+        "width": {{ site.logo.desktop_width }},
+        "height": {{ site.logo.desktop_height }}
+      },
+      "image": "{{ site.url }}{{ site.logo.desktop }}",
+      "description": {{ site.description | jsonify }},
+      "sport": "Badminton",
+      "knowsLanguage": "da-DK",
+      "isAccessibleForFree": false,
+      "publicAccess": true,
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": {{ k.vej | jsonify }},
+        "addressLocality": {{ k.by | jsonify }},
+        "postalCode": {{ k.postnr | jsonify }},
+        "addressRegion": "Region Sjælland",
+        "addressCountry": {{ k.land | jsonify }}
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": {{ k.latitude }},
+        "longitude": {{ k.longitude }}
+      },
+      "telephone": {{ k.phone | jsonify }},
+      "email": {{ k.email | jsonify }},
+      {%- if k.cvr != blank %}
+      "taxID": {{ k.cvr | jsonify }},
+      {%- endif %}
+      {%- if k.pnr != blank %}
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "P-nr.",
+        "value": {{ k.pnr | jsonify }}
+      },
+      {%- endif %}
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Medlemskab og prøvetimer",
+        "telephone": {{ k.phone | jsonify }},
+        "email": {{ k.email | jsonify }},
+        "availableLanguage": ["da", "en"]
+      },
+      "areaServed": [
+        {%- for omraade in k.omraader %}
+        {
+          "@type": "Place",
+          "name": {{ omraade | jsonify }}
+        }{% unless forloop.last %},{% endunless %}
+        {%- endfor %}
+      ],
+      "sameAs": {{ k.profiler | jsonify }},
+      "location": { "@id": "{{ site.url }}/#ejbyhallen" },
+      "memberOf": {
+        "@type": "SportsOrganization",
+        "name": {{ k.juridisk_navn | jsonify }},
+        "url": "https://www.ejbyif.dk/"
+      },
+      "openingHoursSpecification": [
+        {%- for tid in k.aabningstider %}
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "https://schema.org/{{ tid.dag }}",
+          "opens": {{ tid.fra | jsonify }},
+          "closes": {{ tid.til | jsonify }}
+        }{% unless forloop.last %},{% endunless %}
+        {%- endfor %}
+      ],
+      {%- if site.data.tilbud %}
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Badmintontilbud i Ejbyhallen",
+        "itemListElement": [
+          {%- for offer in site.data.tilbud %}
+          {%- assign service = site.tilbud | where: "slug", offer.slug | first %}
+          {
+            "@type": "Offer",
+            "name": {{ offer.title | jsonify }},
+            "description": {{ offer.blurb | strip | jsonify }},
+            {%- if service %}
+            "url": "{{ site.url }}{{ service.url }}",
+            {%- endif %}
+            {%- if offer.price_min %}
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "priceCurrency": "DKK",
+              "minPrice": {{ offer.price_min }},
+              "maxPrice": {{ offer.price_max | default: offer.price_min }}
+            },
+            {%- endif %}
+            "availability": "https://schema.org/InStock",
+            "areaServed": {{ k.by | jsonify }},
+            "category": "Badminton",
+            "seller": { "@id": "{{ site.url }}/#klub" }
+          }{% unless forloop.last %},{% endunless %}
+          {%- endfor %}
+        ]
+      },
+      {%- endif %}
+      "priceRange": "450-1700 DKK pr. sæson"
     },
     {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": "Wednesday",
-      "opens": "18:00",
-      "closes": "21:00"
+      "@type": ["Place", "SportsActivityLocation"],
+      "@id": "{{ site.url }}/#ejbyhallen",
+      "name": {{ k.spillested | jsonify }},
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": {{ k.vej | jsonify }},
+        "addressLocality": {{ k.by | jsonify }},
+        "postalCode": {{ k.postnr | jsonify }},
+        "addressCountry": {{ k.land | jsonify }}
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": {{ k.latitude }},
+        "longitude": {{ k.longitude }}
+      },
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "9 badmintonbaner",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Omklædningsrum",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Tilskuerrækker",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Gratis parkering",
+          "value": true
+        }
+      ],
+      "publicAccess": true,
+      "isAccessibleForFree": false
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.url }}/#website",
+      "url": "{{ site.url }}/",
+      "name": {{ site.title | jsonify }},
+      "description": {{ site.description | jsonify }},
+      "inLanguage": "da-DK",
+      "publisher": { "@id": "{{ site.url }}/#klub" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "{{ page.url | absolute_url }}#webpage",
+      "url": "{{ page.url | absolute_url }}",
+      "name": {{ page.title | default: site.title | jsonify }},
+      "description": {{ page.description | default: site.description | jsonify }},
+      "inLanguage": "da-DK",
+      "isPartOf": { "@id": "{{ site.url }}/#website" },
+      "about": { "@id": "{{ site.url }}/#klub" },
+      "dateModified": "{{ modified | date_to_xmlschema }}"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "{{ page.url | absolute_url }}#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Forside",
+          "item": "{{ site.url }}/"
+        }
+        {%- if page.url != "/" -%}
+        {%- if page.collection == "tilbud" -%}
+        ,{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tilbud",
+          "item": "{{ site.url }}/tilbud/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": {{ page.title | jsonify }},
+          "item": "{{ page.url | absolute_url }}"
+        }
+        {%- else -%}
+        ,{
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ page.title | default: site.title | jsonify }},
+          "item": "{{ page.url | absolute_url }}"
+        }
+        {%- endif -%}
+        {%- endif %}
+      ]
     }
+    {%- comment -%} FAQ: kun på sider der sætter show_faq i front matter. {%- endcomment -%}
+    {%- if page.show_faq and site.data.faq %}
+    ,{
+      "@type": "FAQPage",
+      "@id": "{{ page.url | absolute_url }}#faq",
+      "isPartOf": { "@id": "{{ page.url | absolute_url }}#webpage" },
+      "mainEntity": [
+        {%- for item in site.data.faq %}
+        {
+          "@type": "Question",
+          "name": {{ item.q | strip | jsonify }},
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": {{ item.a | strip | jsonify }}
+          }
+        }{% unless forloop.last %},{% endunless %}
+        {%- endfor %}
+      ]
+    }
+    {%- endif %}
+    {%- comment -%} Tilbudssider får deres egen Service-node med pris. {%- endcomment -%}
+    {%- if page.collection == "tilbud" %}
+    {%- assign offer = site.data.tilbud | where: "slug", page.slug | first %}
+    {%- if offer %}
+    ,{
+      "@type": "Service",
+      "@id": "{{ page.url | absolute_url }}#tilbud",
+      "serviceType": "Badminton",
+      "name": {{ offer.title | jsonify }},
+      "description": {{ offer.blurb | strip | jsonify }},
+      "url": "{{ page.url | absolute_url }}",
+      "provider": { "@id": "{{ site.url }}/#klub" },
+      "areaServed": [
+        {%- for omraade in k.omraader %}
+        {
+          "@type": "Place",
+          "name": {{ omraade | jsonify }}
+        }{% unless forloop.last %},{% endunless %}
+        {%- endfor %}
+      ],
+      "availableAtOrFrom": { "@id": "{{ site.url }}/#ejbyhallen" },
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Voksne motionsspillere"
+      }
+      {%- if offer.price_min %}
+      ,"offers": {
+        "@type": "Offer",
+        "priceCurrency": "DKK",
+        "price": {{ offer.price_min }},
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "DKK",
+          "minPrice": {{ offer.price_min }},
+          "maxPrice": {{ offer.price_max | default: offer.price_min }},
+          "description": {{ offer.pricing | join: " " | strip | jsonify }}
+        },
+        "availability": "https://schema.org/InStock",
+        "url": "{{ page.url | absolute_url }}"
+      }
+      {%- endif %}
+    }
+    {%- endif %}
+    {%- endif %}
   ]
 }
 </script>

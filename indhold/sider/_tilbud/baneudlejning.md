@@ -3,6 +3,10 @@ title: "Baneudlejning"
 slug: baneudlejning
 weight: 3
 season: "2025/2026"
+meta_title: "Baneudlejning i Ejbyhallen | Ejby Badminton"
+description: >-
+  Lej din egen faste badmintonbane i Ejbyhallen mandag eller onsdag kl. 18-19.
+  Singlebane 800 kr. og doublebane 1.600 kr. for sæsonen.
 ---
 
 Vil du hellere spille med din faste makker eller familie?

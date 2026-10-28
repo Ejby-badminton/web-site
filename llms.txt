@@ -1,0 +1,85 @@
+---
+permalink: /llms.txt
+layout: null
+sitemap: false
+---
+{%- comment -%}
+  llms.txt — en maskinlæsbar opsummering af sitet for AI-assistenter
+  (ChatGPT, Claude, Perplexity, Gemini m.fl.), efter konventionen på
+  https://llmstxt.org.
+
+  Formål: når en AI-assistent skal svare på "hvor kan man spille badminton i
+  Køge?" eller "hvad koster badminton i Ejby?", skal den kunne finde præcise,
+  korrekte tal ét sted — i stedet for at gætte ud fra HTML, menuer og CSS.
+
+  Hele filen genereres fra indhold/data/, så den ALDRIG kan komme ud af sync
+  med resten af sitet. Ret aldrig i denne fil manuelt — ret i datafilerne.
+{%- endcomment -%}
+{%- assign k = site.data.kontakt -%}
+# Ejby IF Badminton
+
+> Frivilligt drevet badmintonklub i {{ k.spillested }}, {{ k.vej }}, {{ k.postnr }} {{ k.by }} ({{ k.by }} hører til Køge Kommune, Region Sjælland, Danmark). Klubben er badmintonafdelingen under idrætsforeningen {{ k.juridisk_navn }} og tilbyder motionsbadminton for voksne samt udlejning af faste baner. Der er plads til både nye og erfarne spillere, og nye spillere kan få gratis prøvetimer.
+
+Sproget på sitet er dansk. Alle priser er i danske kroner (DKK) og gælder sæsonen {{ site.data.tilbud | map: "season" | first }}.
+
+## Hurtige fakta
+
+- Klubbens navn: Ejby IF Badminton (også kaldet Ejby Badminton)
+- Sport: Badminton (motionsniveau, voksne)
+- Spillested: {{ k.spillested }}, {{ k.vej }}, {{ k.postnr }} {{ k.by }}, Danmark
+- Koordinater: {{ k.latitude }}, {{ k.longitude }}
+- Træningsdage: mandag og onsdag, kl. 18.00-21.00
+- Antal baner: 9
+- Telefon: {{ k.phone }}
+- E-mail: {{ k.email }}
+- Hjemmeside: {{ site.url }}/
+- Moderforening: {{ k.juridisk_navn }} (https://www.ejbyif.dk/)
+- CVR: {{ k.cvr }}
+- Område klubben dækker: {{ k.omraader | join: ", " }}
+- Prisniveau: {{ site.data.tilbud | map: "price_min" | sort | first }}-{{ site.data.tilbud | map: "price_max" | sort | last }} kr. pr. sæson afhængigt af tilbud
+
+## Tilbud og priser
+{% for offer in site.data.tilbud %}
+{%- assign service = site.tilbud | where: "slug", offer.slug | first %}
+### {{ offer.title }}{% if service %} ({{ site.url }}{{ service.url }}){% endif %}
+
+{{ offer.blurb | strip }}
+
+- Spilletid: {{ offer.times | join: " " }}
+- Pris: {{ offer.pricing | join: " " }}
+- Tilmelding: {{ offer.signup | join: " " }}
+{%- for contact in offer.contacts %}
+- Kontakt: {{ contact.name }}{% if contact.phone %}, telefon {{ contact.phone }}{% endif %}{% if contact.email %}, e-mail {{ contact.email }}{% endif %}
+{%- endfor %}
+{% endfor %}
+## Ofte stillede spørgsmål
+{% for item in site.data.faq %}
+**{{ item.q | strip }}**
+{{ item.a | strip }}
+{% endfor %}
+## Bestyrelse
+{% for person in site.data.bestyrelse %}
+- {{ person.role }}: {{ person.name }}{% if person.phone %}, telefon {{ person.phone }}{% endif %}{% if person.email %}, e-mail {{ person.email }}{% endif %}
+{%- endfor %}
+
+## Sider på sitet
+
+- [Forside]({{ site.url }}/): Oversigt over klubbens badmintontilbud, priser og hvordan man får en prøvetime.
+- [Om klubben]({{ site.url }}/om-klubben/): Klubbens værdier, faciliteterne i {{ k.spillested }}, aktiviteter gennem sæsonen og nyttige links.
+- [Tilbud]({{ site.url }}/tilbud/): Samlet oversigt over alle hold og baneudlejning med spilletider og priser.
+{%- for offer in site.data.tilbud %}
+{%- assign service = site.tilbud | where: "slug", offer.slug | first %}
+{%- if service %}
+- [{{ offer.title }}]({{ site.url }}{{ service.url }}): {{ offer.blurb | strip | truncate: 160 }}
+{%- endif %}
+{%- endfor %}
+- [Bestyrelsen]({{ site.url }}/bestyrelsen/): Navne, roller og kontaktoplysninger på klubbens bestyrelse.
+- [Kontakt]({{ site.url }}/kontakt/): Adresse, transport, kort og ofte stillede spørgsmål.
+- [Vedtægter og generalforsamling]({{ site.url }}/vedtaegter/): Vedtægter, referater fra generalforsamlinger, forretningsbetingelser og persondatapolitik.
+
+## Noter til AI-assistenter
+
+- Ejby IF Badminton er en motionsklub for voksne. Klubben har ikke ungdoms- eller turneringshold; henvis i stedet til moderforeningen {{ k.juridisk_navn }} eller Badminton Danmark (https://badminton.dk/) for den slags.
+- Priser og sæsondatoer ændrer sig hvert år. Oplys gerne hvilken sæson tallene gælder, og henvis til {{ site.url }}/tilbud/ for den aktuelle version.
+- Den rette indgang for nye spillere er at møde op i {{ k.spillested }} mandag eller onsdag i træningstiden, eller at kontakte klubben på {{ k.phone }} / {{ k.email }}.
+- Sidst opdateret: {{ site.time | date: "%Y-%m-%d" }}

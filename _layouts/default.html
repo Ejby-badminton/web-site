@@ -3,37 +3,84 @@
 
 <head>
   <meta charset="utf-8">
-  <title>{% if page.title %}{{page.title}}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  {%- comment -%}
+    Titel: søgemaskiner og AI-assistenter bruger <title> som den primære
+    overskrift. Sidens navn alene ("Kontakt") siger intet om hvilken klub det
+    handler om, så klubnavnet hænges altid på. Forsiden bruger sin egen
+    fulde titel i stedet for at gentage navnet to gange.
+  {%- endcomment -%}
+  {%- assign meta_description = page.description | default: site.description -%}
+  {%- assign meta_title = page.meta_title | default: page.title | default: site.title -%}
+  {%- assign meta_image = page.image | default: site.logo.desktop -%}
+  {%- if page.url == "/" -%}
+    {%- assign full_title = site.title | append: " – Badminton i Ejbyhallen, Lille Skensved" -%}
+  {%- elsif page.meta_title -%}
+    {%- assign full_title = page.meta_title -%}
+  {%- else -%}
+    {%- assign full_title = meta_title | append: " | " | append: site.title -%}
+  {%- endif -%}
+  <title>{{ full_title | escape }}</title>
+
   <link rel="icon" type="image/png" href="{{ '/images/favicon-32x32.png' | relative_url }}">
   <link rel="canonical" href="{{ page.url | absolute_url }}" />
+
   <!-- Self host font -->
   <link rel="preload" href="{{ '/assets/fonts/playfair-display.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="{{ '/assets/css/style.css' | relative_url }}" as="style">
   <link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet">
-  
-  {% assign meta_description = page.description | default: site.description %}
-  {% assign meta_title = page.meta_title | default: page.title | default: site.title %}
-  {% assign meta_image = page.image | default: site.logo.desktop %}
-  
-  <meta name="description" content="{{ meta_description }}" />
-  
+
+  <meta name="description" content="{{ meta_description | strip | escape }}" />
+
+  {%- comment -%}
+    max-snippet:-1 giver Google og AI-assistenter lov til at citere så meget
+    tekst de vil fra siden. Uden den klippes uddrag typisk ved ~160 tegn,
+    hvilket betyder færre fyldestgørende svar hvor klubben bliver nævnt.
+    max-image-preview:large giver store billeder i resultater.
+  {%- endcomment -%}
+  {%- if page.noindex -%}
+  <meta name="robots" content="noindex, follow" />
+  {%- else -%}
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  {%- endif %}
+  <meta name="theme-color" content="#087034" />
+  <meta name="author" content="{{ site.title }}" />
+
+  {%- comment -%} Geo-signaler til lokale søgninger ("badminton nær mig"). {%- endcomment -%}
+  <meta name="geo.region" content="DK-85" />
+  <meta name="geo.placename" content="{{ site.data.kontakt.by }}" />
+  <meta name="geo.position" content="{{ site.data.kontakt.latitude }};{{ site.data.kontakt.longitude }}" />
+  <meta name="ICBM" content="{{ site.data.kontakt.latitude }}, {{ site.data.kontakt.longitude }}" />
+
   <!-- Open Graph -->
-  <meta property="og:title" content="{{ meta_title }}"/>
+  <meta property="og:title" content="{{ full_title | escape }}"/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="{{ page.url | absolute_url }}"/>
   <meta property="og:image" content="{{ meta_image | absolute_url }}"/>
-  <meta property="og:description" content="{{ meta_description }}"/>
+  <meta property="og:image:alt" content="{{ site.title }} logo"/>
+  <meta property="og:description" content="{{ meta_description | strip | escape }}"/>
   <meta property="og:site_name" content="{{ site.title }}"/>
   <meta property="og:locale" content="da_DK"/>
-  
+
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary"/>
-  <meta name="twitter:title" content="{{ meta_title }}"/>
-  <meta name="twitter:description" content="{{ meta_description }}"/>
+  <meta name="twitter:title" content="{{ full_title | escape }}"/>
+  <meta name="twitter:description" content="{{ meta_description | strip | escape }}"/>
   <meta name="twitter:image" content="{{ meta_image | absolute_url }}"/>
-  {% if site.data.seo.meta_twitter_site %}<meta name="twitter:site" content="{{ site.data.seo.meta_twitter_site }}"/>{% endif %}
-  {% if site.data.seo.meta_twitter_creator %}<meta name="twitter:creator" content="{{ site.data.seo.meta_twitter_creator }}"/>{% endif %}
+  {%- if site.data.seo.meta_twitter_site %}<meta name="twitter:site" content="{{ site.data.seo.meta_twitter_site }}"/>{% endif %}
+  {%- if site.data.seo.meta_twitter_creator %}<meta name="twitter:creator" content="{{ site.data.seo.meta_twitter_creator }}"/>{% endif %}
+
+  {%- comment -%}
+    Verifikation af Google Search Console (se indhold/data/seo.yml). Det er
+    her klubben kan følge hvor mange visninger og klik sitet får i Google.
+  {%- endcomment -%}
+  {%- if site.data.seo.google_site_verification != blank %}
+  <meta name="google-site-verification" content="{{ site.data.seo.google_site_verification }}" />
+  {%- endif %}
+  {%- if site.data.seo.bing_site_verification != blank %}
+  <meta name="msvalidate.01" content="{{ site.data.seo.bing_site_verification }}" />
+  {%- endif %}
 
   {% include structured-data.html %}
 </head>

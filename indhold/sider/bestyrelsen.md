@@ -2,9 +2,12 @@
 title: Bestyrelsen
 layout: page
 permalink: "/bestyrelsen/"
-description: Mød bestyrelsen i Ejby IF Badminton
+description: >-
+  Find navn, rolle, telefon og e-mail på formand, kasserer og seniorformænd i
+  Ejby IF Badminton, så du kan kontakte den rette person direkte.
 full_width: true
 intro_image_hide_on_mobile: true
+meta_title: "Bestyrelsen i Ejby IF Badminton – kontakt og roller"
 ---
 
 Vi bygger klubben på frivilligt engagement. Her finder du bestyrelsen, så du hurtigt kan kontakte den rette person om økonomi, træningstilbud, nye idéer eller hvad du nu skulle have brug for.

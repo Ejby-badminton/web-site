@@ -6,6 +6,9 @@
     <li class="has-dropdown {% if page.collection == "tilbud" %}active{% endif %}">
       <span class="main-menu-mobile__label">{{ item.name }}</span>
       <ul class="main-menu-mobile__dropdown">
+        {% if item.url %}
+        <li class="{% if item.url == page.url %}active{% endif %}"><a href="{{ item.url | relative_url }}">Alle tilbud</a></li>
+        {% endif %}
         {% for offer in site.data.tilbud %}
         {% assign service = site.tilbud | where: "slug", offer.slug | first %}
         {% if service %}

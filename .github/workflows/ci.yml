@@ -46,6 +46,13 @@ jobs:
         with:
           node-version: '20'
 
+      # Fanger fejl i titler, meta-beskrivelser, JSON-LD, robots.txt, llms.txt
+      # og sitemap. Samme kontrol som ./scripts/test.sh kører lokalt.
+      - name: Check SEO and structured data
+        run: |
+          cd "$GITHUB_WORKSPACE"
+          node scripts/check-seo.mjs
+
       - name: Run link checker
         env:
           BUNDLE_GEMFILE: Gemfile
@@ -69,7 +76,11 @@ jobs:
             fi
             sleep 1
           done
+          # Sitets eget domæne udelades: siderne tjekkes allerede lokalt, og
+          # canonical-linket peger på produktion. Uden denne undtagelse fejler
+          # link-tjekket for ENHVER ny side, indtil den er deployet.
           npx broken-link-checker http://127.0.0.1:4000 --recursive --filter-level 3 \
+            --exclude "https://ejbyif-badminton.dk" \
             --exclude "https://www.google.com/maps" \
             --exclude "https://maps.google.com" \
             --exclude "https://www.dgi.dk/badminton" \

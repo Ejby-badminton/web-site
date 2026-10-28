@@ -1,8 +1,47 @@
+---
+permalink: /robots.txt
+layout: null
+sitemap: false
+---
+{%- comment -%}
+  robots.txt
+
+  VIGTIGT om formatet: en crawler følger KUN den mest specifikke gruppe, der
+  matcher dens navn — den arver ikke regler fra "User-agent: *". Derfor skal
+  Disallow-reglerne gentages i hver enkelt gruppe. Filen genereres med en
+  løkke, så reglerne er ens overalt og ikke kan komme ud af sync.
+{%- endcomment -%}
+{%- comment -%} Stier der ikke må indekseres — gælder alle crawlere. {%- endcomment -%}
+{%- assign disallow = "/assets/docs/" | split: "," -%}
+{%- capture agent_list -%}
+*,Googlebot,Google-Extended,GoogleOther,OAI-SearchBot,ChatGPT-User,GPTBot,ClaudeBot,Claude-SearchBot,Claude-User,bingbot,BingPreview,PerplexityBot,Perplexity-User,Applebot,Applebot-Extended,DuckAssistBot,Amazonbot,meta-externalagent,MistralAI-User,CCBot
+{%- endcapture -%}
+{%- assign agents = agent_list | strip | split: "," -%}
 # Ejby IF Badminton - robots.txt
-User-agent: *
+#
+# Maskinlæsbar opsummering af sitet for AI-assistenter: {{ site.url }}/llms.txt
+#
+# Alle crawlere er velkomne. AI-crawlerne nedenfor er navngivet EKSPLICIT med
+# vilje: en udtrykkelig regel gør det tydeligt for fremtidige redaktører, at
+# adgangen er et bevidst valg — klubben VIL gerne nævnes i AI-svar om
+# badminton i Køge-området. Vil klubben omvendt holdes ude af AI-svar eller
+# AI-træning, ændres "Allow: /" til "Disallow: /" for den relevante crawler.
+#
+# Hvem er hvem:
+#   Google-Extended ...... Gemini / Vertex AI. Påvirker IKKE Google-søgning.
+#   OAI-SearchBot ........ afgør om klubben kan optræde i ChatGPT-søgning.
+#   GPTBot ............... OpenAI modeltræning.
+#   Claude-SearchBot ..... søgning i Claude. ClaudeBot: modeltræning.
+#   bingbot .............. Bing, som også leverer data til flere AI-produkter.
+#   CCBot ................ Common Crawl, datagrundlag for mange sprogmodeller.
+#
+# Generalforsamlingsreferater indeholder navne på medlemmer og holdes derfor
+# ude af søgeresultater via Disallow nedenfor.
+{% for agent in agents %}
+User-agent: {{ agent }}
 Allow: /
-
-# PDF documents (referater/vedtægter) should not be indexed
-Disallow: /assets/docs/
-
-Sitemap: https://ejbyif-badminton.dk/sitemap.xml
+{%- for path in disallow %}
+Disallow: {{ path }}
+{%- endfor %}
+{% endfor %}
+Sitemap: {{ site.url }}/sitemap.xml

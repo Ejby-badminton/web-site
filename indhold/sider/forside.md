@@ -1,7 +1,9 @@
 ---
 title: Ejby Badminton
 layout: home
-description: Ejby Badminton — Badminton for alle!
+description: >-
+  Motionsbadminton for voksne i Ejbyhallen, Lille Skensved ved Køge. Vi
+  spiller mandag og onsdag, og nye spillere får gratis prøvetimer.
 show_call_box: false
 show_service_grid: false
 permalink: "/"

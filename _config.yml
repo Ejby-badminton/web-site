@@ -43,6 +43,13 @@ defaults:
       path: ""
     values:
       image: "/images/logo/ejby_if_logo.png"
+  # Generalforsamlingsreferater indeholder medlemsnavne. De er udelukket i
+  # robots.txt, så de skal heller ikke stå i sitemappet — ellers sender vi
+  # modstridende signaler til Google.
+  - scope:
+      path: "assets/docs"
+    values:
+      sitemap: false
 
 sass:
   style: compressed # possible values: nested expanded compact compressed
@@ -61,3 +68,9 @@ exclude:
   - LICENSE.md
   - LICENSE
   - README.md
+  # Intern dokumentation — må ikke udgives som sider på sitet.
+  - CLAUDE.md
+  - scripts/
+  - purgecss.config.cjs
+  - package.json
+  - package-lock.json

@@ -1,6 +1,16 @@
-{% if jekyll.environment == "production" %}
-  {% assign gid = site.env.NETLIFY_GOOGLE_ANALYTICS_ID | default: site.data.seo.google_analytics_id | strip %}
-  {% if gid != "" %}
+{%- comment -%}
+  Google Analytics 4.
+
+  Indlæses kun når BÅDE sitet bygges til produktion OG der er sat et måle-ID
+  i indhold/data/seo.yml. Derfor forurener lokal udvikling ikke statistikken.
+
+  Bemærk: sitet hostes på GitHub Pages, så der er ingen Netlify-miljøvariabel
+  at læse ID'et fra — det står i indhold/data/seo.yml.
+{%- endcomment -%}
+{%- if jekyll.environment == "production" -%}
+  {%- assign gid = site.data.seo.google_analytics_id | default: "" | strip -%}
+  {%- if gid != "" -%}
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ gid }}"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -9,7 +19,7 @@
         dataLayer.push(arguments);
       }
       gtag('js', new Date());
-      gtag('config', '{{ gid }}');
+      gtag('config', '{{ gid }}', { anonymize_ip: true });
     </script>
-  {% endif %}
-{% endif %}
+  {%- endif -%}
+{%- endif -%}

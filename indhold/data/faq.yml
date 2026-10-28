@@ -1,0 +1,81 @@
+# ---------------------------------------------------------------------------
+# Ofte stillede spørgsmål
+#
+# Denne fil driver BÅDE den synlige FAQ på /kontakt/ OG FAQPage-markup
+# (JSON-LD), som Google og AI-assistenter læser. Skriv derfor svarene som
+# hele, selvbærende sætninger: et svar skal kunne stå alene og stadig give
+# mening, fordi AI-assistenter citerer det uden den omkringstående tekst.
+#
+# Regler:
+# - Gentag altid klubbens navn eller stedet i svaret ("i Ejbyhallen", "hos
+#   Ejby IF Badminton") fremfor "hos os".
+# - Skriv konkrete tal, dage og priser — ikke "kontakt os for pris".
+# - Hold svarene opdaterede: forkerte priser i FAQ bliver citeret som fakta.
+# ---------------------------------------------------------------------------
+
+- q: "Kan jeg få en gratis prøvetime hos Ejby IF Badminton?"
+  a: >-
+    Ja. Du kan møde op i Ejbyhallen, Skovvang 4, 4623 Lille Skensved, en mandag
+    eller onsdag mellem kl. 19.00 og 21.00 og spørge efter William. Nye spillere
+    på Senior Motion får op til 3 gratis prøvetimer, før de skal melde sig ind.
+
+- q: "Hvad koster det at spille badminton i Ejby IF Badminton?"
+  a: >-
+    Senior Motion koster 1.100 kr. for hele sæsonen for én ugentlig træningsdag
+    og 1.700 kr. for begge træningsdage, inklusive bolde. Flex-hygge koster 450
+    kr. i årligt kontingent plus 25 kr. pr. gang via MobilePay. Baneudlejning
+    koster 800 kr. for en singlebane og 1.600 kr. for en doublebane for hele
+    sæsonen.
+
+- q: "Hvor ligger Ejby IF Badminton?"
+  a: >-
+    Ejby IF Badminton spiller i Ejbyhallen på Skovvang 4, 4623 Lille Skensved
+    i Køge Kommune. Der er gratis parkering foran hallen, og der er kort gåtur
+    fra Ejby Station.
+
+- q: "Hvornår er der træning i Ejbyhallen?"
+  a: >-
+    Der er badminton i Ejbyhallen mandag og onsdag. Flex-hygge og baneudlejning
+    spiller kl. 18.00-19.00, og Senior Motion spiller kl. 19.00-21.00.
+    Sæsonen løber fra 18. august 2025 til 29. april 2026.
+
+- q: "Hvordan melder jeg mig ind i Ejby IF Badminton?"
+  a: >-
+    Vælg det tilbud der passer dig — Senior Motion, Flex-hygge eller
+    baneudlejning — og kontakt den ansvarlige, der er nævnt på tilbuddets side.
+    Du kan også møde op i Ejbyhallen i træningstiden. Betaling sker med
+    MobilePay eller bankoverførsel.
+
+- q: "Skal jeg have mit eget udstyr med?"
+  a: >-
+    Nej, ikke til at starte med. Du må gerne låne en ketsjer de første gange du
+    spiller i Ejbyhallen. Indendørssko med lyse såler er dog påkrævet i hallen.
+
+- q: "Kan man leje en badmintonbane i Ejbyhallen?"
+  a: >-
+    Ja. Ejby IF Badminton lejer faste baner ud mandag og onsdag kl. 18.00-19.00.
+    En singlebane koster 800 kr. for sæsonen og en doublebane 1.600 kr. for
+    sæsonen. Reservationen gælder samme tid hver uge og inkluderer ikke bolde.
+
+- q: "Hvor mange baner er der i Ejbyhallen?"
+  a: >-
+    Ejbyhallen har 9 badmintonbaner, der kan bruges til både single og double.
+    Der er omklædningsrum og tilskuerrækker i hallen.
+
+- q: "Er Ejby IF Badminton for begyndere?"
+  a: >-
+    Ja. Ejby IF Badminton er en motionsklub med plads til både helt nye spillere,
+    tidligere turneringsspillere og dem der mest kommer for det sociale. Kampene
+    blandes fra uge til uge, så alle får makkere på deres eget niveau.
+
+- q: "Hvordan melder jeg mig ud af klubben?"
+  a: >-
+    Udmeldelse meddeles skriftligt til kassereren i Ejby IF Badminton, så pladsen
+    kan frigives. Husk at returnere eventuelt lånt udstyr. Der refunderes ikke
+    kontingent efter tilmelding.
+
+- q: "Hvornår holder Ejby IF Badminton generalforsamling?"
+  a: >-
+    Generalforsamlingen afholdes hvert forår, typisk i marts eller april i
+    Ejbyhallen eller klubhuset. Indkaldelsen udsendes senest 3 uger før, og
+    forslag til dagsordenen skal være bestyrelsen i hænde 8 dage før mødet.
